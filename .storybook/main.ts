@@ -1,9 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import { createRequire } from "module";
-
-const require = createRequire(import.meta.url);
 
 function getAbsolutePath(value: string) {
     return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
@@ -28,10 +25,12 @@ const config: StorybookConfig = {
     async viteFinal(config) {
         const { mergeConfig } = await import('vite');
 
-        const babel = require('@babel/core');
-        const styleXPlugin = require('@stylexjs/babel-plugin');
-        const reactPlugin = require('@vitejs/plugin-react');
-        const react = reactPlugin.default ?? reactPlugin;
+        const babel = await import('@babel/core');
+
+        const { default: styleXPlugin } = await import('@stylexjs/babel-plugin');
+        const { default: rsdPreset } = await import('react-strict-dom/babel-preset');
+
+        const { default: react } = await import('@vitejs/plugin-react');
 
         const styleXOptions = {
             dev: true,
@@ -59,7 +58,7 @@ const config: StorybookConfig = {
                 plugins: [
                     // React-strict-dom JSX transform: html.div → <div/>, etc.
                     // This is what react-strict-dom/babel-preset's first plugin does.
-                    require('react-strict-dom/babel-preset')(null, { debug: false, platform: 'web' }).plugins[0],
+                    rsdPreset(null, { debug: false, platform: 'web' }).plugins[0],
                     // StyleX with runtimeInjection:true
                     [styleXPlugin, styleXOptions],
                 ],
@@ -85,7 +84,7 @@ const config: StorybookConfig = {
                         plugins: [
                             [styleXPlugin, {
                                 ...styleXOptions,
-                                importSources: ['@stylexjs/stylex'], // runtime uses "import * as stylex"
+                                importSources: ['@stylexjs/stylex'],
                             }],
                         ],
                         configFile: false,
