@@ -1,45 +1,36 @@
 # pearpass-lib-ui-react-native-components
 
-A library of reusable React Native components designed for the Pearpass ecosystem mobile applications
+This package contains the shared UI component library used across all PearPass client applications:
+- **Mobile app** 
+- **Desktop app** 
+- **Browser extension**
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage Examples](#usage-examples)
+- [Core Architecture](#core-architecture)
+- [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Related Projects](#related-projects)
 
-## Features
+## 🏗 Core Architecture
 
-- Prebuilt React Native components
-- Fully customizable and themeable using `pearpass-lib-ui-theme-provider`.
-- Optimized for performance and compatibility with modern React Native versions.
+This library is built using **React Strict DOM** to provide a strict, web-standards-aligned API that renders as optimized standard HTML/CSS on web/desktop, and maps efficiently to native components on mobile.
 
-## Installation
+## 🚀 Getting Started
 
-To install the library, use the following command:
+We use **Storybook** as the central place to build, test, and preview components locally. 
+
+### Running Storybook
+
+Inside this directory, simply run:
 
 ```bash
-npm install pearpass-lib-ui-react-native-components
+npm install
+npm run storybook
 ```
 
-Ensure you have the required peer dependencies installed as well.
-
-## Usage Examples
-
-Here is a basic example of how to use a component from the library:
-
-```jsx
-import { ButtonPrimary } from 'pearpass-lib-ui-react-native-components';
-
-const App = () => {
-    return <ButtonPrimary />;
-};
-
-export default App;
-```
+This will spin up a local server rendering components using Vite and React DOM. You can preview all states and interactions.
 
 ## Dependencies
 
@@ -48,7 +39,7 @@ This library has the following peer dependencies:
 - [`react`](https://reactjs.org/)
 - [`react-native`](https://reactnative.dev/)
 - [`react-native-svg`](https://github.com/software-mansion/react-native-svg)
-- [`styled-components`](https://styled-components.com/)
+- [`react-strict-dom`](https://github.com/facebook/react-strict-dom)
 
 For a full list of dependencies, refer to the `package.json` file.
 

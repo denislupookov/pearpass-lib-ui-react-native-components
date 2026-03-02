@@ -1,5 +1,6 @@
 export default {
   presets: [
+    'react-strict-dom/babel-preset',
     [
       '@babel/preset-env',
       {

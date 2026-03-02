@@ -1,0 +1,21 @@
+
+# Welcome to pearpass-lib-ui-react-native-components 👋
+
+This is our centralized **v2 component library**, built specifically to unify the PearPass cohesive visual identity across **Mobile**, **Desktop**, and our **Browser Extension**.
+
+---
+
+## 🏗 Core Architecture
+
+We use [**React Strict DOM**](https://github.com/facebook/react-strict-dom) underneath to write cross-platform compatible primitives. By writing strictly to web standards (e.g. `html.div`, `css.create()`), our components:
+1. Compile down to React Native primitives on iOS/Android.
+2. Compile down to optimized standard HTML and modular CSS on Web/Desktop.
+
+---
+
+## 🎨 Adding Stories
+
+Whenever you add a new component piece to `/src/components`, you **must** write a story for it (e.g. `Button.stories.tsx`). 
+
+This allows us to:
+- Test edge-cases, hover-states, and text-flow issues without loading up the entire Chrome Extension or Simulator!
