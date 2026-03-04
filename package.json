@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "license": "Apache-2.0",
   "scripts": {
+    "generate-tokens": "node scripts/generate-tokens.mjs",
     "prepare": "husky || true",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",

@@ -1,0 +1,38 @@
+// AUTO-GENERATED — do not edit directly.
+// Source: src/theme/tokens.json  |  Generator: scripts/generate-tokens.mjs
+// Run `npm run generate-tokens` to update.
+
+import { css } from 'react-strict-dom';
+
+export const tokens = css.defineVars({
+    colorBackground: '#080A05',
+    colorSurfacePrimary: '#15180E',
+    colorSurfaceSecondary: '#FDCA40',
+    colorPrimary: '#B0D944',
+    colorSecondary: '#8AE081',
+    colorTextPrimary: '#FFFFFF',
+    colorOnPrimary: '#08090C',
+    colorTextSecondary: '#8DC3AC',
+    colorBorderPrimary: '#212814',
+    colorBorderSecondary: '#2C3618',
+    colorSurfaceError: '#D1383D',
+    colorSurfaceWarning: '#D7D245',
+    s4: '4px',
+    s8: '8px',
+    s12: '12px',
+    s16: '16px',
+    s20: '20px',
+    s24: '24px',
+    r8: '8px',
+    r16: '16px',
+    r20: '20px',
+    r26: '26px',
+    fontPrimary: 'Inter',
+    sizeS12: '12px',
+    sizeS24: '24px',
+    sizeS28: '28px',
+    weightRegular: '400',
+    weightMedium: '500',
+} as Record<string, string>);
+
+export type Tokens = typeof tokens;

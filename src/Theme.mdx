@@ -1,0 +1,95 @@
+
+# PearPass Theme
+
+The library provides a `<ThemeProvider>` that supplies the design tokens for your application. It applies the active theme using StyleX and exposes the current theme via React Context (React Native).
+
+## App Setup
+
+Wrap the root of your app:
+
+```tsx
+import { ThemeProvider, ThemeType, Button } from 'pearpass-lib-ui-react-native-components';
+
+export function App() {
+  return (
+    <ThemeProvider theme={ThemeType.Dark}>
+      <Button />
+    </ThemeProvider>
+  );
+}
+```
+
+## Changing the Theme
+
+You can switch the active theme dynamically anywhere inside your app using the `useTheme` hook:
+
+```tsx
+import { useTheme, ThemeType } from 'pearpass-lib-ui-react-native-components';
+
+export function ThemeSwitcher() {
+  const { themeType, setTheme } = useTheme();
+
+  return (
+    <button onClick={() => setTheme(themeType === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark)}>
+      Toggle Theme (Current: {themeType})
+    </button>
+  );
+}
+```
+
+## Writing Components
+
+The way you access tokens depends on whether you are writing a cross-platform `react-strict-dom` component, or a purely React Native primitive component.
+
+### 1. In react-strict-dom component
+
+Use the unified `tokens` object inside `css.create()`. This relies on CSS variables.
+
+```tsx
+import { html, css } from 'react-strict-dom';
+import { tokens } from 'pearpass-lib-ui-react-native-components/src/theme/tokens.css';
+
+const styles = css.create({
+  card: {
+    backgroundColor: tokens.colorSurfacePrimary,
+    padding: tokens.s24,
+    borderRadius: tokens.r16,
+  }
+});
+```
+
+### 2. In React Native primitives
+
+Use `rawTokens` for static values (spacing, radius, typography).
+**For colors**, always use `useTheme` to ensure context-aware dark/light modes.
+
+```tsx
+import { View, StyleSheet } from 'react-native';
+import { rawTokens, useTheme } from 'pearpass-lib-ui-react-native-components';
+
+const styles = StyleSheet.create({
+  card: {
+    padding: rawTokens.s24,
+    borderRadius: rawTokens.r16,
+  }
+});
+
+export function NativeCard() {
+  const { theme } = useTheme();
+  
+  return (
+    <View style={[styles.card, { backgroundColor: theme.colors.colorSurfacePrimary }]}>
+      ...
+    </View>
+  );
+}
+```
+
+## Modifying Tokens
+
+Tokens are generated automatically. **Do not edit `.ts` or `.css.ts` token files directly.**
+
+To update the theme:
+1. Edit `src/theme/tokens.json`
+2. Run `npm run generate-tokens`
+3. Commit the changes

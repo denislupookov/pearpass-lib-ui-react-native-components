@@ -2,6 +2,7 @@ import type { Preview } from '@storybook/react-vite';
 import React from 'react';
 import { html, css } from 'react-strict-dom';
 import './react-strict-dom.css';
+import { tokens } from '../src/theme/tokens.css';
 
 const styles = css.create({
     container: {
@@ -11,7 +12,7 @@ const styles = css.create({
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+        fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     },
 });
 
@@ -24,6 +25,11 @@ const preview: Preview = {
         ),
     ],
     parameters: {
+        options: {
+            storySort: {
+                order: ['Welcome', '*'],
+            },
+        },
         controls: {
             matchers: {
                 color: /(background|color)$/i,
