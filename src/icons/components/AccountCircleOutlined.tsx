@@ -1,3 +1,4 @@
+// This file is auto-generated. Do not edit it.
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgAccountCircleOutlined = (props: SVGProps<SVGSVGElement>) => (
