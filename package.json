@@ -22,8 +22,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.5",
-    "react-native-svg": "15.11.2",
-    "tether-dev-docs": "0.0.x"
+    "react-native-svg": "15.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
@@ -35,6 +34,7 @@
     "@stylexjs/babel-plugin": "^0.15.4",
     "@svgr/cli": "^8.1.0",
     "@testing-library/react-native": "^13.2.0",
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.2.14",
     "@types/react-native": "^0.72.8",
     "@vitejs/plugin-react": "^5.1.4",
