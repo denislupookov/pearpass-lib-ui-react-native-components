@@ -2,7 +2,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgAccountCircleOutlined = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="1em" height="1em" fill="none" {...props}>
+  <svg width="1em" height="1em" fill="none" viewBox="0 0 24 24" {...props}>
     <path
       fill="currentColor"
       d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2M7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5m10.79-1.38a9.95 9.95 0 0 0-12.28 0A7.96 7.96 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12"

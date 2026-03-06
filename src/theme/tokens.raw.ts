@@ -15,6 +15,7 @@ export const rawTokens = {
     radius26: 26,
     fontPrimary: "Inter",
     fontSize12: 12,
+    fontSize14: 14,
     fontSize24: 24,
     fontSize28: 28,
     weightRegular: "400",

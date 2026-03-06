@@ -2,7 +2,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgAccountCircleTone = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="1em" height="1em" fill="none" {...props}>
+  <svg width="1em" height="1em" fill="none" viewBox="0 0 24 24" {...props}>
     <path
       fill="currentColor"
       d="M12 4c-4.42 0-8 3.58-8 8 0 1.95.7 3.73 1.86 5.12a9.95 9.95 0 0 1 12.28 0A7.96 7.96 0 0 0 20 12c0-4.42-3.58-8-8-8m0 9c-1.93 0-3.5-1.57-3.5-3.5S10.07 6 12 6s3.5 1.57 3.5 3.5S13.93 13 12 13"

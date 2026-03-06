@@ -3,7 +3,7 @@ import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 import type { SvgProps } from "react-native-svg";
 const SvgAccountCircleTone = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
+  <Svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <Path
       fill="currentColor"
       d="M12 4c-4.42 0-8 3.58-8 8 0 1.95.7 3.73 1.86 5.12a9.95 9.95 0 0 1 12.28 0A7.96 7.96 0 0 0 20 12c0-4.42-3.58-8-8-8m0 9c-1.93 0-3.5-1.57-3.5-3.5S10.07 6 12 6s3.5 1.57 3.5 3.5S13.93 13 12 13"

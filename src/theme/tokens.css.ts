@@ -29,6 +29,7 @@ export const tokens = css.defineVars({
     radius26: '26px',
     fontPrimary: 'Inter',
     fontSize12: '12px',
+    fontSize14: '14px',
     fontSize24: '24px',
     fontSize28: '28px',
     weightRegular: '400',
