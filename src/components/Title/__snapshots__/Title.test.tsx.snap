@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders h1 by default 1`] = `
+<h1
+  className="margin-x1ghz6dp padding-x1717udv fontSize-xngnso2 wordWrap-x1vvkbs"
+  data-element-src="Title/Title.tsx:53"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Display & Titles
+</h1>
+`;
+
+exports[`Title renders h2 when as is h2 1`] = `
+<h2
+  className="margin-x1ghz6dp padding-x1717udv fontSize-xngnso2 wordWrap-x1vvkbs"
+  data-element-src="Title/Title.tsx:22"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Display & Titles
+</h2>
+`;
+
+exports[`Title renders h3 when as is h3 1`] = `
+<h3
+  className="margin-x1ghz6dp padding-x1717udv fontSize-xngnso2 wordWrap-x1vvkbs"
+  data-element-src="Title/Title.tsx:28"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Display & Titles
+</h3>
+`;
+
+exports[`Title renders h4 when as is h4 1`] = `
+<h4
+  className="margin-x1ghz6dp padding-x1717udv fontSize-xngnso2 wordWrap-x1vvkbs"
+  data-element-src="Title/Title.tsx:34"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Display & Titles
+</h4>
+`;
+
+exports[`Title renders h5 when as is h5 1`] = `
+<h5
+  className="margin-x1ghz6dp padding-x1717udv fontSize-xngnso2 wordWrap-x1vvkbs"
+  data-element-src="Title/Title.tsx:40"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Display & Titles
+</h5>
+`;
+
+exports[`Title renders h6 when as is h6 1`] = `
+<h6
+  className="margin-x1ghz6dp padding-x1717udv fontSize-xngnso2 wordWrap-x1vvkbs"
+  data-element-src="Title/Title.tsx:46"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Display & Titles
+</h6>
+`;

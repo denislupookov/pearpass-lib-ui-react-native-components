@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders anchor with href 1`] = `
+<a
+  className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+  data-element-src="Link/Link.tsx:15"
+  data-style-src="react-strict-dom:web/runtime.js"
+  href="#"
+  ref={null}
+  style={{}}
+>
+  PearPass Application Terms of Use
+</a>
+`;
+
+exports[`Link renders inside Text 1`] = `
+<span
+  className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+  data-element-src="Text/Text.tsx:31"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  Continue with 
+  <a
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="Link/Link.tsx:15"
+    data-style-src="react-strict-dom:web/runtime.js"
+    href="#"
+    ref={null}
+    style={{}}
+  >
+    existing PearPass
+  </a>
+</span>
+`;

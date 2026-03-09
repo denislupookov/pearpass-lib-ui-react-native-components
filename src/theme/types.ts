@@ -20,6 +20,7 @@ export interface ThemeColors {
     colorSurfaceElevatedOnInteraction: string;
     colorSurfaceDisabled: string;
     colorSurfaceDestructiveElevated: string;
+    colorSurfaceDestructive: string;
     colorSurfaceError: string;
     colorSurfaceWarning: string;
 

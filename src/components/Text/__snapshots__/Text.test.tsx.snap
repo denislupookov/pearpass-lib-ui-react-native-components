@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders caption variant 1`] = `
+<span
+  className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+  data-element-src="Text/Text.tsx:31"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  The quick brown fox jumps over the lazy dog.
+</span>
+`;
+
+exports[`Text renders paragraph when as is p 1`] = `
+<p
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="Text/Text.tsx:24"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  The quick brown fox jumps over the lazy dog.
+</p>
+`;
+
+exports[`Text renders span with default label variant 1`] = `
+<span
+  className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+  data-element-src="Text/Text.tsx:31"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  The quick brown fox jumps over the lazy dog.
+</span>
+`;
