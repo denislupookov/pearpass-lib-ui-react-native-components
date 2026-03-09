@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button disables interactions and shows loading state when loading 1`] = `
+<button
+  aria-busy={true}
+  aria-disabled={true}
+  className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+  data-element-src="Button/Button.tsx:82"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  disabled={false}
+  ref={null}
+  style={{}}
+  type="button"
+>
+  <span
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="Button/Button.tsx:111"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    Label
+  </span>
+  <span
+    aria-hidden={true}
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="Button/Button.tsx:124"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <span
+      className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+      data-element-src="Button/Button.tsx:125"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </span>
+</button>
+`;
+
+exports[`Button disables interactions when disabled 1`] = `
+<button
+  aria-disabled={true}
+  className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+  data-element-src="Button/Button.tsx:82"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  disabled={true}
+  ref={null}
+  style={{}}
+  type="button"
+>
+  <span
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="Button/Button.tsx:111"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    Label
+  </span>
+</button>
+`;
+
+exports[`Button renders label and triggers onClick when enabled 1`] = `
+<button
+  className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+  data-element-src="Button/Button.tsx:82"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  disabled={false}
+  onClick={[MockFunction]}
+  ref={null}
+  style={{}}
+  type="button"
+>
+  <span
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="Button/Button.tsx:111"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    Label
+  </span>
+</button>
+`;
+
+exports[`Button supports icon-only buttons with aria-label 1`] = `
+<button
+  aria-label="Account"
+  className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+  data-element-src="Button/Button.tsx:82"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  disabled={false}
+  ref={null}
+  style={{}}
+  type="button"
+>
+  <span
+    aria-hidden={true}
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="Button/Button.tsx:102"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  />
+</button>
+`;
