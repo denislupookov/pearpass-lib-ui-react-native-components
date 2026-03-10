@@ -4,13 +4,50 @@
   "type": "module",
   "description": "React native components for Pearpass library",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme/index.d.ts",
+      "import": "./dist/theme/index.js",
+      "require": "./dist/theme/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js",
+      "require": "./dist/components/index.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "import": "./dist/components/*/index.js",
+      "require": "./dist/components/*/index.js"
+    },
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons/index.js",
+      "require": "./dist/icons/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/components/*.d.ts",
+      "import": "./dist/icons/components/*.js",
+      "require": "./dist/icons/components/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
   "license": "Apache-2.0",
   "scripts": {
     "generate-tokens": "node scripts/generate-tokens.mjs",
     "generate-icons:web": "svgr --out-dir src/icons/components src/icons/assets",
     "generate-icons:native": "svgr --native --ext native.tsx --no-index --out-dir src/icons/components src/icons/assets",
     "generate-icons": "rm -rf src/icons/components && npm run generate-icons:web && npm run generate-icons:native && node scripts/generate-icon-story.mjs",
-    "prepare": "husky || true",
+    "build": "rm -rf dist && tsc --project tsconfig.build.json",
+    "prepare": "(npm run build || true) && (husky || true)",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "test": "jest",

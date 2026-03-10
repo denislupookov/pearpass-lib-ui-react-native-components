@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, type ReactNode } from 'react';
-import { html } from 'react-strict-dom';
+import { createContext, useContext, useState, type ReactNode } from 'react';
+import { css, html } from 'react-strict-dom';
 import { darkTheme } from './themes/dark';
 import { lightTheme } from './themes/light';
 import { darkThemeStyle } from './themes/dark.css';
@@ -45,6 +45,17 @@ interface ThemeProviderProps {
     children: ReactNode;
 }
 
+const containerStyles = css.create({
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
+        minHeight: '100%',
+        height: '100%',
+        width: '100%',
+    }
+});
+
 export function ThemeProvider({ theme: initialTheme = ThemeType.Dark, children }: ThemeProviderProps) {
     const [themeType, setThemeType] = useState<ThemeType>(initialTheme);
 
@@ -58,8 +69,11 @@ export function ThemeProvider({ theme: initialTheme = ThemeType.Dark, children }
         <ThemeContext.Provider value={value}>
             <html.div
                 data-theme={themeType}
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                style={getThemeStyle(themeType) as any}
+                style={[
+                    getThemeStyle(themeType),
+                    containerStyles.root
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                ] as any}
             >
                 {children}
             </html.div>
