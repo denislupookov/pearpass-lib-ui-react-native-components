@@ -26,7 +26,7 @@ describe('FieldError', () => {
         expect(component!.toJSON()).toMatchSnapshot();
 
         const span = component!.root.findAll(
-            (node) => node.type === 'span' && node.children?.includes('This field is required.')
+            (node: renderer.ReactTestInstance) => node.type === 'span' && node.children?.includes('This field is required.')
         );
         expect(span.length).toBeGreaterThan(0);
     });
@@ -41,7 +41,7 @@ describe('FieldError', () => {
         });
 
         const span = component!.root.find(
-            (node) => node.type === 'span' && node.props.id === 'field-error'
+            (node: renderer.ReactTestInstance) => node.type === 'span' && node.props.id === 'field-error'
         );
         expect(span).toBeTruthy();
     });

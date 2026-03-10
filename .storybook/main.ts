@@ -28,6 +28,7 @@ const config: StorybookConfig = {
         const babel = await import('@babel/core');
 
         const { default: styleXPlugin } = await import('@stylexjs/babel-plugin');
+        // @ts-ignore We don't have types for this preset
         const { default: rsdPreset } = await import('react-strict-dom/babel-preset');
 
         const { default: react } = await import('@vitejs/plugin-react');

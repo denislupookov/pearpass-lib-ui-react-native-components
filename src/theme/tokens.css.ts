@@ -27,6 +27,7 @@ export const tokens = css.defineVars({
     colorSurfaceWarning: '#D7D245',
     colorFocusRing: '#B0D944',
     spacing4: '4px',
+    spacing6: '6px',
     spacing8: '8px',
     spacing12: '12px',
     spacing16: '16px',

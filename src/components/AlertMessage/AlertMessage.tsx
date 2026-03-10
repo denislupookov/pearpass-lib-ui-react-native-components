@@ -11,6 +11,8 @@ export const AlertMessage = React.forwardRef<HTMLDivElement, AlertMessageProps>(
         ref={ref}
         data-testid={testID}
         style={[styles.container, variantStyleMap[variant], sizeStyleMap[size]]}
+        role={variant === 'error' ? 'alert' : 'status'}
+        aria-live={variant === 'error' ? 'assertive' : 'polite'}
       >
         <html.div style={[styles.messageContainer, size === 'big' && styles.messageContainerBig]}>
           {icon && (

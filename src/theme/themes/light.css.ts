@@ -28,6 +28,7 @@ export const lightThemeStyle = css.createTheme(tokens, {
     colorSurfaceWarning: '',
     colorFocusRing: '',
     spacing4: '4px',
+    spacing6: '6px',
     spacing8: '8px',
     spacing12: '12px',
     spacing16: '16px',

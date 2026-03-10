@@ -78,6 +78,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
     const interactionStyle = disabled ? styles.disabled : isLoading ? styles.loading : null;
     const loadingContentStyle = isLoading ? styles.loadingContent : null;
 
+    const handleClick: HtmlButtonProps['onClick'] = (e) => {
+        onClick?.(e);
+    };
+
     return (
         <html.button
             {...rest}
@@ -87,7 +91,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
             aria-disabled={isInteractionDisabled || undefined}
             aria-busy={isLoading || undefined}
             aria-label={ariaLabel}
-            onClick={isInteractionDisabled ? undefined : onClick}
+            onClick={isInteractionDisabled ? undefined : handleClick}
             style={[
                 styles.buttonBase,
                 sizeStyle,

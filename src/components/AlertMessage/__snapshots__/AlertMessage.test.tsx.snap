@@ -2,23 +2,25 @@
 
 exports[`AlertMessage renders correctly with all props 1`] = `
 <div
+  aria-live="polite"
   className="margin-x1ghz6dp padding-x1717udv"
   data-element-src="AlertMessage/AlertMessage.tsx:9"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="alert-message"
   ref={null}
+  role="status"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="AlertMessage/AlertMessage.tsx:15"
+    data-element-src="AlertMessage/AlertMessage.tsx:17"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       aria-hidden={true}
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="AlertMessage/AlertMessage.tsx:17"
+      data-element-src="AlertMessage/AlertMessage.tsx:19"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
@@ -28,13 +30,13 @@ exports[`AlertMessage renders correctly with all props 1`] = `
     </div>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="AlertMessage/AlertMessage.tsx:21"
+      data-element-src="AlertMessage/AlertMessage.tsx:23"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="AlertMessage/AlertMessage.tsx:22"
+        data-element-src="AlertMessage/AlertMessage.tsx:24"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       >
@@ -42,7 +44,7 @@ exports[`AlertMessage renders correctly with all props 1`] = `
       </div>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="AlertMessage/AlertMessage.tsx:23"
+        data-element-src="AlertMessage/AlertMessage.tsx:25"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       >
@@ -52,7 +54,7 @@ exports[`AlertMessage renders correctly with all props 1`] = `
   </div>
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="AlertMessage/AlertMessage.tsx:27"
+    data-element-src="AlertMessage/AlertMessage.tsx:29"
     data-style-src="react-strict-dom:web/runtime.js"
     data-testid="alert-action"
     onClick={[Function]}

@@ -3,13 +3,20 @@
 exports[`FieldError renders the error message 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="FieldError/FieldError.tsx:16"
+  data-element-src="FieldError/FieldError.tsx:13"
   data-style-src="react-strict-dom:web/runtime.js"
+  role="alert"
   style={{}}
 >
   <span
+    aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="FieldError/FieldError.tsx:23"
+    data-element-src="FieldError/FieldError.tsx:14"
+    data-style-src="react-strict-dom:web/runtime.js"
+  />
+  <span
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="FieldError/FieldError.tsx:17"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >

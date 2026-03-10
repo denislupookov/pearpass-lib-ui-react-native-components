@@ -5,7 +5,7 @@ exports[`Button disables interactions and shows loading state when loading 1`] =
   aria-busy={true}
   aria-disabled={true}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="Button/Button.tsx:82"
+  data-element-src="Button/Button.tsx:86"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   disabled={false}
   ref={null}
@@ -14,7 +14,7 @@ exports[`Button disables interactions and shows loading state when loading 1`] =
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="Button/Button.tsx:111"
+    data-element-src="Button/Button.tsx:115"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -23,13 +23,13 @@ exports[`Button disables interactions and shows loading state when loading 1`] =
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="Button/Button.tsx:124"
+    data-element-src="Button/Button.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Button/Button.tsx:125"
+      data-element-src="Button/Button.tsx:129"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     />
@@ -41,7 +41,7 @@ exports[`Button disables interactions when disabled 1`] = `
 <button
   aria-disabled={true}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="Button/Button.tsx:82"
+  data-element-src="Button/Button.tsx:86"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   disabled={true}
   ref={null}
@@ -50,7 +50,7 @@ exports[`Button disables interactions when disabled 1`] = `
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="Button/Button.tsx:111"
+    data-element-src="Button/Button.tsx:115"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -62,17 +62,17 @@ exports[`Button disables interactions when disabled 1`] = `
 exports[`Button renders label and triggers onClick when enabled 1`] = `
 <button
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="Button/Button.tsx:82"
+  data-element-src="Button/Button.tsx:86"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   disabled={false}
-  onClick={[MockFunction]}
+  onClick={[Function]}
   ref={null}
   style={{}}
   type="button"
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="Button/Button.tsx:111"
+    data-element-src="Button/Button.tsx:115"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -85,9 +85,10 @@ exports[`Button supports icon-only buttons with aria-label 1`] = `
 <button
   aria-label="Account"
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="Button/Button.tsx:82"
+  data-element-src="Button/Button.tsx:86"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   disabled={false}
+  onClick={[Function]}
   ref={null}
   style={{}}
   type="button"
@@ -95,7 +96,7 @@ exports[`Button supports icon-only buttons with aria-label 1`] = `
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="Button/Button.tsx:102"
+    data-element-src="Button/Button.tsx:106"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />

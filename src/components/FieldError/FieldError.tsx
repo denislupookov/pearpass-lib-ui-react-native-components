@@ -10,7 +10,7 @@ export interface FieldErrorProps {
 
 export const FieldError = ({ children, id }: FieldErrorProps) => {
   return (
-    <html.div style={styles.root}>
+    <html.div style={styles.root} role="alert">
       <html.span style={[styles.icon]} aria-hidden={true}>
         <ErrorFilled />
       </html.span>

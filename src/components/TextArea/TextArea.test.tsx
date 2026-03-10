@@ -78,7 +78,7 @@ describe('TextArea', () => {
     expect(component!.toJSON()).toMatchSnapshot()
 
     const errorText = component!.root.findAll(
-      (node) =>
+      (node: renderer.ReactTestInstance) =>
         node.type === 'span' &&
         node.children?.includes('This field is required.')
     )
@@ -92,7 +92,7 @@ describe('TextArea', () => {
       component = renderer.create(<TextArea label="Label" />)
     })
 
-    const errorSpans = component!.root.findAll((node) => node.type === 'span')
+    const errorSpans = component!.root.findAll((node: renderer.ReactTestInstance) => node.type === 'span')
     expect(errorSpans.length).toBe(0)
   })
 })

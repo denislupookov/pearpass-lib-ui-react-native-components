@@ -15,6 +15,7 @@ export const styles = css.create({
         fontFamily: tokens.fontPrimary,
     },
     inputWrapper: {
+        boxSizing: 'border-box',
         padding: tokens.spacing12,
         position: 'relative',
         borderRadius: tokens.radius8,
@@ -48,6 +49,7 @@ export const styles = css.create({
         opacity: 0.5,
     },
     textarea: {
+        boxSizing: 'border-box',
         width: '100%',
         fontSize: tokens.fontSize12,
         fontWeight: tokens.weightRegular,

@@ -23,7 +23,6 @@ export interface ThemeColors {
     colorSurfaceDestructive: string;
     colorSurfaceError: string;
     colorSurfaceWarning: string;
-    colorSurfaceDestructive: string;
 
     colorFocusRing: string;
 }
