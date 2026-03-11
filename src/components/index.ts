@@ -1,5 +1,5 @@
-export * from './Button';
-export * from './AlertMessage';
+export * from './Button'
+export * from './AlertMessage'
 export * from './FieldError'
 export * from './TextArea'
 export * from './Title'
@@ -8,3 +8,4 @@ export * from './Link'
 export * from './Radio'
 export * from './Form'
 export * from './PageHeader'
+export * from './ToggleSwitch'

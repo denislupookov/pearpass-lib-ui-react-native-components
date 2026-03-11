@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleSwitch renders checked state 1`] = `
+<div
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="ToggleSwitch/ToggleSwitch.tsx:43"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  <div
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:45"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <span
+      className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+      data-element-src="Text/Text.tsx:31"
+      data-style-src="react-strict-dom:web/runtime.js"
+      ref={null}
+      style={{}}
+    >
+      Toggle
+    </span>
+  </div>
+  <button
+    aria-checked={true}
+    aria-label="Toggle"
+    className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:55"
+    data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+    disabled={false}
+    onClick={[Function]}
+    role="switch"
+    style={{}}
+    type="button"
+  >
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="ToggleSwitch/ToggleSwitch.tsx:64"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </button>
+</div>
+`;
+
+exports[`ToggleSwitch renders label only without description 1`] = `
+<div
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="ToggleSwitch/ToggleSwitch.tsx:43"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  <div
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:45"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <span
+      className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+      data-element-src="Text/Text.tsx:31"
+      data-style-src="react-strict-dom:web/runtime.js"
+      ref={null}
+      style={{}}
+    >
+      Label only
+    </span>
+  </div>
+  <button
+    aria-checked={false}
+    aria-label="Label only"
+    className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:55"
+    data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+    disabled={false}
+    onClick={[Function]}
+    role="switch"
+    style={{}}
+    type="button"
+  >
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="ToggleSwitch/ToggleSwitch.tsx:64"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </button>
+</div>
+`;
+
+exports[`ToggleSwitch renders unchecked state 1`] = `
+<div
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="ToggleSwitch/ToggleSwitch.tsx:43"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  <div
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:45"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <span
+      className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+      data-element-src="Text/Text.tsx:31"
+      data-style-src="react-strict-dom:web/runtime.js"
+      ref={null}
+      style={{}}
+    >
+      Toggle
+    </span>
+  </div>
+  <button
+    aria-checked={false}
+    aria-label="Toggle"
+    className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:55"
+    data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+    disabled={false}
+    onClick={[Function]}
+    role="switch"
+    style={{}}
+    type="button"
+  >
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="ToggleSwitch/ToggleSwitch.tsx:64"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </button>
+</div>
+`;
+
+exports[`ToggleSwitch renders with label and description 1`] = `
+<div
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="ToggleSwitch/ToggleSwitch.tsx:43"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  <div
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:45"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <span
+      className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+      data-element-src="Text/Text.tsx:31"
+      data-style-src="react-strict-dom:web/runtime.js"
+      ref={null}
+      style={{}}
+    >
+      Notifications
+    </span>
+    <span
+      className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+      data-element-src="Text/Text.tsx:31"
+      data-style-src="react-strict-dom:web/runtime.js"
+      ref={null}
+      style={{}}
+    >
+      Receive push notifications
+    </span>
+  </div>
+  <button
+    aria-checked={false}
+    aria-label="Notifications"
+    className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:55"
+    data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+    disabled={false}
+    onClick={[Function]}
+    role="switch"
+    style={{}}
+    type="button"
+  >
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="ToggleSwitch/ToggleSwitch.tsx:64"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </button>
+</div>
+`;
+
+exports[`ToggleSwitch renders without label or description 1`] = `
+<div
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="ToggleSwitch/ToggleSwitch.tsx:43"
+  data-style-src="react-strict-dom:web/runtime.js"
+  ref={null}
+  style={{}}
+>
+  <button
+    aria-checked={false}
+    aria-label="Toggle"
+    className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+    data-element-src="ToggleSwitch/ToggleSwitch.tsx:55"
+    data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+    disabled={false}
+    onClick={[Function]}
+    role="switch"
+    style={{}}
+    type="button"
+  >
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="ToggleSwitch/ToggleSwitch.tsx:64"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </button>
+</div>
+`;
