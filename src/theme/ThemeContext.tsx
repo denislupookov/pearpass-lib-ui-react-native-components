@@ -49,7 +49,6 @@ const containerStyles = css.create({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        flex: 1,
         minHeight: '100%',
         height: '100%',
         width: '100%',

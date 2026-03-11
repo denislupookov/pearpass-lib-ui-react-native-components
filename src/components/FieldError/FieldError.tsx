@@ -2,6 +2,7 @@ import React from 'react'
 import { html } from 'react-strict-dom'
 import { styles } from './FieldError.styles'
 import { ErrorFilled } from '../../icons'
+import { useTheme } from '../../theme'
 
 export interface FieldErrorProps {
   children: React.ReactNode
@@ -9,10 +10,12 @@ export interface FieldErrorProps {
 }
 
 export const FieldError = ({ children, id }: FieldErrorProps) => {
+  const { theme } = useTheme();
+
   return (
     <html.div style={styles.root}>
       <html.span style={[styles.icon]} aria-hidden={true}>
-        <ErrorFilled />
+        <ErrorFilled color={theme.colors.colorSurfaceDestructiveElevated} />
       </html.span>
       <html.span id={id} style={styles.text}>
         {children}
