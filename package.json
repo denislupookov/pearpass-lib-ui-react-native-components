@@ -59,8 +59,8 @@
     "storybook:native:android": "cd storybook-native && npx expo run:android"
   },
   "peerDependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-native": "0.79.5",
     "react-native-svg": "15.11.2"
   },
