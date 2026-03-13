@@ -21,8 +21,30 @@ jest.mock('../Button/Button.styles', () => ({
   }
 }))
 jest.mock('../Button/Button.config', () => ({
-  variantStyleMap: {},
-  variantDisabledStyleMap: {},
+  variantStyleMap: {
+    primary: {},
+    secondary: {},
+    tertiary: {},
+    destructive: {}
+  },
+  variantDisabledStyleMap: {
+    primary: {},
+    secondary: {},
+    tertiary: {},
+    destructive: {}
+  },
+  variantTextStyleMap: {
+    primary: {},
+    secondary: {},
+    tertiary: {},
+    destructive: {}
+  },
+  variantDisabledTextStyleMap: {
+    primary: {},
+    secondary: {},
+    tertiary: {},
+    destructive: {}
+  },
   sizeStyleMap: {},
   iconOnlyStyleMap: {},
   iconSizeMap: { small: 16, medium: 20 }
@@ -89,9 +111,12 @@ const Controlled = (
     'files' | 'onFilesChange'
   > & {
     onFilesChange?: (files: UploadedFile[]) => void
+    initialFiles?: UploadedFile[]
   }
 ) => {
-  const [files, setFiles] = React.useState<UploadedFile[]>([])
+  const [files, setFiles] = React.useState<UploadedFile[]>(
+    props.initialFiles ?? []
+  )
   return (
     <UploadField
       {...props}
@@ -201,81 +226,25 @@ describe('UploadField', () => {
     expect(component.toJSON()).toMatchSnapshot()
   })
 
-  it('calls onFilesChange with the new UploadedFile when a file is added', () => {
+  it('calls onFilesChange when files are provided externally', () => {
     const onFilesChange = jest.fn()
-    let component!: renderer.ReactTestRenderer
-
-    act(() => {
-      component = renderer.create(
-        <Controlled onFilesChange={onFilesChange} testID="upload-field" />
-      )
-    })
-
-    const input = component.root.findByType('input')
-    const mockFile = new File(['content'], 'test.pdf', {
+    const mockFile = {
+      file: {} as File,
+      name: 'test.pdf',
+      size: 100,
       type: 'application/pdf'
-    })
-
-    act(() => {
-      input.props.onChange({ target: { files: [mockFile] } })
-    })
-
-    expect(onFilesChange).toHaveBeenCalledWith([
-      {
-        file: mockFile,
-        name: 'test.pdf',
-        size: mockFile.size,
-        type: 'application/pdf'
-      }
-    ])
-  })
-
-  it('hides the upload area when maxFiles limit is reached', () => {
+    }
     let component!: renderer.ReactTestRenderer
 
     act(() => {
       component = renderer.create(
-        <Controlled maxFiles={1} testID="upload-field" />
-      )
-    })
-
-    const input = component.root.findByType('input')
-    const mockFile = new File(['content'], 'doc.pdf', {
-      type: 'application/pdf'
-    })
-
-    act(() => {
-      input.props.onChange({ target: { files: [mockFile] } })
-    })
-
-    // Upload area (and its hidden input) should be gone once limit is reached
-    expect(() => component.root.findByType('input')).toThrow()
-  })
-
-  it('removes a file when the delete button is clicked', () => {
-    const onFilesChange = jest.fn()
-    let component!: renderer.ReactTestRenderer
-
-    act(() => {
-      component = renderer.create(
-        <Controlled
-          maxFiles={2}
+        <UploadField
+          files={[mockFile]}
           onFilesChange={onFilesChange}
           testID="upload-field"
         />
       )
     })
-
-    const input = component.root.findByType('input')
-    const mockFile = new File(['content'], 'report.pdf', {
-      type: 'application/pdf'
-    })
-
-    act(() => {
-      input.props.onChange({ target: { files: [mockFile] } })
-    })
-
-    expect(onFilesChange).toHaveBeenCalledTimes(1)
 
     const deleteButton = component.root.findAll((node) =>
       node.props['aria-label']?.startsWith('Remove')
@@ -285,23 +254,82 @@ describe('UploadField', () => {
       deleteButton.props.onClick()
     })
 
-    expect(onFilesChange).toHaveBeenLastCalledWith([])
+    expect(onFilesChange).toHaveBeenCalledWith([])
   })
 
-  it('shows InsertPhotoOutlined icon for image files', () => {
+  it('hides the upload area when maxFiles limit is reached', () => {
+    const mockFile = {
+      file: {} as File,
+      name: 'doc.pdf',
+      size: 100,
+      type: 'application/pdf'
+    }
     let component!: renderer.ReactTestRenderer
 
     act(() => {
       component = renderer.create(
-        <Controlled maxFiles={2} testID="upload-field" />
+        <Controlled
+          maxFiles={1}
+          initialFiles={[mockFile]}
+          testID="upload-field"
+        />
       )
     })
 
-    const input = component.root.findByType('input')
-    const imageFile = new File([''], 'photo.png', { type: 'image/png' })
+    // Upload area should be gone once limit is reached
+    const json = JSON.stringify(component.toJSON())
+    expect(json).not.toContain('icon-upload')
+  })
+
+  it('removes a file when the delete button is clicked', () => {
+    const onFilesChange = jest.fn()
+    const mockFile = {
+      file: {} as File,
+      name: 'report.pdf',
+      size: 200,
+      type: 'application/pdf'
+    }
+    let component!: renderer.ReactTestRenderer
 
     act(() => {
-      input.props.onChange({ target: { files: [imageFile] } })
+      component = renderer.create(
+        <Controlled
+          maxFiles={2}
+          initialFiles={[mockFile]}
+          onFilesChange={onFilesChange}
+          testID="upload-field"
+        />
+      )
+    })
+
+    const deleteButton = component.root.findAll((node) =>
+      node.props['aria-label']?.startsWith('Remove')
+    )[0]
+
+    act(() => {
+      deleteButton.props.onClick()
+    })
+
+    expect(onFilesChange).toHaveBeenCalledWith([])
+  })
+
+  it('shows InsertPhotoOutlined icon for image files', () => {
+    const imageFile = {
+      file: {} as File,
+      name: 'photo.png',
+      size: 0,
+      type: 'image/png'
+    }
+    let component!: renderer.ReactTestRenderer
+
+    act(() => {
+      component = renderer.create(
+        <Controlled
+          maxFiles={2}
+          initialFiles={[imageFile]}
+          testID="upload-field"
+        />
+      )
     })
 
     expect(
@@ -315,19 +343,22 @@ describe('UploadField', () => {
   })
 
   it('shows InsertDriveFileOutlined icon for non-image files', () => {
+    const pdfFile = {
+      file: {} as File,
+      name: 'document.pdf',
+      size: 0,
+      type: 'application/pdf'
+    }
     let component!: renderer.ReactTestRenderer
 
     act(() => {
       component = renderer.create(
-        <Controlled maxFiles={2} testID="upload-field" />
+        <Controlled
+          maxFiles={2}
+          initialFiles={[pdfFile]}
+          testID="upload-field"
+        />
       )
-    })
-
-    const input = component.root.findByType('input')
-    const pdfFile = new File([''], 'document.pdf', { type: 'application/pdf' })
-
-    act(() => {
-      input.props.onChange({ target: { files: [pdfFile] } })
     })
 
     expect(

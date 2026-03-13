@@ -72,7 +72,7 @@ export const styles = css.create({
     width: '100%',
     padding: 0,
     '::placeholder': {
-      color: tokens.colorTextDisabled,
+      color: tokens.colorTextSecondary,
     },
   },
   rightSlotContainer: {

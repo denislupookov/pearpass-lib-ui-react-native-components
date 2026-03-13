@@ -107,6 +107,12 @@ const config: StorybookConfig = {
                 rsdRuntimePlugin,
                 ...(Array.isArray(reactWithRSD) ? reactWithRSD : [reactWithRSD]),
             ],
+            resolve: {
+                extensions: [
+                    '.web.tsx', '.web.ts', '.web.jsx', '.web.js',
+                    '.tsx', '.ts', '.jsx', '.js',
+                ],
+            },
             // Exclude from esbuild pre-bundling so our plugin can process it
             optimizeDeps: {
                 exclude: ['react-strict-dom'],

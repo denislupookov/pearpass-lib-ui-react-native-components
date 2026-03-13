@@ -6,18 +6,19 @@ import {
   TrashOutlined,
   UploadFileFilled
 } from '../../icons'
+import { useTheme } from '../../theme'
+import { formatFileSize } from '../../utils'
+import { Button } from '../Button'
 import { Link } from '../Link/Link'
 import { Text } from '../Text/Text'
 import { styles } from './UploadField.styles'
 import { UploadedFile } from './types'
-import { formatFileSize } from '../../utils'
-import { Button } from '../Button'
 
-function getFileIcon(mimeType: string): React.ReactElement {
+function getFileIcon(mimeType: string, color: string): React.ReactElement {
   if (mimeType.startsWith('image/')) {
-    return <InsertPhotoOutlined width={16} height={16} />
+    return <InsertPhotoOutlined width={16} height={16} color={color} />
   }
-  return <InsertDriveFileOutlined width={16} height={16} />
+  return <InsertDriveFileOutlined width={16} height={16} color={color} />
 }
 
 function buildFormatsLabel(
@@ -31,7 +32,6 @@ function buildFormatsLabel(
 export interface UploadFieldProps {
   image?: string
   imageAlt?: string
-  uploadIcon?: React.ReactNode
   fileIcon?: React.ReactNode
   acceptedFormats?: string[]
   maxFiles?: number
@@ -41,129 +41,61 @@ export interface UploadFieldProps {
   formatsPrefix?: string
   files: UploadedFile[]
   onFilesChange: (files: UploadedFile[]) => void
+  onPress?: () => void
   testID?: string
 }
 
 export const UploadField = ({
   image,
   imageAlt = '',
-  uploadIcon,
   fileIcon,
   acceptedFormats,
   maxFiles = 1,
-  allowDragAndDrop = false,
   uploadLinkText,
   uploadSuffixText,
   formatsPrefix,
   files,
   onFilesChange,
+  onPress,
   testID
 }: UploadFieldProps): React.ReactElement => {
-  const [isDragging, setIsDragging] = React.useState(false)
-
-  const inputRef = React.useRef<HTMLInputElement>(null)
-  const dropZoneRef = React.useRef<HTMLDivElement>(null)
-
-  const addFiles = React.useCallback(
-    (incoming: File[]) => {
-      const slots = maxFiles - files.length
-      if (slots <= 0) return
-      const toAdd: UploadedFile[] = incoming.slice(0, slots).map((f) => ({
-        file: f,
-        name: f.name,
-        size: f.size,
-        type: f.type
-      }))
-      onFilesChange([...files, ...toAdd])
-    },
-    [maxFiles, files, onFilesChange]
-  )
+  const { theme } = useTheme()
 
   const removeFile = (index: number) => {
     onFilesChange(files.filter((_, i) => i !== index))
-    if (inputRef.current) {
-      inputRef.current.value = ''
-    }
-  }
-
-  React.useEffect(() => {
-    const el = dropZoneRef.current
-    if (!el || !allowDragAndDrop) {
-      return
-    }
-
-    const onDragOver = (e: DragEvent) => {
-      e.preventDefault()
-      setIsDragging(true)
-    }
-    const onDragLeave = (e: DragEvent) => {
-      if (!el.contains(e.relatedTarget as Node | null)) {
-        setIsDragging(false)
-      }
-    }
-    const onDrop = (e: DragEvent) => {
-      e.preventDefault()
-      setIsDragging(false)
-      if (e.dataTransfer?.files) {
-        addFiles(Array.from(e.dataTransfer.files))
-      }
-    }
-
-    el.addEventListener('dragover', onDragOver)
-    el.addEventListener('dragleave', onDragLeave)
-    el.addEventListener('drop', onDrop)
-    return () => {
-      el.removeEventListener('dragover', onDragOver)
-      el.removeEventListener('dragleave', onDragLeave)
-      el.removeEventListener('drop', onDrop)
-    }
-  }, [addFiles, allowDragAndDrop])
-
-  const triggerInput = (
-    e:
-      | React.MouseEvent
-      | Parameters<React.ComponentProps<typeof html.a>['onClick'] & {}>[0]
-  ) => {
-    ;(e as { preventDefault?: () => void }).preventDefault?.()
-    inputRef.current?.click()
-  }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      addFiles(Array.from(e.target.files))
-    }
   }
 
   const showUploadArea = files.length < maxFiles
   const formatsLabel = buildFormatsLabel(acceptedFormats, formatsPrefix)
-  const acceptAttr = acceptedFormats?.join(',')
 
   return (
     <html.div style={styles.wrapper} data-testid={testID}>
       {showUploadArea && (
-        <html.div
-          ref={dropZoneRef}
-          style={[
-            styles.uploadContainer,
-            isDragging && styles.uploadContainerDragOver
-          ]}
-        >
+        <html.div style={styles.uploadContainer}>
           {image ? (
             <html.div style={styles.imageWrapper}>
               <html.img src={image} style={styles.image} alt={imageAlt} />
-              <html.div style={styles.imageIconBadge}>
-                {uploadIcon ?? <UploadFileFilled width={16} height={16} />}
-              </html.div>
+              <html.span style={styles.imageIconBadge}>
+                <UploadFileFilled
+                  color={theme.colors.colorTextSecondary}
+                  width={16}
+                  height={16}
+                />
+              </html.span>
             </html.div>
           ) : (
-            <html.div style={styles.uploadIconWrapper}>
-              {uploadIcon ?? <UploadFileFilled width={32} height={32} />}
-            </html.div>
+            <html.span style={styles.uploadIconWrapper}>
+              <UploadFileFilled
+                color={theme.colors.colorTextSecondary}
+                width={32}
+                height={32}
+              />
+            </html.span>
           )}
 
           <html.div style={styles.textContainer}>
             <Text as="p" style={styles.mainText}>
-              <Link href="#" onClick={triggerInput}>
+              <Link href="#" onClick={onPress}>
                 {uploadLinkText}
               </Link>{' '}
               {uploadSuffixText}
@@ -174,24 +106,6 @@ export const UploadField = ({
               </Text>
             )}
           </html.div>
-
-          <input
-            ref={inputRef}
-            type="file"
-            accept={acceptAttr}
-            multiple={maxFiles > 1}
-            tabIndex={-1}
-            aria-hidden="true"
-            style={{
-              position: 'absolute',
-              width: 1,
-              height: 1,
-              opacity: 0,
-              overflow: 'hidden',
-              pointerEvents: 'none'
-            }}
-            onChange={handleInputChange}
-          />
         </html.div>
       )}
 
@@ -201,9 +115,10 @@ export const UploadField = ({
           style={styles.fileContainer}
         >
           <html.div style={styles.fileIconContainer}>
-            <html.div style={styles.fileIconInner}>
-              {fileIcon ?? getFileIcon(uploadedFile.type)}
-            </html.div>
+            <html.span style={styles.fileIconInner}>
+              {fileIcon ??
+                getFileIcon(uploadedFile.type, theme.colors.colorTextSecondary)}
+            </html.span>
           </html.div>
 
           <html.div style={styles.fileDetails}>
@@ -216,7 +131,9 @@ export const UploadField = ({
           </html.div>
 
           <Button
-            iconBefore={<TrashOutlined />}
+            iconBefore={
+              <TrashOutlined color={theme.colors.colorTextSecondary} />
+            }
             variant="tertiary"
             onClick={() => removeFile(index)}
             aria-label={`Remove ${uploadedFile.name}`}
