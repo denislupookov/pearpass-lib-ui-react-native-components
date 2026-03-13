@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog renders with body and footer 1`] = `
+<div
+  className="margin-x1ghz6dp padding-x1717udv"
+  data-element-src="Dialog/Dialog.tsx:125"
+  data-style-src="react-strict-dom:web/runtime.js"
+  style={{}}
+>
+  <div
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="Dialog/Dialog.tsx:126"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  />
+  <div
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="Dialog/Dialog.tsx:130"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <div
+      aria-describedby=":r1:"
+      aria-labelledby=":r0:"
+      aria-modal={true}
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="Dialog/Dialog.tsx:87"
+      data-style-src="react-strict-dom:web/runtime.js"
+      ref={[Function]}
+      role="dialog"
+      style={{}}
+      tabIndex={-1}
+    >
+      <div
+        className="margin-x1ghz6dp padding-x1717udv"
+        data-element-src="Dialog/Dialog.tsx:98"
+        data-style-src="react-strict-dom:web/runtime.js"
+        style={{}}
+      >
+        <span
+          className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+          data-element-src="Text/Text.tsx:31"
+          data-style-src="react-strict-dom:web/runtime.js"
+          id=":r0:"
+          ref={null}
+          style={{}}
+        >
+          Title
+        </span>
+        <button
+          aria-label="Close dialog"
+        />
+      </div>
+      <div
+        className="margin-x1ghz6dp padding-x1717udv"
+        data-element-src="Dialog/Dialog.tsx:116"
+        data-style-src="react-strict-dom:web/runtime.js"
+        id=":r1:"
+        style={{}}
+      >
+        Body text
+      </div>
+      <div
+        className="margin-x1ghz6dp padding-x1717udv"
+        data-element-src="Dialog/Dialog.tsx:120"
+        data-style-src="react-strict-dom:web/runtime.js"
+        style={{}}
+      >
+        <button>
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

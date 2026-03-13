@@ -50,6 +50,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
         iconAfter,
         type = 'button',
         'aria-label': ariaLabel,
+        style: userStyle,
         ...rest
     },
     ref
@@ -91,6 +92,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
                 variantStyleMap[variant],
                 disabledStyle,
                 interactionStyle,
+                userStyle,
             ]}
         >
             {hasiconBefore && (

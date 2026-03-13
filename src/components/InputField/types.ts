@@ -18,4 +18,5 @@ export interface InputFieldProps {
   /** When true, removes external borders and radius for grouping (keeps bottom border) */
   isGrouped?: boolean;
   testID?: string;
+  inputRef?: React.RefObject<HTMLInputElement | null>;
 }

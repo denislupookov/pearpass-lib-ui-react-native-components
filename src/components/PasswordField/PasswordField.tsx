@@ -19,6 +19,7 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
     variant = 'default',
     errorMessage,
     passwordIndicator,
+    isGrouped,
     testID,
   } = props;
 
@@ -30,8 +31,9 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
     <Button
       variant="tertiary"
       onClick={toggleVisibility}
+      size="small"
       aria-label={isVisible ? EYE_OPEN_LABEL : EYE_CLOSED_LABEL}
-      iconBefore={isVisible ? <EyeFilled width={20} height={20} /> : <EyeOutlined width={20} height={20} />}
+      iconBefore={isVisible ? <EyeFilled width={16} height={16} /> : <EyeOutlined width={16} height={16} />}
       data-testid="password-field-eye-button"
     />
   );
@@ -58,6 +60,7 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
       errorMessage={errorMessage}
       inputType={isVisible ? 'text' : 'password'}
       rightSlot={rightSlot}
+      isGrouped={isGrouped}
       testID={testID}
     />
   );

@@ -13,7 +13,7 @@ export const styles = css.create({
         borderColor: 'transparent',
         cursor: 'pointer',
         position: 'relative',
-        display: 'inline-flex',
+        display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',

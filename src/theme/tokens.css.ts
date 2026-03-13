@@ -36,6 +36,7 @@ export const tokens = css.defineVars({
     spacing24: '24px',
     spacing32: '32px',
     spacing40: '40px',
+    spacing48: '48px',
     radius8: '8px',
     radius16: '16px',
     radius20: '20px',

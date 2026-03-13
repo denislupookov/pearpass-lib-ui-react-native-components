@@ -3,20 +3,20 @@
 exports[`InputField renders correctly with default props 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="InputField/InputField.tsx:27"
+  data-element-src="InputField/InputField.tsx:28"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="email-input"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="InputField/InputField.tsx:28"
+    data-element-src="InputField/InputField.tsx:29"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:33"
+      data-element-src="InputField/InputField.tsx:34"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
@@ -31,7 +31,7 @@ exports[`InputField renders correctly with default props 1`] = `
       </span>
       <input
         className="margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23 borderStyle-x1y0btm7"
-        data-element-src="InputField/InputField.tsx:35"
+        data-element-src="InputField/InputField.tsx:36"
         data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
         dir="auto"
         onBlur={[Function]}
@@ -50,20 +50,20 @@ exports[`InputField renders correctly with default props 1`] = `
 exports[`InputField renders correctly with error variant, right slot and error message 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="InputField/InputField.tsx:27"
+  data-element-src="InputField/InputField.tsx:28"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="username-input"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="InputField/InputField.tsx:28"
+    data-element-src="InputField/InputField.tsx:29"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:33"
+      data-element-src="InputField/InputField.tsx:34"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
@@ -78,7 +78,7 @@ exports[`InputField renders correctly with error variant, right slot and error m
       </span>
       <input
         className="margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23 borderStyle-x1y0btm7"
-        data-element-src="InputField/InputField.tsx:35"
+        data-element-src="InputField/InputField.tsx:36"
         data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
         dir="auto"
         onBlur={[Function]}
@@ -92,7 +92,7 @@ exports[`InputField renders correctly with error variant, right slot and error m
     </div>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:46"
+      data-element-src="InputField/InputField.tsx:48"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >

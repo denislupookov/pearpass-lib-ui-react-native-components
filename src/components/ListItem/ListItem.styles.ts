@@ -82,6 +82,7 @@ export const styles = css.create({
     minWidth: 0
   },
   dividerLine: {
+    display: 'flex',
     width: 1,
     alignSelf: 'stretch',
     backgroundColor: tokens.colorBorderSecondary
@@ -94,6 +95,7 @@ export const styles = css.create({
     minWidth: 0
   },
   dividerLineHorizontal: {
+    display: 'flex',
     height: 1,
     alignSelf: 'stretch',
     backgroundColor: tokens.colorBorderSecondary
@@ -127,6 +129,7 @@ export const styles = css.create({
     backgroundColor: tokens.colorSurfaceDestructive
   },
   iconAlignTop: {
+    display: 'flex',
     alignSelf: 'flex-start'
   }
 })

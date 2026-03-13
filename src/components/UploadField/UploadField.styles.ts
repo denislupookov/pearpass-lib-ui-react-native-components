@@ -32,7 +32,7 @@ export const styles = css.create({
 
   imageWrapper: {
     position: 'relative',
-    display: 'inline-flex'
+    display: 'flex'
   },
   image: {
     width: tokens.spacing40,

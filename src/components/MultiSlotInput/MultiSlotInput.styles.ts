@@ -43,7 +43,7 @@ export const styles = css.create({
   },
 
   addButton: {
-    display: 'inline-flex',
+    display: 'flex',
     alignItems: 'center',
     gap: tokens.spacing4,
     borderWidth: 0,

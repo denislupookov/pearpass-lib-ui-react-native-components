@@ -12,4 +12,5 @@ export interface PasswordFieldProps {
   errorMessage?: string;
   /** If defined, renders the PasswordIndicator to the left of the eye icon */
   passwordIndicator?: PasswordIndicatorVariant;
+  isGrouped?: boolean;
 }

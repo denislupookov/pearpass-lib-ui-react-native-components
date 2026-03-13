@@ -17,6 +17,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
     rightSlot,
     isGrouped,
     testID,
+    inputRef,
   } = props;
   const [isFocused, setIsFocused] = React.useState(false);
 
@@ -33,6 +34,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
         <html.div style={styles.innerColumn}>
           <Text variant="label" style={styles.label}>{label}</Text>
           <html.input
+            ref={inputRef}
             type={inputType}
             value={value}
             placeholder={placeholderText}
