@@ -1,7 +1,8 @@
 import React from 'react';
 import { html } from 'react-strict-dom';
 import { Link } from '../Link';
-import { styles, variantStyleMap, sizeStyleMap } from './AlertMessage.styles';
+import { Text } from '../Text';
+import { styles, variantStyleMap, sizeStyleMap, variantIconStyleMap } from './AlertMessage.styles';
 import { AlertMessageProps } from './types';
 
 export const AlertMessage = React.forwardRef<HTMLDivElement, AlertMessageProps>(
@@ -17,13 +18,19 @@ export const AlertMessage = React.forwardRef<HTMLDivElement, AlertMessageProps>(
       >
         <html.div style={[styles.messageContainer, size === 'big' && styles.messageContainerBig]}>
           {icon && (
-            <html.div style={styles.iconContainer} aria-hidden={true}>
+            <html.span style={[styles.iconContainer, variantIconStyleMap[variant]]} aria-hidden={true}>
               {icon}
-            </html.div>
+            </html.span>
           )}
           <html.div style={styles.copy}>
-            {size !== 'small' && <html.div style={styles.title}>{title}</html.div>}
-            <html.div style={styles.description}>{description}</html.div>
+            {size !== 'small' && (
+              <Text variant="bodyEmphasized" style={styles.title}>
+                {title}
+              </Text>
+            )}
+            <Text variant="caption" style={styles.description}>
+              {description}
+            </Text>
           </html.div>
         </html.div>
         {actionText && (

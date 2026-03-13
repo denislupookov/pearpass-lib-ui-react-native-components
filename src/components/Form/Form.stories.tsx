@@ -22,10 +22,12 @@ type Story = StoryObj<typeof meta>;
 
 const storyStyles = css.create({
     container: {
-        width: 694,
+        width: '100%',
+        maxWidth: 694,
         padding: tokens.spacing24,
         backgroundColor: tokens.colorSurfacePrimary,
         borderRadius: tokens.radius16,
+        boxSizing: 'border-box',
     },
     footer: {
         display: 'flex',

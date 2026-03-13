@@ -61,6 +61,9 @@ export const styles = css.create({
         resize: 'none',
         outlineStyle: 'none',
         minHeight: 100,
+        '::placeholder': {
+            color: tokens.colorTextDisabled,
+        },
     },
     textareaDisabled: {
         cursor: 'not-allowed',

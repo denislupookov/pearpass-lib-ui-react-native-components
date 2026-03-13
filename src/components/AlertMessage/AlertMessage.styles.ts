@@ -18,7 +18,6 @@ export const styles = css.create({
     alignItems: 'center',
     padding: 0,
     gap: tokens.spacing8,
-    flex: 1,
   },
   messageContainerBig: {
     flexDirection: 'column',
@@ -38,7 +37,8 @@ export const styles = css.create({
     alignItems: 'flex-start',
     padding: 0,
     gap: 6,
-    flex: 1,
+    flexShrink: 1,
+    width: '100%',
   },
   title: {
     fontFamily: tokens.fontPrimary,
@@ -79,7 +79,18 @@ export const styles = css.create({
   variantError: {
     backgroundColor: tokens.colorSurfaceDestructive,
   },
+  iconSuccess: {
+    color: tokens.colorPrimary,
+  },
+  iconError: {
+    color: tokens.colorSurfaceError,
+  },
 });
+
+export const variantIconStyleMap = {
+  success: styles.iconSuccess,
+  error: styles.iconError,
+};
 
 export const variantStyleMap = {
   success: styles.variantSuccess,

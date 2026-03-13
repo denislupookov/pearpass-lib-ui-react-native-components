@@ -58,14 +58,12 @@ export const styles = css.create({
         paddingInline: tokens.spacing12,
     },
     label: {
-        color: 'currentColor',
         lineHeight: 'normal',
     },
     icon: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'currentColor',
         lineHeight: 0,
         flexShrink: 0,
     },
@@ -178,6 +176,21 @@ export const styles = css.create({
     variantDestructiveDisabled: {
         backgroundColor: tokens.colorSurfaceDisabled,
         borderColor: tokens.colorSurfaceDisabled,
+        color: tokens.colorTextDisabled,
+    },
+    textPrimary: {
+        color: tokens.colorOnPrimary,
+    },
+    textSecondary: {
+        color: tokens.colorTextPrimary,
+    },
+    textTertiary: {
+        color: tokens.colorPrimary,
+    },
+    textDestructive: {
+        color: tokens.colorTextPrimary,
+    },
+    textDisabled: {
         color: tokens.colorTextDisabled,
     },
 });

@@ -71,6 +71,9 @@ export const styles = css.create({
     outline: 'none',
     width: '100%',
     padding: 0,
+    '::placeholder': {
+      color: tokens.colorTextDisabled,
+    },
   },
   rightSlotContainer: {
     display: 'flex',

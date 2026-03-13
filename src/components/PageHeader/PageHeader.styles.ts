@@ -6,8 +6,10 @@ export const styles = css.create({
         display: 'flex',
         flexDirection: 'column',
         gap: tokens.spacing6,
+        width: '100%',
     },
     subtitle: {
         color: tokens.colorTextSecondary,
+        flexShrink: 1,
     }
 });
