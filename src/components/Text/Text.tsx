@@ -10,13 +10,14 @@ export interface TextProps extends Omit<HtmlTextProps, 'children'> {
     children: React.ReactNode;
     as?: TextElement;
     variant?: TextVariant;
+    color?: string;
 }
 
 export const Text = React.forwardRef<HTMLElement, TextProps>(function Text(
-    { children, as = 'span', variant = 'label', style: userStyle, ...rest },
+    { children, as = 'span', variant = 'label', color, style: userStyle, ...rest },
     ref
 ) {
-    const style = [styles.textBase, variantStyleMap[variant], userStyle];
+    const style = [styles.textBase, variantStyleMap[variant], color ? { color } : undefined, userStyle];
 
     switch (as) {
         case 'p':
