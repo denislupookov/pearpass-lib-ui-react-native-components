@@ -27,6 +27,7 @@ export interface ThemeColors {
     colorFocusRing: string;
     colorTextTertiary: string;
     colorLinkText: string;
+    backgroundSnackbar: string;
 }
 
 export interface Theme {

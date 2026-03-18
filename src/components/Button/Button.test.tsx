@@ -2,6 +2,10 @@ import React from 'react';
 import renderer, { act } from 'react-test-renderer';
 import { Button } from './Button';
 
+jest.mock('./ButtonSpinner', () => ({
+    ButtonSpinner: () => <span data-testid="mock-button-spinner" />,
+}));
+
 jest.mock('./Button.styles', () => ({
     styles: {
         buttonBase: {},

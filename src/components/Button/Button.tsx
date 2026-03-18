@@ -12,6 +12,8 @@ import {
 } from './Button.config';
 import { ButtonSize, ButtonVariant } from './types';
 import { withIconSize } from '../../utils';
+import { ButtonSpinner } from './ButtonSpinner';
+import { useTheme } from '../../theme';
 
 type HtmlButtonProps = React.ComponentProps<typeof html.button>;
 
@@ -57,6 +59,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
     },
     ref
 ) {
+    const { theme } = useTheme();
     const hasChildren = children !== null && children !== undefined && children !== false;
     const hasiconBefore = Boolean(iconBefore);
     const hasiconAfter = Boolean(iconAfter);
@@ -72,6 +75,19 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
     const interactionStyle = disabled ? styles.disabled : isLoading ? styles.loading : null;
     const loadingContentStyle = isLoading ? styles.loadingContent : null;
     const textStyle = disabled ? variantDisabledTextStyleMap[variant] : variantTextStyleMap[variant];
+
+    const runtimeIconColorMap: Record<ButtonVariant, string> = {
+        primary: theme.colors.colorOnPrimary,
+        secondary: theme.colors.colorTextPrimary,
+        tertiary: theme.colors.colorPrimary,
+        destructive: theme.colors.colorTextPrimary,
+    };
+    const iconColor = disabled ? theme.colors.colorTextDisabled : runtimeIconColorMap[variant];
+
+    const withIconColor = (icon: React.ReactNode) =>
+        React.isValidElement<{ color?: string }>(icon) && !icon.props.color
+            ? React.cloneElement(icon, { color: iconColor })
+            : icon;
 
     const handleClick: HtmlButtonProps['onClick'] = (e) => {
         onClick?.(e);
@@ -98,12 +114,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
                 userStyle,
             ]}
         >
-            {hasiconBefore && (
+            {hasiconBefore && !isLoading && (
                 <html.span
-                    style={[styles.icon, styles.iconSize(iconSize), textStyle, loadingContentStyle]}
+                    style={[styles.icon, styles.iconSize(iconSize), textStyle]}
                     aria-hidden={true}
                 >
-                    {withIconSize(iconBefore, iconSize)}
+                    {withIconColor(withIconSize(iconBefore, iconSize))}
                 </html.span>
             )}
 
@@ -111,20 +127,16 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
                 <html.span style={[styles.label, textStyle, loadingContentStyle]}>{children}</html.span>
             )}
 
-            {hasiconAfter && (
+            {hasiconAfter && !isLoading && (
                 <html.span
-                    style={[styles.icon, styles.iconSize(iconSize), textStyle, loadingContentStyle]}
+                    style={[styles.icon, styles.iconSize(iconSize), textStyle]}
                     aria-hidden={true}
                 >
-                    {withIconSize(iconAfter, iconSize)}
+                    {withIconColor(withIconSize(iconAfter, iconSize))}
                 </html.span>
             )}
 
-            {isLoading && (
-                <html.span style={styles.spinnerContainer} aria-hidden={true}>
-                    <html.span style={styles.spinner} />
-                </html.span>
-            )}
+            {isLoading && <ButtonSpinner color={iconColor} />}
         </html.button>
     );
 });

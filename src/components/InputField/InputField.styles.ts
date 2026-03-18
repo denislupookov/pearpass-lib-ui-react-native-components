@@ -21,7 +21,7 @@ export const styles = css.create({
     backgroundColor: tokens.colorSurfacePrimary,
     width: '100%',
     boxSizing: 'border-box',
-    transitionProperty: 'border-color, background-color',
+    transitionProperty: 'border-color, background-color, box-shadow',
     transitionDuration: '150ms',
     transitionTimingFunction: 'ease',
     ':hover': {
@@ -39,6 +39,11 @@ export const styles = css.create({
   },
   containerError: {
     borderColor: tokens.colorSurfaceError,
+  },
+  containerNativeAnimated: {
+    borderColor: 'transparent',
+    backgroundColor: 'transparent',
+    borderRadius: 0,
   },
   containerGrouped: {
     borderRadius: 0,

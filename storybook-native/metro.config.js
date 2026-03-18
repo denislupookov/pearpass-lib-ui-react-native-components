@@ -16,13 +16,15 @@ config.resolver.nodeModulesPaths = [
   path.resolve(libraryRoot, 'node_modules'),
 ];
 
-// Block the parent's copies of react/react-native/react-native-svg
+// Block the parent's copies of react/react-native and native libraries
 // so that ALL imports resolve to the Expo app's single copy
 const parentNM = path.resolve(libraryRoot, 'node_modules');
 config.resolver.blockList = [
   new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react/.*`),
   new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native/.*`),
   new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native-svg/.*`),
+  new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native-reanimated/.*`),
+  new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native-gesture-handler/.*`),
 ];
 
 module.exports = withStorybook(config);

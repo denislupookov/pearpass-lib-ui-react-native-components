@@ -2,4 +2,6 @@ node_modules
 
 .yalc
 storybook-static
-dist.idea/
+dist
+.idea/
+

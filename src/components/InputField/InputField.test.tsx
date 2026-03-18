@@ -3,12 +3,18 @@ import renderer, { act } from 'react-test-renderer';
 import { InputField } from './InputField';
 import { FieldErrorProps } from '../FieldError/FieldError';
 
+jest.mock('./AnimatedContainer', () => ({
+  AnimatedContainer: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  NATIVE_ANIMATED: false,
+}));
+
 jest.mock('./InputField.styles', () => ({
   styles: {
     wrapper: {},
     container: {},
     containerFocused: {},
     containerError: {},
+    containerNativeAnimated: {},
     innerColumn: {},
     label: {},
     input: {},

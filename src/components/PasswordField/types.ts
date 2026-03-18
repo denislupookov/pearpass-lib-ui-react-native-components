@@ -13,4 +13,6 @@ export interface PasswordFieldProps {
   /** If defined, renders the PasswordIndicator to the left of the eye icon */
   passwordIndicator?: PasswordIndicatorVariant;
   isGrouped?: boolean;
+  /** When provided, shows an animated info box below the input on focus */
+  infoBox?: string;
 }

@@ -19,4 +19,8 @@ export interface InputFieldProps {
   isGrouped?: boolean;
   testID?: string;
   inputRef?: React.RefObject<HTMLInputElement | null>;
+  /** Called when the input gains focus */
+  onFocus?: () => void;
+  /** Called when the input loses focus */
+  onBlur?: () => void;
 }
