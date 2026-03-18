@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react'
 
-import { colors } from 'pearpass-lib-ui-theme-provider/native'
+import { colors } from '@tetherto/pearpass-lib-ui-theme-provider/native'
 import {
   checkPassphraseStrength,
   checkPasswordStrength
-} from 'pearpass-utils-password-check'
+} from '@tetherto/pearpass-utils-password-check'
 import { View, Text, StyleSheet } from 'react-native'
 
 import { EyeClosedIcon } from '../../icons/EyeClosedIcon'

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { colors } from 'pearpass-lib-ui-theme-provider/native'
+import { colors } from '@tetherto/pearpass-lib-ui-theme-provider/native'
 import { Pressable, TextInput } from 'react-native'
 /**
  * @param {{
