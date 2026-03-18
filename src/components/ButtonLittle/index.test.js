@@ -1,7 +1,10 @@
 import React from 'react'
 
 import { render, fireEvent } from '@testing-library/react-native'
-import { ThemeProvider, colors } from 'pearpass-lib-ui-theme-provider/native'
+import {
+  ThemeProvider,
+  colors
+} from '@tetherto/pearpass-lib-ui-theme-provider/native'
 import { Text } from 'react-native'
 
 import { ButtonLittle } from './index'
