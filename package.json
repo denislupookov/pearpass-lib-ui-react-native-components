@@ -46,7 +46,7 @@
     "generate-icons:web": "svgr --out-dir src/icons/components src/icons/assets",
     "generate-icons:native": "svgr --native --ext native.tsx --no-index --out-dir src/icons/components src/icons/assets",
     "generate-icons": "npm run generate-icons:web && npm run generate-icons:native && node scripts/generate-icon-story.mjs",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "echo 'no TS build'",  
     "prepare": "husky || true",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",

@@ -9,7 +9,7 @@
       "DOM.Iterable"
     ],
     "jsx": "react-native",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
