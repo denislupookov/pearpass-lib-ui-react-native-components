@@ -32,6 +32,7 @@ export const tokens = css.defineVars({
     colorTextTertiary: '#F6F6F6',
     colorLinkText: '#BADE5B',
     backgroundSnackbar: '#FFFFFF',
+    spacing2: '2px',
     spacing4: '4px',
     spacing6: '6px',
     spacing8: '8px',
