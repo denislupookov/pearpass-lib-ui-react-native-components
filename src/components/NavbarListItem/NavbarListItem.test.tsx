@@ -5,10 +5,13 @@ import { NavbarListItem } from './NavbarListItem'
 jest.mock('./NavbarListItem.styles', () => ({
   styles: {
     root: {},
+    sizeSmall: {},
+    sizeBig: {},
     selected: {},
     variantDefault: {},
     variantSecondary: {},
     variantDestructive: {},
+    iconGroup: {},
     icon: {},
     iconSize: () => ({}),
     label: {},
@@ -19,6 +22,10 @@ jest.mock('./NavbarListItem.styles', () => ({
 
 jest.mock('./NavbarListItem.config', () => ({
   ICON_SIZE: 20,
+  sizeStyleMap: {
+    small: {},
+    big: {}
+  },
   variantStyleMap: {
     default: {},
     secondary: {},
@@ -29,6 +36,21 @@ jest.mock('./NavbarListItem.config', () => ({
 const DummyIcon = ({ width, height }: { width?: number; height?: number }) => {
   void width
   void height
+  return null
+}
+
+const SizedDummyIcon = ({
+  width,
+  height,
+  size
+}: {
+  width?: number
+  height?: number
+  size?: number
+}) => {
+  void width
+  void height
+  void size
   return null
 }
 
@@ -53,6 +75,63 @@ describe('NavbarListItem', () => {
     })
 
     expect(component!.toJSON()).toMatchSnapshot()
+  })
+
+  it('renders with multiple icons and label', () => {
+    let component: renderer.ReactTestRenderer
+
+    act(() => {
+      component = renderer.create(
+        <NavbarListItem
+          icon={
+            <>
+              <DummyIcon />
+              <DummyIcon />
+            </>
+          }
+          label="Security"
+        />
+      )
+    })
+
+    expect(component!.toJSON()).toMatchSnapshot()
+  })
+
+  it('preserves explicitly passed icon dimensions', () => {
+    let component: renderer.ReactTestRenderer
+
+    act(() => {
+      component = renderer.create(
+        <NavbarListItem
+          icon={<SizedDummyIcon width={8} height={5} />}
+          label="Security"
+        />
+      )
+    })
+
+    const icon = component!.root.findByType(SizedDummyIcon)
+
+    expect(icon.props.width).toBe(8)
+    expect(icon.props.height).toBe(5)
+  })
+
+  it('preserves explicitly passed icon size prop', () => {
+    let component: renderer.ReactTestRenderer
+
+    act(() => {
+      component = renderer.create(
+        <NavbarListItem
+          icon={<SizedDummyIcon size={14} />}
+          label="Security"
+        />
+      )
+    })
+
+    const icon = component!.root.findByType(SizedDummyIcon)
+
+    expect(icon.props.size).toBe(14)
+    expect(icon.props.width).toBeUndefined()
+    expect(icon.props.height).toBeUndefined()
   })
 
   it('renders icon only', () => {
