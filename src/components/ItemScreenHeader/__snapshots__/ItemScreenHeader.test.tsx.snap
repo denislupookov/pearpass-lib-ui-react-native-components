@@ -29,7 +29,7 @@ exports[`ItemScreenHeader renders with actions 1`] = `
       >
         <span
           className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-          data-element-src="Text/Text.tsx:31"
+          data-element-src="Text/Text.tsx:43"
           data-style-src="react-strict-dom:web/runtime.js"
           ref={null}
           style={{}}
@@ -40,7 +40,7 @@ exports[`ItemScreenHeader renders with actions 1`] = `
     </div>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:43"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -91,7 +91,7 @@ exports[`ItemScreenHeader renders with all props 1`] = `
     </div>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:43"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -142,7 +142,7 @@ exports[`ItemScreenHeader renders with icon and title 1`] = `
     </div>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:43"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -182,7 +182,7 @@ exports[`ItemScreenHeader renders with title only 1`] = `
       >
         <span
           className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-          data-element-src="Text/Text.tsx:31"
+          data-element-src="Text/Text.tsx:43"
           data-style-src="react-strict-dom:web/runtime.js"
           ref={null}
           style={{}}
@@ -193,7 +193,7 @@ exports[`ItemScreenHeader renders with title only 1`] = `
     </div>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:43"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}

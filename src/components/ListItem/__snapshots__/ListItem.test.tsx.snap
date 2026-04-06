@@ -2,21 +2,29 @@
 
 exports[`ListItem applies selected state correctly 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      {},
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -29,28 +37,36 @@ exports[`ListItem applies selected state correctly 1`] = `
 
 exports[`ListItem renders icon, title, subtitle, and right element together 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -59,7 +75,7 @@ exports[`ListItem renders icon, title, subtitle, and right element together 1`] 
     </span>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -69,7 +85,7 @@ exports[`ListItem renders icon, title, subtitle, and right element together 1`] 
   </div>
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:82"
+    data-element-src="ListItem/ListItem.tsx:124"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -82,21 +98,29 @@ exports[`ListItem renders icon, title, subtitle, and right element together 1`] 
 
 exports[`ListItem renders object subtitle with divider 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -105,13 +129,13 @@ exports[`ListItem renders object subtitle with divider 1`] = `
     </span>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="ListItem/ListItem.tsx:53"
+      data-element-src="ListItem/ListItem.tsx:86"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -120,13 +144,13 @@ exports[`ListItem renders object subtitle with divider 1`] = `
       </span>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="ListItem/ListItem.tsx:55"
+        data-element-src="ListItem/ListItem.tsx:88"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       />
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -140,21 +164,29 @@ exports[`ListItem renders object subtitle with divider 1`] = `
 
 exports[`ListItem renders title correctly 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -167,21 +199,29 @@ exports[`ListItem renders title correctly 1`] = `
 
 exports[`ListItem renders vertical subtitle layout 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -190,13 +230,13 @@ exports[`ListItem renders vertical subtitle layout 1`] = `
     </span>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="ListItem/ListItem.tsx:44"
+      data-element-src="ListItem/ListItem.tsx:77"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -205,13 +245,13 @@ exports[`ListItem renders vertical subtitle layout 1`] = `
       </span>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="ListItem/ListItem.tsx:46"
+        data-element-src="ListItem/ListItem.tsx:79"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       />
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -225,28 +265,36 @@ exports[`ListItem renders vertical subtitle layout 1`] = `
 
 exports[`ListItem renders with custom iconSize 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -259,28 +307,36 @@ exports[`ListItem renders with custom iconSize 1`] = `
 
 exports[`ListItem renders with destructive variant 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -289,7 +345,7 @@ exports[`ListItem renders with destructive variant 1`] = `
     </span>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -302,28 +358,36 @@ exports[`ListItem renders with destructive variant 1`] = `
 
 exports[`ListItem renders with icon 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -336,28 +400,36 @@ exports[`ListItem renders with icon 1`] = `
 
 exports[`ListItem renders with iconAlign top 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -366,13 +438,13 @@ exports[`ListItem renders with iconAlign top 1`] = `
     </span>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="ListItem/ListItem.tsx:44"
+      data-element-src="ListItem/ListItem.tsx:77"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -381,13 +453,13 @@ exports[`ListItem renders with iconAlign top 1`] = `
       </span>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="ListItem/ListItem.tsx:46"
+        data-element-src="ListItem/ListItem.tsx:79"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       />
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -401,21 +473,29 @@ exports[`ListItem renders with iconAlign top 1`] = `
 
 exports[`ListItem renders with object subtitle (primary + secondary) 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -424,13 +504,13 @@ exports[`ListItem renders with object subtitle (primary + secondary) 1`] = `
     </span>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="ListItem/ListItem.tsx:53"
+      data-element-src="ListItem/ListItem.tsx:86"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -439,13 +519,13 @@ exports[`ListItem renders with object subtitle (primary + secondary) 1`] = `
       </span>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="ListItem/ListItem.tsx:55"
+        data-element-src="ListItem/ListItem.tsx:88"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       />
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:31"
+        data-element-src="Text/Text.tsx:35"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -459,21 +539,29 @@ exports[`ListItem renders with object subtitle (primary + secondary) 1`] = `
 
 exports[`ListItem renders with right element 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -483,7 +571,7 @@ exports[`ListItem renders with right element 1`] = `
   </div>
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:82"
+    data-element-src="ListItem/ListItem.tsx:124"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -496,11 +584,19 @@ exports[`ListItem renders with right element 1`] = `
 
 exports[`ListItem renders with selectionMode multi 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <button
     aria-checked={false}
@@ -510,19 +606,19 @@ exports[`ListItem renders with selectionMode multi 1`] = `
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -531,7 +627,7 @@ exports[`ListItem renders with selectionMode multi 1`] = `
     </span>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -544,11 +640,19 @@ exports[`ListItem renders with selectionMode multi 1`] = `
 
 exports[`ListItem renders with selectionMode multi and isSelected true 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <button
     aria-checked={true}
@@ -558,19 +662,19 @@ exports[`ListItem renders with selectionMode multi and isSelected true 1`] = `
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="ListItem/ListItem.tsx:68"
+    data-element-src="ListItem/ListItem.tsx:110"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -583,21 +687,29 @@ exports[`ListItem renders with selectionMode multi and isSelected true 1`] = `
 
 exports[`ListItem renders with showDivider 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      {},
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -610,21 +722,29 @@ exports[`ListItem renders with showDivider 1`] = `
 
 exports[`ListItem renders with string subtitle 1`] = `
 <div
-  className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="ListItem/ListItem.tsx:62"
-  data-style-src="react-strict-dom:web/runtime.js"
+  onClick={[Function]}
   ref={null}
-  style={{}}
+  style={
+    [
+      {},
+      {},
+      false,
+      false,
+      false,
+      {},
+      undefined,
+    ]
+  }
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="ListItem/ListItem.tsx:76"
+    data-element-src="ListItem/ListItem.tsx:118"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}
@@ -633,7 +753,7 @@ exports[`ListItem renders with string subtitle 1`] = `
     </span>
     <span
       className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-      data-element-src="Text/Text.tsx:31"
+      data-element-src="Text/Text.tsx:35"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={null}
       style={{}}

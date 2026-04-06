@@ -111,6 +111,9 @@ export const styles = css.create({
     paddingBlock: tokens.spacing16,
     paddingInline: tokens.spacing16
   },
+  pressed: {
+    backgroundColor: tokens.colorSurfaceHover
+  },
   selected: {
     backgroundColor: tokens.colorSurfaceHover,
     '@media (hover: hover)': {
@@ -120,9 +123,9 @@ export const styles = css.create({
     }
   },
   showDivider: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: tokens.colorBorderSecondary
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: tokens.colorBorderSecondary
   },
   variantDefault: {},
   variantDestructive: {

@@ -3,7 +3,7 @@
 exports[`Text renders caption variant 1`] = `
 <span
   className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-  data-element-src="Text/Text.tsx:31"
+  data-element-src="Text/Text.tsx:35"
   data-style-src="react-strict-dom:web/runtime.js"
   ref={null}
   style={{}}
@@ -15,7 +15,7 @@ exports[`Text renders caption variant 1`] = `
 exports[`Text renders paragraph when as is p 1`] = `
 <p
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="Text/Text.tsx:24"
+  data-element-src="Text/Text.tsx:28"
   data-style-src="react-strict-dom:web/runtime.js"
   ref={null}
   style={{}}
@@ -27,7 +27,7 @@ exports[`Text renders paragraph when as is p 1`] = `
 exports[`Text renders span with default label variant 1`] = `
 <span
   className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-  data-element-src="Text/Text.tsx:31"
+  data-element-src="Text/Text.tsx:35"
   data-style-src="react-strict-dom:web/runtime.js"
   ref={null}
   style={{}}

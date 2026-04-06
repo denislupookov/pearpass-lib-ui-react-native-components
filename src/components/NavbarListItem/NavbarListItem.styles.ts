@@ -43,6 +43,9 @@ export const styles = css.create({
     paddingInline: tokens.spacing16,
     backgroundColor: tokens.colorSurfacePrimary
   },
+  pressed: {
+    backgroundColor: tokens.colorSurfaceHover
+  },
   divider: {
     borderStyle: 'solid',
     borderBottomWidth: 1,
@@ -102,5 +105,10 @@ export const styles = css.create({
   iconOnly: (size: number) => ({
     width: size,
     justifyContent: 'center' as const
-  })
+  }),
+  additionalItems: {
+    fontSize: tokens.fontSize14,
+    display: 'flex',
+    alignItems: 'center'
+  }
 })

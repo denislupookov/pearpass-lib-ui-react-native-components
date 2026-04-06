@@ -2,6 +2,22 @@ import React from 'react'
 import renderer, { act } from 'react-test-renderer'
 import { ListItem } from './ListItem'
 
+jest.mock('../Pressable', () => ({
+  Pressable: ({ children, 'data-testid': dataTestId, onClick, onPressIn, onPressOut, onLongPress, delayLongPress, ...rest }: {
+    children?: React.ReactNode
+    'data-testid'?: string
+    onClick?: () => void
+    onPressIn?: () => void
+    onPressOut?: () => void
+    onLongPress?: () => void
+    delayLongPress?: number
+    [key: string]: unknown
+  }) => {
+    void onPressIn; void onPressOut; void onLongPress; void delayLongPress
+    return <div data-testid={dataTestId} onClick={onClick} {...(rest as React.HTMLAttributes<HTMLDivElement>)}>{children}</div>
+  }
+}))
+
 jest.mock('./ListItem.styles', () => ({
   styles: {
     root: {},

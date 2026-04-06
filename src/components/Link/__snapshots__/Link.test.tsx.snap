@@ -17,7 +17,7 @@ exports[`Link renders anchor with href 1`] = `
 exports[`Link renders inside Text 1`] = `
 <span
   className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-  data-element-src="Text/Text.tsx:31"
+  data-element-src="Text/Text.tsx:43"
   data-style-src="react-strict-dom:web/runtime.js"
   ref={null}
   style={{}}

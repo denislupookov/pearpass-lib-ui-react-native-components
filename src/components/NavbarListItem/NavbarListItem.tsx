@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { html } from 'react-strict-dom'
 import { styles } from './NavbarListItem.styles'
 import {
@@ -20,6 +20,7 @@ export type NavbarListItemProps = Omit<
   'children' | 'onClick'
 > & {
   icon?: React.ReactNode
+  iconSize?: number
   label?: string
   count?: number
   selected?: boolean
@@ -29,6 +30,7 @@ export type NavbarListItemProps = Omit<
   showDivider?: boolean
   onClick?: HtmlButtonProps['onClick']
   testID?: string
+  additionalItems?: React.ReactNode
 }
 
 const ICON_ONLY_SIZE = ICON_SIZE + 16
@@ -55,6 +57,7 @@ export const NavbarListItem = React.forwardRef<
 >(function NavbarListItem(
   {
     icon,
+    iconSize = ICON_SIZE,
     label,
     count,
     selected = false,
@@ -64,6 +67,7 @@ export const NavbarListItem = React.forwardRef<
     showDivider = false,
     onClick,
     testID,
+    additionalItems,
     ...rest
   },
   ref
@@ -72,6 +76,7 @@ export const NavbarListItem = React.forwardRef<
   const iconNodes = flattenIconNodes(icon)
   const hasIcon = iconNodes.length > 0
   const hasMultipleIcons = iconNodes.length > 1
+  const [isPressed, setIsPressed] = useState(false)
   const isIconOnly = hasIcon && !hasMultipleIcons && !label && count === undefined
 
   return (
@@ -82,11 +87,15 @@ export const NavbarListItem = React.forwardRef<
       data-testid={testID}
       aria-selected={selected}
       onClick={onClick}
+      onTouchStart={() => setIsPressed(true)}
+      onTouchEnd={() => setIsPressed(false)}
+      onTouchCancel={() => setIsPressed(false)}
       style={[
         styles.root,
         sizeStyleMap[resolvedSize],
         showDivider && styles.divider,
         selected && styles.selected,
+        isPressed && styles.pressed,
         variantStyleMap[variant],
         isIconOnly && styles.iconOnly(ICON_ONLY_SIZE)
       ]}
@@ -98,11 +107,11 @@ export const NavbarListItem = React.forwardRef<
               key={index}
               style={[
                 styles.icon,
-                styles.iconSize(ICON_SIZE),
+                styles.iconSize(iconSize),
                 index > 0 && styles.iconGroupItemSpacing
               ]}
             >
-              {withIconSize(iconNode, ICON_SIZE)}
+              {withIconSize(iconNode, iconSize)}
             </html.div>
           ))}
         </html.div>
@@ -110,10 +119,10 @@ export const NavbarListItem = React.forwardRef<
 
       {!hasMultipleIcons && hasIcon && (
         <html.div
-          style={[styles.icon, styles.iconSize(ICON_SIZE)]}
+          style={[styles.icon, styles.iconSize(iconSize)]}
           aria-hidden={true}
         >
-          {withIconSize(iconNodes[0], ICON_SIZE)}
+          {withIconSize(iconNodes[0], iconSize)}
         </html.div>
       )}
 
@@ -123,6 +132,10 @@ export const NavbarListItem = React.forwardRef<
         <html.span style={styles.count} aria-label={`${count} items`}>
           {count}
         </html.span>
+      )}
+
+      {additionalItems && (
+        <html.span style={styles.additionalItems}>{additionalItems}</html.span>
       )}
     </html.button>
   )

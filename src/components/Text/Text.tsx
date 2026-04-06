@@ -11,13 +11,16 @@ export interface TextProps extends Omit<HtmlTextProps, 'children'> {
     as?: TextElement;
     variant?: TextVariant;
     color?: string;
+    numberOfLines?: number;
 }
 
 export const Text = React.forwardRef<HTMLElement, TextProps>(function Text(
-    { children, as = 'span', variant = 'label', color, style: userStyle, ...rest },
+    { children, as = 'span', variant = 'label', color, numberOfLines, style: userStyle, ...rest },
     ref
 ) {
-    const style = [styles.textBase, variantStyleMap[variant], color ? { color } : undefined, userStyle];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const numberOfLinesStyle = numberOfLines ? { overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: numberOfLines, WebkitBoxOrient: 'vertical' } as any : undefined
+    const style = [styles.textBase, variantStyleMap[variant], color ? { color } : undefined, numberOfLinesStyle, userStyle];
 
     switch (as) {
         case 'p':

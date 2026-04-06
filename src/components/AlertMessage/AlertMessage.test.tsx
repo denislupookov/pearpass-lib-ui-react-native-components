@@ -1,6 +1,6 @@
-import React from 'react';
-import renderer, { act } from 'react-test-renderer';
-import { AlertMessage } from './AlertMessage';
+import React from 'react'
+import renderer, { act } from 'react-test-renderer'
+import { AlertMessage } from './AlertMessage'
 
 jest.mock('./AlertMessage.styles', () => ({
   styles: {
@@ -11,28 +11,38 @@ jest.mock('./AlertMessage.styles', () => ({
     copy: {},
     title: {},
     description: {},
-    link: {},
+    link: {}
   },
   variantStyleMap: {
     success: {},
-    error: {},
+    error: {}
   },
   sizeStyleMap: {
     small: {},
     medium: {},
-    big: {},
-  },
-}));
+    big: {}
+  }
+}))
+
+jest.mock('../Text/Text.styles', () => ({
+  styles: {
+    textBase: {},
+    variantLabel: {},
+    variantBody: {},
+    variantBodyEmphasized: {},
+    variantCaption: {}
+  }
+}))
 
 jest.mock('../Link/Link.styles', () => ({
   styles: {
-    linkBase: {},
-  },
-}));
+    linkBase: {}
+  }
+}))
 
 describe('AlertMessage', () => {
   it('renders title, description, action text and icon when all props are provided', () => {
-    let component: renderer.ReactTestRenderer;
+    let component: renderer.ReactTestRenderer
 
     act(() => {
       component = renderer.create(
@@ -42,40 +52,40 @@ describe('AlertMessage', () => {
           title="Test Alert"
           description="This is a test description."
           actionText="Test Action"
-          onAction={() => { }}
+          onAction={() => {}}
           icon={<span data-testid="custom-icon">Icon</span>}
           testID="alert-message"
           actionTestId="alert-action"
         />
-      );
-    });
+      )
+    })
 
     // Container rendered
     expect(
       component!.root.findByProps({ 'data-testid': 'alert-message' })
-    ).toBeTruthy();
+    ).toBeTruthy()
 
     // Title text present
-    const tree = JSON.stringify(component!.toJSON());
-    expect(tree).toContain('Test Alert');
+    const tree = JSON.stringify(component!.toJSON())
+    expect(tree).toContain('Test Alert')
 
     // Description text present
-    expect(tree).toContain('This is a test description.');
+    expect(tree).toContain('This is a test description.')
 
     // Action element present
     expect(
       component!.root.findByProps({ 'data-testid': 'alert-action' })
-    ).toBeTruthy();
+    ).toBeTruthy()
 
     // Custom icon rendered
     expect(
       component!.root.findByProps({ 'data-testid': 'custom-icon' })
-    ).toBeTruthy();
-  });
+    ).toBeTruthy()
+  })
 
   it('triggers onAction callback when action text is clicked', () => {
-    const onAction = jest.fn();
-    let component: renderer.ReactTestRenderer;
+    const onAction = jest.fn()
+    let component: renderer.ReactTestRenderer
 
     act(() => {
       component = renderer.create(
@@ -88,20 +98,20 @@ describe('AlertMessage', () => {
           onAction={onAction}
           actionTestId="alert-action"
         />
-      );
-    });
+      )
+    })
 
     act(() => {
       component!.root
         .findByProps({ 'data-testid': 'alert-action' })
-        .props.onClick?.();
-    });
+        .props.onClick?.()
+    })
 
-    expect(onAction).toHaveBeenCalledTimes(1);
-  });
+    expect(onAction).toHaveBeenCalledTimes(1)
+  })
 
   it('renders without icon, actionText or testID without crashing', () => {
-    let component: renderer.ReactTestRenderer;
+    let component: renderer.ReactTestRenderer
 
     expect(() => {
       act(() => {
@@ -112,17 +122,17 @@ describe('AlertMessage', () => {
             title="Minimal Alert"
             description="No extras here."
           />
-        );
-      });
-    }).not.toThrow();
+        )
+      })
+    }).not.toThrow()
 
-    const tree = JSON.stringify(component!.toJSON());
-    expect(tree).toContain('Minimal Alert');
-    expect(tree).toContain('No extras here.');
-  });
+    const tree = JSON.stringify(component!.toJSON())
+    expect(tree).toContain('Minimal Alert')
+    expect(tree).toContain('No extras here.')
+  })
 
   it('does not render action element when actionText is omitted', () => {
-    let component: renderer.ReactTestRenderer;
+    let component: renderer.ReactTestRenderer
 
     act(() => {
       component = renderer.create(
@@ -133,11 +143,11 @@ describe('AlertMessage', () => {
           description="Read only alert."
           actionTestId="alert-action"
         />
-      );
-    });
+      )
+    })
 
     expect(() =>
       component!.root.findByProps({ 'data-testid': 'alert-action' })
-    ).toThrow();
-  });
-});
+    ).toThrow()
+  })
+})

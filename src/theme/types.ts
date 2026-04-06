@@ -1,6 +1,7 @@
 export interface ThemeColors {
     colorBackground: string;
     colorSurfacePrimary: string;
+    colorSurfaceSearchField: string;
     colorSurfaceSecondary: string;
 
     colorPrimary: string;
@@ -10,10 +11,12 @@ export interface ThemeColors {
 
     colorTextPrimary: string;
     colorOnPrimary: string;
+    colorTextSearchField: string;
     colorTextSecondary: string;
     colorTextDisabled: string;
 
     colorBorderPrimary: string;
+    colorBorderSearchField: string;
     colorBorderSecondary: string;
 
     colorSurfaceHover: string;

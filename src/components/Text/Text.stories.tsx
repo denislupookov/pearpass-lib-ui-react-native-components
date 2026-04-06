@@ -15,7 +15,7 @@ const meta = {
         },
         variant: {
             control: 'select',
-            options: ['label', 'body', 'bodyEmphasized', 'caption'],
+            options: ['label', 'labelEmphasized', 'body', 'bodyEmphasized', 'caption'],
         },
     },
 } satisfies Meta<typeof Text>;
@@ -26,8 +26,9 @@ type Story = StoryObj<typeof meta>;
 
 const variants: Array<{ label: string; value: TextVariant }> = [
     { label: 'Label (14px)', value: 'label' },
+    { label: 'Label Emphasized (14px medium)', value: 'labelEmphasized' },
     { label: 'Body (16px)', value: 'body' },
-    { label: 'Body Emphasized (16px)', value: 'bodyEmphasized' },
+    { label: 'Body Emphasized (16px medium)', value: 'bodyEmphasized' },
     { label: 'Caption (12px)', value: 'caption' },
 ];
 

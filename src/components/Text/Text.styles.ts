@@ -12,6 +12,9 @@ export const styles = css.create({
         letterSpacing: 0,
     },
     variantLabel: {},
+    variantLabelEmphasized: {
+        fontWeight: tokens.weightMedium,
+    },
     variantBody: {
         fontSize: tokens.fontSize16,
     },

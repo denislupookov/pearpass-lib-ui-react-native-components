@@ -16,7 +16,8 @@ jest.mock('./NavbarListItem.styles', () => ({
     iconSize: () => ({}),
     label: {},
     count: {},
-    iconOnly: () => ({})
+    iconOnly: () => ({}),
+    additionalItems: {}
   }
 }))
 
@@ -222,5 +223,25 @@ describe('NavbarListItem', () => {
     })
 
     expect(component!.toJSON()).toMatchSnapshot()
+  })
+
+  it('renders with additionalItems', () => {
+    let component: renderer.ReactTestRenderer
+
+    act(() => {
+      component = renderer.create(
+        <NavbarListItem
+          icon={<DummyIcon />}
+          label="All Items"
+          count={49}
+          additionalItems={<DummyIcon />}
+        />
+      )
+    })
+
+    expect(component!.toJSON()).toMatchSnapshot()
+
+    const button = component!.root.findByType('button')
+    expect(button.children.length).toBe(4)
   })
 })

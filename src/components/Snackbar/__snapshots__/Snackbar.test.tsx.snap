@@ -11,7 +11,7 @@ exports[`Snackbar renders text correctly 1`] = `
 >
   <p
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="Text/Text.tsx:24"
+    data-element-src="Text/Text.tsx:36"
     data-style-src="react-strict-dom:web/runtime.js"
     ref={null}
     style={{}}
@@ -39,7 +39,7 @@ exports[`Snackbar renders with custom iconSize 1`] = `
   />
   <p
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="Text/Text.tsx:24"
+    data-element-src="Text/Text.tsx:36"
     data-style-src="react-strict-dom:web/runtime.js"
     ref={null}
     style={{}}
@@ -67,7 +67,7 @@ exports[`Snackbar renders with icon 1`] = `
   />
   <p
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="Text/Text.tsx:24"
+    data-element-src="Text/Text.tsx:36"
     data-style-src="react-strict-dom:web/runtime.js"
     ref={null}
     style={{}}

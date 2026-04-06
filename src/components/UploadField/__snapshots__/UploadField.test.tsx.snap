@@ -46,7 +46,7 @@ exports[`UploadField renders context image when image prop is provided 1`] = `
     >
       <p
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="Text/Text.tsx:24"
+        data-element-src="Text/Text.tsx:36"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
@@ -99,7 +99,7 @@ exports[`UploadField renders the upload area by default 1`] = `
     >
       <p
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="Text/Text.tsx:24"
+        data-element-src="Text/Text.tsx:36"
         data-style-src="react-strict-dom:web/runtime.js"
         ref={null}
         style={{}}
