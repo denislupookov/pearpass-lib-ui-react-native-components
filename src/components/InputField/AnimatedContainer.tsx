@@ -7,6 +7,7 @@ import React from 'react';
 interface AnimatedContainerProps {
   isFocused: boolean;
   isError: boolean;
+  isGrouped?: boolean;
   children: React.ReactNode;
 }
 

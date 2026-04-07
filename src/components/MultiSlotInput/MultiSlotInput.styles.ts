@@ -37,11 +37,7 @@ export const styles = css.create({
   ctaSlot: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: tokens.spacing8,
-    paddingHorizontal: tokens.spacing12,
-    gap: tokens.spacing4,
-    boxSizing: 'border-box',
+    alignItems: 'stretch',
   },
 
 });
