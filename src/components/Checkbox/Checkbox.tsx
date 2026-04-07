@@ -4,6 +4,7 @@ import { styles } from './Checkbox.styles'
 import { checkboxStateStyleMap } from './Checkbox.config'
 import { Text } from '../Text'
 import { Check } from '../../icons'
+import { useTheme } from '../../theme/ThemeContext'
 
 type HtmlDivProps = React.ComponentProps<typeof html.div>
 
@@ -35,6 +36,8 @@ export const Checkbox = React.forwardRef<HTMLDivElement, CheckboxProps>(
       }
     }
 
+    const { theme } = useTheme()
+
     const hasDetails = Boolean(label) || Boolean(description)
     const checkboxStateStyle =
       checkboxStateStyleMap[checked ? 'checked' : 'unchecked']
@@ -53,7 +56,7 @@ export const Checkbox = React.forwardRef<HTMLDivElement, CheckboxProps>(
         >
           {checked && (
             <html.span style={styles.checkIconWrapper} aria-hidden={true}>
-              <Check width={14} height={14} />
+              <Check width={14} height={14} color={theme.colors.colorOnPrimary} />
             </html.span>
           )}
         </html.button>

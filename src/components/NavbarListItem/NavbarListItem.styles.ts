@@ -7,7 +7,6 @@ export const styles = css.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: tokens.spacing8,
-    marginBlock: 1,
     backgroundColor: 'transparent',
     borderWidth: 0,
     cursor: 'pointer',

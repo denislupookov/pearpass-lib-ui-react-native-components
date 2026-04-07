@@ -24,7 +24,6 @@ export { default as DoneAll } from "./DoneAll";
 export { default as Download } from "./Download";
 export { default as DriveFileMove } from "./DriveFileMove";
 export { default as DriveFileMoveOutlined } from "./DriveFileMoveOutlined";
-export { default as Edit } from "./Edit";
 export { default as EditOutlined } from "./EditOutlined";
 export { default as ErrorFilled } from "./ErrorFilled";
 export { default as ExpandMore } from "./ExpandMore";
