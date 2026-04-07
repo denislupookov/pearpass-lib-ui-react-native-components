@@ -9,6 +9,7 @@ import { useTheme } from '../../theme';
 interface AnimatedContainerProps {
   isFocused: boolean;
   isError: boolean;
+  isGrouped?: boolean;
   children: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ const DURATION = 150;
 export const AnimatedContainer = ({
   isFocused,
   isError,
+  isGrouped = false,
   children,
 }: AnimatedContainerProps): React.ReactElement => {
   const { theme } = useTheme();
@@ -35,15 +37,19 @@ export const AnimatedContainer = ({
       borderColor.value = withTiming(theme.colors.colorBorderPrimary, { duration: DURATION });
       backgroundColor.value = withTiming(theme.colors.colorSurfacePrimary, { duration: DURATION });
     }
-  }, [isFocused, isError, theme, borderColor, backgroundColor]);
+  }, [isFocused, isError]);
 
   const animatedStyle = useAnimatedStyle(() => ({
     borderColor: borderColor.value,
     backgroundColor: backgroundColor.value,
   }));
 
+  const groupedStyle = isGrouped
+    ? { borderWidth: 0, borderBottomWidth: 1, borderRadius: 0, backgroundColor: 'transparent', overflow: 'visible' as const }
+    : undefined;
+
   return (
-    <Animated.View style={[{ borderRadius: 8, borderWidth: 1, overflow: 'hidden' }, animatedStyle]}>
+    <Animated.View style={[{ borderRadius: 8, borderWidth: 1, overflow: 'hidden' }, animatedStyle, groupedStyle]}>
       {children}
     </Animated.View>
   );

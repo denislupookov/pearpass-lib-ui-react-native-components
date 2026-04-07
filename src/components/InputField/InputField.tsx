@@ -59,7 +59,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
 
   return (
     <html.div style={styles.wrapper} data-testid={testID}>
-      <AnimatedContainer isFocused={isFocused} isError={resolvedVariant === 'error'}>
+      <AnimatedContainer isFocused={isFocused} isError={resolvedVariant === 'error'} isGrouped={isGrouped}>
         <html.div style={[
           variantContainerStyleMap[resolvedVariant],
           isGrouped && styles.containerGrouped,

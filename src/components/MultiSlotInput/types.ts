@@ -1,19 +1,16 @@
 import React from 'react';
 
 export interface MultiSlotInputProps {
-  label: string;
-  values: string[];
-  onAdd: () => void;
-  onChangeItem: (index: number, value: string) => void;
-  onRemove: (index: number) => void;
-  placeholder?: string;
-  /** @deprecated use placeholder */
-  placeholderText?: string;
-  addButtonLabel?: string;
+  /** The slot inputs to render. */
+  children: React.ReactNode;
+
+  /**
+   * Node rendered below the slot list — typically an "Add another" Button.
+   */
+  actions?: React.ReactNode;
+
+  /** Global error message displayed beneath the grouped container. */
   errorMessage?: string;
-  maxSlots?: number;
-  disabled?: boolean;
-  leftSlot?: React.ReactNode;
-  rightSlot?: (index: number) => React.ReactNode;
+
   testID?: string;
 }
