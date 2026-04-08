@@ -32,6 +32,9 @@ const variants: Array<{ label: string; value: TextVariant }> = [
     { label: 'Caption (12px)', value: 'caption' },
 ];
 
+const longText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+
 const storyStyles = css.create({
     stack: {
         display: 'flex',
@@ -49,6 +52,9 @@ const storyStyles = css.create({
         fontWeight: tokens.weightMedium,
         color: tokens.colorTextSecondary,
     },
+    truncationContainer: {
+        maxWidth: 360,
+    },
 });
 
 export const Playground: Story = {
@@ -57,6 +63,86 @@ export const Playground: Story = {
         variant: 'label',
         as: 'span',
     },
+};
+
+export const SingleLineTruncation: Story = {
+    args: {
+        children: longText,
+        variant: 'body',
+        numberOfLines: 1,
+    },
+    parameters: {
+        controls: { disable: true },
+    },
+    render: (args) => (
+        <html.div style={storyStyles.stack}>
+            <html.div style={storyStyles.row}>
+                <html.span style={storyStyles.label}>numberOfLines=1</html.span>
+                <html.div style={storyStyles.truncationContainer}>
+                    <Text variant={args.variant} numberOfLines={1}>
+                        {args.children}
+                    </Text>
+                </html.div>
+            </html.div>
+            <html.div style={storyStyles.row}>
+                <html.span style={storyStyles.label}>No truncation (reference)</html.span>
+                <html.div style={storyStyles.truncationContainer}>
+                    <Text variant={args.variant}>{args.children}</Text>
+                </html.div>
+            </html.div>
+        </html.div>
+    ),
+};
+
+export const MultiLineTruncation: Story = {
+    args: {
+        children: longText,
+        variant: 'body',
+    },
+    parameters: {
+        controls: { disable: true },
+    },
+    render: (args) => (
+        <html.div style={storyStyles.stack}>
+            {[1, 2, 3, 4].map((lines) => (
+                <html.div key={lines} style={storyStyles.row}>
+                    <html.span style={storyStyles.label}>
+                        numberOfLines={lines}
+                    </html.span>
+                    <html.div style={storyStyles.truncationContainer}>
+                        <Text variant={args.variant} numberOfLines={lines}>
+                            {args.children}
+                        </Text>
+                    </html.div>
+                </html.div>
+            ))}
+        </html.div>
+    ),
+};
+
+export const TruncationWithVariants: Story = {
+    args: {
+        children: longText,
+    },
+    parameters: {
+        controls: { disable: true },
+    },
+    render: (args) => (
+        <html.div style={storyStyles.stack}>
+            {variants.map((variant) => (
+                <html.div key={variant.value} style={storyStyles.row}>
+                    <html.span style={storyStyles.label}>
+                        {variant.label} — numberOfLines=1
+                    </html.span>
+                    <html.div style={storyStyles.truncationContainer}>
+                        <Text variant={variant.value} numberOfLines={1}>
+                            {args.children}
+                        </Text>
+                    </html.div>
+                </html.div>
+            ))}
+        </html.div>
+    ),
 };
 
 export const VariantShowcase: Story = {
@@ -74,7 +160,7 @@ export const VariantShowcase: Story = {
         <html.div style={storyStyles.stack}>
             {variants.map((variant) => (
                 <html.div key={variant.value} style={storyStyles.row}>
-                    <html.div style={storyStyles.label}>{variant.label}</html.div>
+                    <html.span style={storyStyles.label}>{variant.label}</html.span>
                     <Text as={args.as} variant={variant.value}>
                         {args.children}
                     </Text>

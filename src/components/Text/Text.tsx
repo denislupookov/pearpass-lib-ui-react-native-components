@@ -19,7 +19,7 @@ export const Text = React.forwardRef<HTMLElement, TextProps>(function Text(
     ref
 ) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const numberOfLinesStyle = numberOfLines ? { overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: numberOfLines, WebkitBoxOrient: 'vertical' } as any : undefined
+    const numberOfLinesStyle = numberOfLines ? { lineClamp: numberOfLines, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: numberOfLines, WebkitBoxOrient: 'vertical' } as any : undefined
     const style = [styles.textBase, variantStyleMap[variant], color ? { color } : undefined, numberOfLinesStyle, userStyle];
 
     switch (as) {
