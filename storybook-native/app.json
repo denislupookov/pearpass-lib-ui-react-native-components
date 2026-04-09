@@ -10,6 +10,17 @@
     },
     "android": {
       "package": "com.pearpass.storybook"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "assets/fonts/humble-nostalgia.otf",
+            "assets/fonts/inter.ttf"
+          ]
+        }
+      ]
+    ]
   }
 }

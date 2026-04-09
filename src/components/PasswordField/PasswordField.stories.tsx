@@ -7,7 +7,7 @@ import { AlertMessage } from '../AlertMessage';
 import { Button } from '../Button';
 import { Text } from '../Text';
 import { Title } from '../Title';
-import ReportProblemRound from '../../icons/components/ReportProblemRound';
+
 import { StoryScrollContainer } from '../../storybook/StoryScrollContainer';
 
 const meta: Meta<typeof PasswordField> = {
@@ -329,7 +329,6 @@ export const PasswordForm: Story = {
           size="small"
           title="Important"
           description="Don't forget your Master password. It's the only way to access your vault. We can't help recover it. Back it up securely."
-          icon={<ReportProblemRound width={16} height={16} />}
         />
 
         <Text variant="caption" style={formStyles.textCenter}>

@@ -18,6 +18,7 @@ export const styles = css.create({
     alignItems: 'center',
     padding: 0,
     gap: tokens.spacing8,
+    flex: 1,
   },
   messageContainerBig: {
     flexDirection: 'column',
@@ -30,6 +31,10 @@ export const styles = css.create({
     width: tokens.spacing16,
     height: tokens.spacing16,
     flexShrink: 0,
+  },
+  iconContainerBig: {
+    width: tokens.spacing24,
+    height: tokens.spacing24,
   },
   copy: {
     display: 'flex',
@@ -73,17 +78,11 @@ export const styles = css.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  variantSuccess: {
-    // Relying on default container background #212814
-  },
   variantError: {
     backgroundColor: tokens.colorSurfaceDestructive,
   },
   variantWarning: {
     // Same elevated background as success
-  },
-  iconSuccess: {
-    color: tokens.colorPrimary,
   },
   iconWarning: {
     color: tokens.colorSurfaceWarning,
@@ -94,13 +93,11 @@ export const styles = css.create({
 });
 
 export const variantIconStyleMap = {
-  success: styles.iconSuccess,
   warning: styles.iconWarning,
   error: styles.iconError,
 };
 
 export const variantStyleMap = {
-  success: styles.variantSuccess,
   warning: styles.variantWarning,
   error: styles.variantError,
 };

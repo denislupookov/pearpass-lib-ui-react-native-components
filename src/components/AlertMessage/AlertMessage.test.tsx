@@ -8,13 +8,14 @@ jest.mock('./AlertMessage.styles', () => ({
     messageContainer: {},
     messageContainerBig: {},
     iconContainer: {},
+    iconContainerBig: {},
     copy: {},
     title: {},
     description: {},
     link: {}
   },
   variantStyleMap: {
-    success: {},
+    warning: {},
     error: {}
   },
   sizeStyleMap: {
@@ -47,13 +48,12 @@ describe('AlertMessage', () => {
     act(() => {
       component = renderer.create(
         <AlertMessage
-          variant="success"
+          variant="warning"
           size="medium"
           title="Test Alert"
           description="This is a test description."
           actionText="Test Action"
           onAction={() => {}}
-          icon={<span data-testid="custom-icon">Icon</span>}
           testID="alert-message"
           actionTestId="alert-action"
         />
@@ -75,11 +75,6 @@ describe('AlertMessage', () => {
     // Action element present
     expect(
       component!.root.findByProps({ 'data-testid': 'alert-action' })
-    ).toBeTruthy()
-
-    // Custom icon rendered
-    expect(
-      component!.root.findByProps({ 'data-testid': 'custom-icon' })
     ).toBeTruthy()
   })
 
@@ -117,7 +112,7 @@ describe('AlertMessage', () => {
       act(() => {
         component = renderer.create(
           <AlertMessage
-            variant="success"
+            variant="warning"
             size="big"
             title="Minimal Alert"
             description="No extras here."
