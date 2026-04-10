@@ -33,6 +33,13 @@ export const iconSizeMap: Record<ButtonSize, number> = {
     medium: 18,
 };
 
+export const variantPressedStyleMap = {
+    primary: styles.variantPrimaryPressed,
+    secondary: styles.variantSecondaryPressed,
+    tertiary: styles.variantTertiaryPressed,
+    destructive: styles.variantDestructivePressed,
+} satisfies Record<ButtonVariant, (typeof styles)[keyof typeof styles]>;
+
 export const variantDisabledStyleMap = {
     primary: styles.variantPrimaryDisabled,
     secondary: styles.variantSecondaryDisabled,

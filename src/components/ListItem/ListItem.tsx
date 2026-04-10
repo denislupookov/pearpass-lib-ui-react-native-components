@@ -3,7 +3,7 @@ import { html } from 'react-strict-dom'
 import { styles } from './ListItem.styles'
 import { ICON_SIZE, variantStyleMap } from './ListItem.config'
 import { ListItemSubtitle, ListItemSubtitleLayout, ListItemPlatform, ListItemVariant, ListItemIconAlign, ListItemSelectionMode } from './types'
-import { Text } from '../Text'
+import { Text, TextProps } from '../Text'
 import { Checkbox } from '../Checkbox'
 import { Pressable, PressableProps } from '../Pressable'
 import { withIconSize, defaultPlatform } from '../../utils'
@@ -26,6 +26,8 @@ export type ListItemProps = {
   onClick?: () => void
   onLongPress?: () => void
   delayLongPress?: number
+  titleStyle?: TextProps['style']
+  subtitleStyle?: TextProps['style']
   testID?: string
   style?: PressableProps['style']
 }
@@ -50,6 +52,8 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
       onClick,
       onLongPress,
       delayLongPress,
+      titleStyle,
+      subtitleStyle,
       testID,
       style: userStyle
     },
@@ -69,24 +73,24 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
       if (!subtitle) return null
 
       if (typeof subtitle === 'string') {
-        return <Text style={styles.subtitle}>{subtitle}</Text>
+        return <Text style={[styles.subtitle, subtitleStyle]}>{subtitle}</Text>
       }
 
       if (subtitleLayout === 'vertical') {
         return (
           <html.div style={styles.subtitleDividerContainerVertical}>
-            <Text style={styles.subtitleSegment}>{subtitle.primary}</Text>
+            <Text style={[styles.subtitleSegment, subtitleStyle]}>{subtitle.primary}</Text>
             <html.div style={styles.dividerLineHorizontal} />
-            <Text style={styles.subtitleSegment}>{subtitle.secondary}</Text>
+            <Text style={[styles.subtitleSegment, subtitleStyle]}>{subtitle.secondary}</Text>
           </html.div>
         )
       }
 
       return (
         <html.div style={styles.subtitleDividerContainer}>
-          <Text style={styles.subtitleSegment}>{subtitle.primary}</Text>
+          <Text style={[styles.subtitleSegment, subtitleStyle]}>{subtitle.primary}</Text>
           <html.div style={styles.dividerLine} />
-          <Text style={styles.subtitleSegment}>{subtitle.secondary}</Text>
+          <Text style={[styles.subtitleSegment, subtitleStyle]}>{subtitle.secondary}</Text>
         </html.div>
       )
     }
@@ -116,7 +120,7 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
         )}
 
         <html.div style={styles.content}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={[styles.title, titleStyle]}>{title}</Text>
           {renderSubtitle()}
         </html.div>
 

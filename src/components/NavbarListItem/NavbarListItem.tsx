@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { html } from 'react-strict-dom'
 import { styles } from './NavbarListItem.styles'
 import {
@@ -12,6 +12,7 @@ import type {
   NavbarListItemSize
 } from './types'
 import { withIconSize, defaultPlatform } from '../../utils'
+import { usePressState } from '../../hooks/usePressState'
 
 type HtmlButtonProps = React.ComponentProps<typeof html.button>
 
@@ -76,7 +77,7 @@ export const NavbarListItem = React.forwardRef<
   const iconNodes = flattenIconNodes(icon)
   const hasIcon = iconNodes.length > 0
   const hasMultipleIcons = iconNodes.length > 1
-  const [isPressed, setIsPressed] = useState(false)
+  const { isPressed, pressHandlers } = usePressState()
   const isIconOnly = hasIcon && !hasMultipleIcons && !label && count === undefined
 
   return (
@@ -87,9 +88,7 @@ export const NavbarListItem = React.forwardRef<
       data-testid={testID}
       aria-selected={selected}
       onClick={onClick}
-      onTouchStart={() => setIsPressed(true)}
-      onTouchEnd={() => setIsPressed(false)}
-      onTouchCancel={() => setIsPressed(false)}
+      {...pressHandlers}
       style={[
         styles.root,
         sizeStyleMap[resolvedSize],

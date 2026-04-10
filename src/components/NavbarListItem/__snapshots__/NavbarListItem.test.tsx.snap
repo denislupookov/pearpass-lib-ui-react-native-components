@@ -4,7 +4,7 @@ exports[`NavbarListItem applies selected state correctly 1`] = `
 <button
   aria-selected={true}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="NavbarListItem/NavbarListItem.tsx:54"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -15,7 +15,7 @@ exports[`NavbarListItem applies selected state correctly 1`] = `
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -28,7 +28,7 @@ exports[`NavbarListItem renders destructive variant 1`] = `
 <button
   aria-selected={false}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="NavbarListItem/NavbarListItem.tsx:54"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -39,7 +39,7 @@ exports[`NavbarListItem renders destructive variant 1`] = `
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -52,7 +52,7 @@ exports[`NavbarListItem renders label correctly 1`] = `
 <button
   aria-selected={false}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="NavbarListItem/NavbarListItem.tsx:54"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -63,7 +63,7 @@ exports[`NavbarListItem renders label correctly 1`] = `
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -76,7 +76,7 @@ exports[`NavbarListItem renders secondary variant 1`] = `
 <button
   aria-selected={false}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="NavbarListItem/NavbarListItem.tsx:54"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -87,7 +87,7 @@ exports[`NavbarListItem renders secondary variant 1`] = `
 >
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -100,7 +100,7 @@ exports[`NavbarListItem renders with additionalItems 1`] = `
 <button
   aria-selected={false}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="NavbarListItem/NavbarListItem.tsx:54"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -109,16 +109,16 @@ exports[`NavbarListItem renders with additionalItems 1`] = `
   style={{}}
   type="button"
 >
-  <span
+  <div
     aria-hidden={true}
-    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:75"
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:120"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -127,7 +127,7 @@ exports[`NavbarListItem renders with additionalItems 1`] = `
   <span
     aria-label="49 items"
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:86"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:131"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -135,7 +135,7 @@ exports[`NavbarListItem renders with additionalItems 1`] = `
   </span>
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:92"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:137"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
@@ -146,7 +146,7 @@ exports[`NavbarListItem renders with icon and count 1`] = `
 <button
   aria-selected={false}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="NavbarListItem/NavbarListItem.tsx:54"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -155,16 +155,16 @@ exports[`NavbarListItem renders with icon and count 1`] = `
   style={{}}
   type="button"
 >
-  <span
+  <div
     aria-hidden={true}
-    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:75"
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:120"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -173,7 +173,7 @@ exports[`NavbarListItem renders with icon and count 1`] = `
   <span
     aria-label="49 items"
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="NavbarListItem/NavbarListItem.tsx:86"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:131"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
@@ -186,7 +186,11 @@ exports[`NavbarListItem renders with multiple icons and label 1`] = `
 <button
   aria-selected={false}
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+<<<<<<< HEAD
   data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+=======
+  data-element-src="NavbarListItem/NavbarListItem.tsx:84"
+>>>>>>> 5f01640422ab6cef19c13e824173a5c27a7be569
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   onTouchCancel={[Function]}
   onTouchEnd={[Function]}
@@ -198,26 +202,42 @@ exports[`NavbarListItem renders with multiple icons and label 1`] = `
   <div
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv"
+<<<<<<< HEAD
     data-element-src="NavbarListItem/NavbarListItem.tsx:104"
+=======
+    data-element-src="NavbarListItem/NavbarListItem.tsx:103"
+>>>>>>> 5f01640422ab6cef19c13e824173a5c27a7be569
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
+<<<<<<< HEAD
       data-element-src="NavbarListItem/NavbarListItem.tsx:106"
+=======
+      data-element-src="NavbarListItem/NavbarListItem.tsx:105"
+>>>>>>> 5f01640422ab6cef19c13e824173a5c27a7be569
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     />
     <div
       className="margin-x1ghz6dp padding-x1717udv"
+<<<<<<< HEAD
       data-element-src="NavbarListItem/NavbarListItem.tsx:106"
+=======
+      data-element-src="NavbarListItem/NavbarListItem.tsx:105"
+>>>>>>> 5f01640422ab6cef19c13e824173a5c27a7be569
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     />
   </div>
   <span
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+<<<<<<< HEAD
     data-element-src="NavbarListItem/NavbarListItem.tsx:129"
+=======
+    data-element-src="NavbarListItem/NavbarListItem.tsx:128"
+>>>>>>> 5f01640422ab6cef19c13e824173a5c27a7be569
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >

@@ -98,6 +98,10 @@ export const styles = css.create({
         borderColor: tokens.colorPrimary,
         color: tokens.colorOnPrimary,
     },
+    variantPrimaryPressed: {
+        backgroundColor: tokens.colorAccentActive,
+        borderColor: tokens.colorAccentActive,
+    },
     variantPrimaryDisabled: {
         backgroundColor: tokens.colorSurfaceDisabled,
         borderColor: tokens.colorSurfaceDisabled,
@@ -107,6 +111,10 @@ export const styles = css.create({
         backgroundColor: 'transparent',
         borderColor: tokens.colorBorderPrimary,
         color: tokens.colorTextPrimary,
+    },
+    variantSecondaryPressed: {
+        backgroundColor: tokens.colorSurfaceElevatedOnInteraction,
+        borderColor: tokens.colorBorderSecondary,
     },
     variantSecondaryDisabled: {
         backgroundColor: 'transparent',
@@ -118,6 +126,9 @@ export const styles = css.create({
         borderColor: 'transparent',
         color: tokens.colorPrimary,
     },
+    variantTertiaryPressed: {
+        backgroundColor: tokens.colorSurfaceElevatedOnInteraction,
+    },
     variantTertiaryDisabled: {
         backgroundColor: 'transparent',
         borderColor: 'transparent',
@@ -127,6 +138,10 @@ export const styles = css.create({
         backgroundColor: tokens.colorSurfaceDestructive,
         borderColor: tokens.colorSurfaceDestructive,
         color: tokens.colorTextPrimary,
+    },
+    variantDestructivePressed: {
+        backgroundColor: tokens.colorSurfaceDestructiveElevated,
+        borderColor: tokens.colorSurfaceDestructiveElevated,
     },
     variantDestructiveDisabled: {
         backgroundColor: tokens.colorSurfaceDisabled,

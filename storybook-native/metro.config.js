@@ -25,6 +25,7 @@ config.resolver.blockList = [
   new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native-svg/.*`),
   new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native-reanimated/.*`),
   new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/react-native-gesture-handler/.*`),
+  new RegExp(`${parentNM.replace(/[/\\]/g, '[/\\\\]')}/@gorhom/.*`),
 ];
 
 module.exports = withStorybook(config);

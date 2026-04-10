@@ -108,8 +108,8 @@ export const styles = css.create({
   },
   mobile: {
     borderRadius: 0,
-    paddingBlock: tokens.spacing16,
-    paddingInline: tokens.spacing16
+    paddingBlock: tokens.spacing12,
+    paddingInline: tokens.spacing12
   },
   pressed: {
     backgroundColor: tokens.colorSurfaceHover

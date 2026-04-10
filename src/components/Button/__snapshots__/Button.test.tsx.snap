@@ -74,10 +74,13 @@ exports[`Button supports icon-only buttons with aria-label 1`] = `
 <button
   aria-label="Account"
   className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
-  data-element-src="Button/Button.tsx:97"
+  data-element-src="Button/Button.tsx:111"
   data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
   disabled={false}
   onClick={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
   ref={null}
   style={{}}
   type="button"
@@ -85,7 +88,7 @@ exports[`Button supports icon-only buttons with aria-label 1`] = `
   <span
     aria-hidden={true}
     className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-    data-element-src="Button/Button.tsx:118"
+    data-element-src="Button/Button.tsx:134"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   />

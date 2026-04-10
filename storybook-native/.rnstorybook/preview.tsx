@@ -2,6 +2,8 @@ import React from 'react'
 import type { Preview } from '@storybook/react'
 import { View, StyleSheet } from 'react-native'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ThemeProvider } from '../../src/theme'
 
 const rnStyles = StyleSheet.create({
@@ -16,13 +18,17 @@ const rnStyles = StyleSheet.create({
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <ThemeProvider>
-        <BottomSheetModalProvider>
-          <View style={rnStyles.container}>
-            <Story />
-          </View>
-        </BottomSheetModalProvider>
-      </ThemeProvider>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <SafeAreaProvider>
+          <ThemeProvider>
+            <BottomSheetModalProvider>
+              <View style={rnStyles.container}>
+                <Story />
+              </View>
+            </BottomSheetModalProvider>
+          </ThemeProvider>
+        </SafeAreaProvider>
+      </GestureHandlerRootView>
     )
   ],
   parameters: {
