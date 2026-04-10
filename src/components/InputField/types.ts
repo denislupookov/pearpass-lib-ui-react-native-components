@@ -14,6 +14,7 @@ export interface InputFieldProps {
   leftSlot?: React.ReactNode;
   rightSlot?: React.ReactNode;
   disabled?: boolean;
+  readOnly?: boolean;
   // todo: what it means add explanation
   isGrouped?: boolean;
   testID?: string;

@@ -28,6 +28,7 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
     leftSlot,
     rightSlot: rightSlotProp,
     disabled,
+    readOnly,
     isGrouped,
     testID,
     copyable = false,
@@ -94,6 +95,7 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
       leftSlot={leftSlot}
       rightSlot={builtRightSlot}
       disabled={disabled}
+      readOnly={readOnly}
       isGrouped={isGrouped}
       testID={testID}
       copyable={copyable}

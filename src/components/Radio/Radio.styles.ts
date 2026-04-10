@@ -11,6 +11,10 @@ export const styles = css.create({
     borderColor: tokens.colorBorderPrimary,
     borderRadius: tokens.spacing8
   },
+  rootBuiltIn: {
+    borderWidth: 0,
+    borderRadius: 0
+  },
   optionWrapper: {
     display: 'flex',
     padding: tokens.spacing12,
@@ -19,6 +23,9 @@ export const styles = css.create({
     alignSelf: 'stretch',
     cursor: 'pointer',
     userSelect: 'none'
+  },
+  optionWrapperBuiltIn: {
+    padding: 0
   },
   optionWrapperDivider: {
     borderBottomWidth: 1,

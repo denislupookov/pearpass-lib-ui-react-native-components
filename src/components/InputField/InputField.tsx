@@ -25,6 +25,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
     leftSlot,
     rightSlot,
     disabled = false,
+    readOnly = false,
     isGrouped,
     testID,
     inputRef,
@@ -81,6 +82,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
               value={value}
               placeholder={resolvedPlaceholder}
               disabled={disabled}
+              readOnly={readOnly}
               onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
                 onChange?.(e);
                 onChangeText?.(e.target.value);
@@ -96,12 +98,11 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
               {copyable && (
                 <Button
                   variant="tertiary"
+                  size="small"
                   onClick={handleCopy}
                   aria-label="Copy to clipboard"
-                  style={styles.copyButton}
-                >
-                  <ContentCopy width={16} height={16} color={theme.colors.colorTextPrimary} />
-                </Button>
+                  iconBefore={<ContentCopy color={theme.colors.colorTextPrimary} />}
+                />
               )}
             </html.div>
           )}

@@ -12,6 +12,7 @@ export interface PasswordFieldProps {
   leftSlot?: React.ReactNode;
   rightSlot?: React.ReactNode;
   disabled?: boolean;
+  readOnly?: boolean;
   isGrouped?: boolean;
   testID?: string;
   copyable?: boolean;

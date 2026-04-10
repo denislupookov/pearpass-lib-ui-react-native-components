@@ -82,6 +82,17 @@ export const styles = css.create({
       color: tokens.colorTextSecondary,
     },
   },
+  inputValue: {
+    fontFamily: tokens.fontPrimary,
+    fontWeight: tokens.weightMedium,
+    fontSize: tokens.fontSize14,
+    lineHeight: tokens.spacing20,
+    color: tokens.colorTextPrimary,
+    width: '100%',
+  },
+  inputPlaceholder: {
+    color: tokens.colorTextSecondary,
+  },
   leftSlotContainer: {
     display: 'flex',
     flexDirection: 'row',
@@ -97,6 +108,18 @@ export const styles = css.create({
     justifyContent: 'center',
     flexShrink: 0,
     gap: tokens.spacing4,
+  },
+  selectButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: tokens.spacing4,
+    width: '100%',
+    padding: tokens.spacing12,
+    backgroundColor: 'transparent',
+    borderWidth: 0,
+    cursor: 'pointer',
+    textAlign: 'left',
   },
   containerDisabled: {
     opacity: 0.5,

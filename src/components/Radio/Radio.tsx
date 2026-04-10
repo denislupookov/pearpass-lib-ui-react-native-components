@@ -9,6 +9,7 @@ export type RadioProps = {
   value?: string
   onChange?: (value: string) => void
   disabled?: boolean
+  builtIn?: boolean
   testID?: string
 }
 
@@ -17,10 +18,15 @@ export const Radio = ({
   value,
   onChange,
   disabled = false,
+  builtIn = false,
   testID
 }: RadioProps) => {
   return (
-    <html.div role="radiogroup" data-testid={testID} style={styles.root}>
+    <html.div
+      role="radiogroup"
+      data-testid={testID}
+      style={[styles.root, builtIn && styles.rootBuiltIn]}
+    >
       {options.map((option: RadioOption, index: number) => {
         const isChecked = option.value === value
         const isDisabled = disabled || option.disabled === true
@@ -35,6 +41,7 @@ export const Radio = ({
             tabIndex={isDisabled ? -1 : 0}
             style={[
               styles.optionWrapper,
+              builtIn && styles.optionWrapperBuiltIn,
               isNotLast && styles.optionWrapperDivider,
               isDisabled && styles.optionWrapperDisabled
             ]}

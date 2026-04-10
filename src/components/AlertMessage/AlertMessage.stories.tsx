@@ -158,7 +158,7 @@ export const VariantMatrix: Story = {
           </html.div>
           <html.div style={storyStyles.cell}>
             <html.div style={storyStyles.caption}>Error with Action</html.div>
-            <AlertMessage variant="error" size="medium" title="Error" description="Medium error with action." icon={<ErrorFilled width={16} height={16} />} actionText="Retry" onAction={() => {}} />
+            <AlertMessage variant="error" size="medium" title="Error" description="Medium error with action." icon={<ErrorFilled width={16} height={16} />} actionText="Retry" onAction={() => { }} />
           </html.div>
         </html.div>
       </html.div>
