@@ -2,10 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { html, css } from 'react-strict-dom';
 import { AlertMessage } from './AlertMessage';
-import ReportProblemRound from '../../icons/components/ReportProblemRound';
-import VerifiedUser from '../../icons/components/VerifiedUser';
-import ErrorFilled from '../../icons/components/ErrorFilled';
+
 import { tokens } from '../../theme/tokens.css';
+import { StoryScrollContainer } from '../../storybook/StoryScrollContainer';
 
 const meta: Meta<typeof AlertMessage> = {
   title: 'Components/AlertMessage',
@@ -13,7 +12,7 @@ const meta: Meta<typeof AlertMessage> = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['success', 'warning', 'error'],
+      options: ['warning', 'error'],
     },
     size: {
       control: { type: 'select' },
@@ -38,6 +37,7 @@ const storyStyles = css.create({
     display: 'flex',
     flexDirection: 'column',
     gap: tokens.spacing16,
+    flexShrink: 0,
   },
   sectionTitle: {
     fontFamily: tokens.fontPrimary,
@@ -51,16 +51,13 @@ const storyStyles = css.create({
   },
   row: {
     display: 'flex',
-    flexDirection: 'row',
-    gap: tokens.spacing20,
-    flexWrap: 'wrap',
+    flexDirection: 'column',
+    gap: tokens.spacing16,
   },
   cell: {
     display: 'flex',
     flexDirection: 'column',
     gap: tokens.spacing8,
-    flex: 1,
-    minWidth: '300px',
   },
   caption: {
     fontFamily: tokens.fontPrimary,
@@ -75,17 +72,6 @@ export const Warning: Story = {
     size: 'small',
     title: 'Warning',
     description: "Don't forget your Master password. It's the only way to access your vault. We can't help recover it. Back it up securely.",
-    icon: <ReportProblemRound width={16} height={16} />,
-  },
-};
-
-export const SmallSuccess: Story = {
-  args: {
-    variant: 'success',
-    size: 'small',
-    title: 'Success',
-    description: 'Your changes have been saved successfully.',
-    icon: <VerifiedUser width={16} height={16} />,
   },
 };
 
@@ -95,17 +81,6 @@ export const MediumError: Story = {
     size: 'medium',
     title: 'Operation Failed',
     description: 'There was an error saving your changes. Please try again.',
-    icon: <ErrorFilled width={16} height={16} />,
-  },
-};
-
-export const BigSuccess: Story = {
-  args: {
-    variant: 'success',
-    size: 'big',
-    title: 'Operation Successful',
-    description: 'Your changes have been saved successfully.',
-    icon: <VerifiedUser width={16} height={16} />,
   },
 };
 
@@ -115,7 +90,6 @@ export const WithAction: Story = {
     size: 'medium',
     title: 'Operation Failed',
     description: 'There was an error saving your changes.',
-    icon: <ErrorFilled width={16} height={16} />,
     actionText: 'Retry',
     onAction: () => console.log('Retry clicked!'),
   },
@@ -126,42 +100,49 @@ export const VariantMatrix: Story = {
     controls: { disable: true },
   },
   render: () => (
-    <html.div style={storyStyles.container}>
-      <html.div style={storyStyles.section}>
-        <html.div style={storyStyles.sectionTitle}>Small</html.div>
-        <html.div style={storyStyles.row}>
-          <html.div style={storyStyles.cell}>
-            <html.div style={storyStyles.caption}>Success</html.div>
-            <AlertMessage variant="success" size="small" title="" description="Small success message." icon={<VerifiedUser width={16} height={16} />} />
-          </html.div>
-          <html.div style={storyStyles.cell}>
-            <html.div style={storyStyles.caption}>Warning</html.div>
-            <AlertMessage variant="warning" size="small" title="" description="Don't forget your Master password. It's the only way to access your vault." icon={<ReportProblemRound width={16} height={16} />} />
-          </html.div>
-          <html.div style={storyStyles.cell}>
-            <html.div style={storyStyles.caption}>Error</html.div>
-            <AlertMessage variant="error" size="small" title="" description="Small error message." icon={<ErrorFilled width={16} height={16} />} />
+    <StoryScrollContainer>
+      <html.div style={storyStyles.container}>
+        <html.div style={storyStyles.section}>
+          <html.div style={storyStyles.sectionTitle}>Small</html.div>
+          <html.div style={storyStyles.row}>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Warning</html.div>
+              <AlertMessage variant="warning" size="small" title="" description="Don't forget your Master password. It's the only way to access your vault." />
+            </html.div>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Error</html.div>
+              <AlertMessage variant="error" size="small" title="" description="Small error message." />
+            </html.div>
           </html.div>
         </html.div>
-      </html.div>
 
-      <html.div style={storyStyles.section}>
-        <html.div style={storyStyles.sectionTitle}>Medium</html.div>
-        <html.div style={storyStyles.row}>
-          <html.div style={storyStyles.cell}>
-            <html.div style={storyStyles.caption}>Success</html.div>
-            <AlertMessage variant="success" size="medium" title="Success" description="Medium success message." icon={<VerifiedUser width={16} height={16} />} />
+        <html.div style={storyStyles.section}>
+          <html.div style={storyStyles.sectionTitle}>Medium</html.div>
+          <html.div style={storyStyles.row}>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Warning</html.div>
+              <AlertMessage variant="warning" size="medium" title="Warning" description="Medium warning message." />
+            </html.div>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Error with Action</html.div>
+              <AlertMessage variant="error" size="medium" title="Error" description="Medium error with action." actionText="Retry" onAction={() => { }} />
+            </html.div>
           </html.div>
-          <html.div style={storyStyles.cell}>
-            <html.div style={storyStyles.caption}>Warning</html.div>
-            <AlertMessage variant="warning" size="medium" title="Warning" description="Medium warning message." icon={<ReportProblemRound width={16} height={16} />} />
-          </html.div>
-          <html.div style={storyStyles.cell}>
-            <html.div style={storyStyles.caption}>Error with Action</html.div>
-            <AlertMessage variant="error" size="medium" title="Error" description="Medium error with action." icon={<ErrorFilled width={16} height={16} />} actionText="Retry" onAction={() => { }} />
+        </html.div>
+        <html.div style={storyStyles.section}>
+          <html.div style={storyStyles.sectionTitle}>Big</html.div>
+          <html.div style={storyStyles.row}>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Warning</html.div>
+              <AlertMessage variant="warning" size="big" title="Warning" description="Big warning message." />
+            </html.div>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Error with Action</html.div>
+              <AlertMessage variant="error" size="big" title="Error" description="Big error with action." actionText="Retry" onAction={() => { }} />
+            </html.div>
           </html.div>
         </html.div>
       </html.div>
-    </html.div>
+    </StoryScrollContainer>
   ),
 };

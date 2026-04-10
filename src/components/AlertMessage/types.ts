@@ -1,10 +1,10 @@
-export type AlertVariant = 'success' | 'warning' | 'error';
+export type AlertVariant = 'warning' | 'error';
 export type AlertSize = 'small' | 'medium' | 'big';
 
 export interface AlertMessageProps {
     variant: AlertVariant;
     size: AlertSize;
-    icon?: React.ReactNode;
+
     title: string;
     actionText?: string;
     onAction?: () => void;
