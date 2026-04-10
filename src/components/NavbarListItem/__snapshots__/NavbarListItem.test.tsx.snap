@@ -181,3 +181,47 @@ exports[`NavbarListItem renders with icon and count 1`] = `
   </span>
 </button>
 `;
+
+exports[`NavbarListItem renders with multiple icons and label 1`] = `
+<button
+  aria-selected={false}
+  className="borderStyle-x1y0btm7 margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23"
+  data-element-src="NavbarListItem/NavbarListItem.tsx:83"
+  data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  ref={null}
+  style={{}}
+  type="button"
+>
+  <div
+    aria-hidden={true}
+    className="margin-x1ghz6dp padding-x1717udv"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:104"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="NavbarListItem/NavbarListItem.tsx:106"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+    <div
+      className="margin-x1ghz6dp padding-x1717udv"
+      data-element-src="NavbarListItem/NavbarListItem.tsx:106"
+      data-style-src="react-strict-dom:web/runtime.js"
+      style={{}}
+    />
+  </div>
+  <span
+    className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+    data-element-src="NavbarListItem/NavbarListItem.tsx:129"
+    data-style-src="react-strict-dom:web/runtime.js"
+    style={{}}
+  >
+    Security
+  </span>
+</button>
+`;

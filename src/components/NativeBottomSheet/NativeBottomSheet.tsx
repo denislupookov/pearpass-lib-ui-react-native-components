@@ -1,8 +1,10 @@
 import React from 'react'
 
 export type NativeBottomSheetProps = {
-  trigger: React.ReactNode
+  trigger?: React.ReactNode
   children: React.ReactNode
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
   testID?: string
 }
 
