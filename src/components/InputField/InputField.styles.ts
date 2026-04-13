@@ -8,6 +8,12 @@ export const styles = css.create({
     alignItems: 'flex-start',
     gap: tokens.spacing8,
   },
+  trigger: {
+    width: '100%',
+  },
+  wrapperTriggerContent: {
+    pointerEvents: 'none',
+  },
   container: {
     display: 'flex',
     flexDirection: 'row',

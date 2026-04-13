@@ -2,7 +2,6 @@ import React, { useCallback, createContext, useEffect, useMemo, useRef, useConte
 import { View, Pressable } from 'react-native'
 import { BottomSheetBackdrop, BottomSheetModal, BottomSheetView } from '@gorhom/bottom-sheet'
 import type { BottomSheetBackdropProps } from '@gorhom/bottom-sheet'
-import type { BottomSheetModalMethods } from '@gorhom/bottom-sheet/lib/typescript/types'
 import { useTheme } from '../../theme/ThemeContext'
 import { rawTokens } from '../../theme/tokens.raw'
 
@@ -96,7 +95,8 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
       return
     }
 
-    ; (bottomSheetRef.current as unknown as BottomSheetModalMethods | null)?.dismiss()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ; (bottomSheetRef.current as any | null)?.dismiss()
   }, [isControlled, open])
 
   const triggerElement = openOnLongPress

@@ -23,6 +23,7 @@ export interface InputFieldProps {
   onCopy?: (value: string) => void;
   onFocus?: () => void;
   onBlur?: () => void;
+  onClick?: () => void;
   /** @deprecated Use placeholder instead */
   placeholderText?: string;
   /** @deprecated Use onChange instead */
