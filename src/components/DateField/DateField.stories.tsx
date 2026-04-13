@@ -4,6 +4,7 @@ import { html, css } from 'react-strict-dom'
 
 import { DateField } from './DateField'
 import { tokens } from '../../theme/tokens.css'
+import { PICKER_MODE } from './constants'
 
 const meta: Meta<typeof DateField> = {
   title: 'Components/DateField',
@@ -17,7 +18,7 @@ const meta: Meta<typeof DateField> = {
     readOnly: { control: 'boolean' },
     pickerMode: {
       control: { type: 'select' },
-      options: ['date', 'time', 'datetime', 'month-year']
+      options: Object.values(PICKER_MODE)
     },
     onChangeText: { control: false },
     onChangeDate: { control: false },

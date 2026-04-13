@@ -12,35 +12,30 @@ import { rawTokens } from '../../theme/tokens.raw';
 import { InputField } from '../InputField';
 import { DateFieldProps, DateFieldPickerMode } from './types';
 import { formatDateFieldValue, parseDateFieldValue } from './utils';
+import { PICKER_MODE } from './constants';
 
 const getPickerDate = (
   value: string,
   valueDate?: Date | null,
-  pickerMode: DateFieldPickerMode = 'date'
+  pickerMode: DateFieldPickerMode = PICKER_MODE.date
 ): Date => valueDate ?? parseDateFieldValue(value, pickerMode) ?? new Date();
 
-const getIOSPickerMode = (
-  pickerMode: DateFieldPickerMode
-): 'date' | 'time' | 'datetime' => {
-  if (pickerMode === 'time') {
-    return 'time';
-  }
+type IOSPickerMode = Exclude<DateFieldPickerMode, typeof PICKER_MODE.monthYear>;
+type AndroidPickerMode = typeof PICKER_MODE.date | typeof PICKER_MODE.time;
 
-  if (pickerMode === 'datetime') {
-    return 'datetime';
-  }
-
-  return 'date';
+const getIOSPickerMode = (pickerMode: DateFieldPickerMode): IOSPickerMode => {
+  if (pickerMode === PICKER_MODE.time) return PICKER_MODE.time;
+  if (pickerMode === PICKER_MODE.datetime) return PICKER_MODE.datetime;
+  return PICKER_MODE.date;
 };
 
-const getAndroidPickerMode = (
-  pickerMode: DateFieldPickerMode
-): 'date' | 'time' => (pickerMode === 'time' ? 'time' : 'date');
+const getAndroidPickerMode = (pickerMode: DateFieldPickerMode): AndroidPickerMode =>
+  pickerMode === PICKER_MODE.time ? PICKER_MODE.time : PICKER_MODE.date;
 
 const getIOSDisplay = (): 'spinner' => 'spinner';
 
 export const DateField = ({
-  pickerMode = 'date',
+  pickerMode = PICKER_MODE.date,
   valueDate,
   onChangeDate,
   minimumDate,
