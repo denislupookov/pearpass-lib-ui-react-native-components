@@ -23,6 +23,9 @@ export const styles = css.create({
   description: {
     color: tokens.colorTextSecondary
   },
+  detailsDisabled: {
+    opacity: 0.25
+  },
   checkboxBase: {
     display: 'flex',
     width: tokens.spacing16,

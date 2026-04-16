@@ -12,7 +12,7 @@ const meta: Meta<typeof AlertMessage> = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['warning', 'error'],
+      options: ['info', 'warning', 'error'],
     },
     size: {
       control: { type: 'select' },
@@ -20,6 +20,8 @@ const meta: Meta<typeof AlertMessage> = {
     },
     title: { control: 'text' },
     description: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    color: { control: 'color' },
   },
 };
 
@@ -106,6 +108,10 @@ export const VariantMatrix: Story = {
           <html.div style={storyStyles.sectionTitle}>Small</html.div>
           <html.div style={storyStyles.row}>
             <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Info</html.div>
+              <AlertMessage variant="info" size="small" title="" description="Press and hold to open vault manager." />
+            </html.div>
+            <html.div style={storyStyles.cell}>
               <html.div style={storyStyles.caption}>Warning</html.div>
               <AlertMessage variant="warning" size="small" title="" description="Don't forget your Master password. It's the only way to access your vault." />
             </html.div>
@@ -120,6 +126,10 @@ export const VariantMatrix: Story = {
           <html.div style={storyStyles.sectionTitle}>Medium</html.div>
           <html.div style={storyStyles.row}>
             <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Info</html.div>
+              <AlertMessage variant="info" size="medium" title="Info" description="Medium info message." />
+            </html.div>
+            <html.div style={storyStyles.cell}>
               <html.div style={storyStyles.caption}>Warning</html.div>
               <AlertMessage variant="warning" size="medium" title="Warning" description="Medium warning message." />
             </html.div>
@@ -132,6 +142,10 @@ export const VariantMatrix: Story = {
         <html.div style={storyStyles.section}>
           <html.div style={storyStyles.sectionTitle}>Big</html.div>
           <html.div style={storyStyles.row}>
+            <html.div style={storyStyles.cell}>
+              <html.div style={storyStyles.caption}>Info</html.div>
+              <AlertMessage variant="info" size="big" title="Info" description="Big info message." />
+            </html.div>
             <html.div style={storyStyles.cell}>
               <html.div style={storyStyles.caption}>Warning</html.div>
               <AlertMessage variant="warning" size="big" title="Warning" description="Big warning message." />

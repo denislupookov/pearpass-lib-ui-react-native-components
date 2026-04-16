@@ -78,11 +78,17 @@ export const styles = css.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  variantInfo: {
+    // Default background (colorSurfaceHover)
+  },
   variantError: {
     backgroundColor: tokens.colorSurfaceDestructive,
   },
   variantWarning: {
     // Same elevated background as success
+  },
+  iconInfo: {
+    color: tokens.colorTextPrimary,
   },
   iconWarning: {
     color: tokens.colorSurfaceWarning,
@@ -93,11 +99,13 @@ export const styles = css.create({
 });
 
 export const variantIconStyleMap = {
+  info: styles.iconInfo,
   warning: styles.iconWarning,
   error: styles.iconError,
 };
 
 export const variantStyleMap = {
+  info: styles.variantInfo,
   warning: styles.variantWarning,
   error: styles.variantError,
 };

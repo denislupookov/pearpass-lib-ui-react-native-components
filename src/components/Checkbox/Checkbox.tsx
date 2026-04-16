@@ -63,7 +63,7 @@ export const Checkbox = React.forwardRef<HTMLDivElement, CheckboxProps>(
 
         {hasDetails && (
           <html.div
-            style={styles.details}
+            style={[styles.details, disabled && styles.detailsDisabled]}
             onClick={disabled ? undefined : handleToggle}
           >
             {label && <Text>{label}</Text>}
