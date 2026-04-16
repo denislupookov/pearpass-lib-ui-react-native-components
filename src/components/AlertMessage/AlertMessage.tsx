@@ -65,7 +65,7 @@ export const AlertMessage = React.forwardRef<HTMLDivElement, AlertMessageProps>(
         {actionText && (
           <Link
             onClick={onAction}
-            style={styles.link}
+            style={[styles.link, color != null && overrideStyles.text(color)]}
             data-testid={actionTestId}
           >
             {actionText}
