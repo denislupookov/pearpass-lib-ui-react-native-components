@@ -108,6 +108,40 @@ ${allLightEntries.map(([k, v]) => `    ${k}: '${toCssValue(v)}',`).join('\n')}
 });
 `;
 
+// ─── 7. tailwind-theme.css — CSS custom properties for Tailwind v4 (web) ─────
+const kebab = (key) => key.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);
+const cssVar = ([k, v]) => `  --${kebab(k)}: ${toCssValue(v)};`;
+const themeRef = ([k]) => `  --${kebab(k)}: var(--${kebab(k)});`;
+
+const staticEntriesForCss = [
+    ...Object.entries(spacing),
+    ...Object.entries(radius),
+    ...Object.entries(typography),
+];
+
+// Light values come in partially filled — only emit vars that actually have a value
+const lightColorEntries = Object.entries(colors.light).filter(([, v]) => v !== '' && v != null);
+
+const tailwindThemeCss = `/* AUTO-GENERATED — do not edit directly. */
+/* Source: src/theme/tokens.json  |  Generator: scripts/generate-tokens.mjs */
+/* Run \`npm run generate-tokens\` to update. */
+
+:root,
+[data-theme='dark'] {
+${Object.entries(colors.dark).map(cssVar).join('\n')}
+${staticEntriesForCss.map(cssVar).join('\n')}
+}
+${lightColorEntries.length > 0 ? `
+[data-theme='light'] {
+${lightColorEntries.map(cssVar).join('\n')}
+}
+` : ''}
+/* Expose vars to Tailwind v4 so utilities (bg-*, text-*, border-*, ...) respond to data-theme switches */
+@theme inline {
+${Object.entries(colors.dark).map(themeRef).join('\n')}
+}
+`;
+
 // ─── WRITE ────────────────────────────────────────────────────────────────────
 
 const files = [
@@ -117,6 +151,7 @@ const files = [
     ['src/theme/themes/light.ts', lightTs],
     ['src/theme/themes/dark.css.ts', darkCssTs],
     ['src/theme/themes/light.css.ts', lightCssTs],
+    ['src/theme/tailwind-theme.css', tailwindThemeCss],
 ];
 
 for (const [relPath, content] of files) {

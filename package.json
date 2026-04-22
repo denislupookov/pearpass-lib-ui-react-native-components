@@ -37,6 +37,7 @@
       "import": "./dist/icons/components/*.js",
       "require": "./dist/icons/components/*.js"
     },
+    "./tailwind.css": "./src/theme/tailwind-theme.css",
     "./package.json": "./package.json"
   },
   "sideEffects": false,
