@@ -65,16 +65,22 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
       if (!isOpen || !triggerRef.current) return
       if (typeof window === 'undefined') return
 
+      let rafId: number | null = null
       const updateRect = () => {
-        if (triggerRef.current) {
-          setTriggerRect(triggerRef.current.getBoundingClientRect())
-        }
+        if (rafId !== null) return
+        rafId = requestAnimationFrame(() => {
+          rafId = null
+          if (triggerRef.current) {
+            setTriggerRect(triggerRef.current.getBoundingClientRect())
+          }
+        })
       }
 
       updateRect()
       window.addEventListener('scroll', updateRect, true)
       window.addEventListener('resize', updateRect)
       return () => {
+        if (rafId !== null) cancelAnimationFrame(rafId)
         window.removeEventListener('scroll', updateRect, true)
         window.removeEventListener('resize', updateRect)
       }
