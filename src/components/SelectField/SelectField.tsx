@@ -2,7 +2,6 @@ import React from 'react';
 import { html } from 'react-strict-dom';
 import { FieldError } from '../FieldError/FieldError';
 import { Text } from '../Text/Text';
-import { Button } from '../Button';
 import { AnimatedContainer, NATIVE_ANIMATED } from '../InputField/AnimatedContainer';
 import { styles as inputStyles, variantContainerStyleMap } from '../InputField/InputField.styles';
 import { SelectFieldProps } from './types';
@@ -82,14 +81,7 @@ export const SelectField = (props: SelectFieldProps): React.ReactElement => {
 
           {rightSlot && (
             <html.div style={inputStyles.rightSlotContainer}>
-              <Button
-                variant="tertiary"
-                size="small"
-                onClick={disabled ? undefined : onClick}
-                disabled={disabled}
-                iconBefore={rightSlot}
-                aria-label="Action"
-              />
+              {rightSlot}
             </html.div>
           )}
         </html.button>
