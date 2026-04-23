@@ -90,6 +90,7 @@ export { default as PhoneIphone } from "./PhoneIphone";
 export { default as PublicOutlined } from "./PublicOutlined";
 export { default as PushPin } from "./PushPin";
 export { default as QrCode } from "./QrCode";
+export { default as Replay } from "./Replay";
 export { default as Report } from "./Report";
 export { default as ReportProblem } from "./ReportProblem";
 export { default as ReportProblemRound } from "./ReportProblemRound";
