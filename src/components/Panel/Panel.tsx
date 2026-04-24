@@ -1,6 +1,6 @@
 import React from 'react';
 import { html } from 'react-strict-dom';
-import { styles } from './Dialog.styles';
+import { styles } from './Panel.styles';
 import { Text } from '../Text';
 import { Close } from '../../icons';
 import { Button } from '../Button';
@@ -8,7 +8,7 @@ import { useTheme } from '../../theme';
 
 type HtmlDivProps = React.ComponentProps<typeof html.div>;
 
-export interface DialogSurfaceProps extends Omit<HtmlDivProps, 'children' | 'title'> {
+export interface PanelProps extends Omit<HtmlDivProps, 'children' | 'title'> {
     title: React.ReactNode;
     children?: React.ReactNode;
     footer?: React.ReactNode;
@@ -19,14 +19,14 @@ export interface DialogSurfaceProps extends Omit<HtmlDivProps, 'children' | 'tit
     closeButtonTestID?: string;
 }
 
-export const DialogSurface = React.forwardRef<HTMLDivElement, DialogSurfaceProps>(function DialogSurface(
+export const Panel = React.forwardRef<HTMLDivElement, PanelProps>(function Panel(
     {
         title,
         children,
         footer,
         onClose,
         hideCloseButton = false,
-        closeButtonAriaLabel = 'Close dialog',
+        closeButtonAriaLabel = 'Close',
         style: userStyle,
         testID,
         closeButtonTestID,
@@ -78,4 +78,4 @@ export const DialogSurface = React.forwardRef<HTMLDivElement, DialogSurfaceProps
     );
 });
 
-DialogSurface.displayName = 'DialogSurface';
+Panel.displayName = 'Panel';

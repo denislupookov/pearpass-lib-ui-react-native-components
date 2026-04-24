@@ -1,13 +1,13 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { css, html } from 'react-strict-dom';
-import { DialogSurface } from './DialogSurface';
+import { Panel } from './Panel';
 import { Button } from '../Button';
 import { tokens } from '../../theme/tokens.css';
 
 const meta = {
-    title: 'Components/DialogSurface',
-    component: DialogSurface,
+    title: 'Components/Panel',
+    component: Panel,
     tags: ['autodocs'],
     argTypes: {
         onClose: { action: 'closed' },
@@ -16,7 +16,7 @@ const meta = {
         children: { control: false },
         footer: { control: false },
     },
-} satisfies Meta<typeof DialogSurface>;
+} satisfies Meta<typeof Panel>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -44,13 +44,13 @@ const footerActions = (
 
 export const Playground: Story = {
     args: {
-        title: 'Inline Dialog',
-        children: 'This DialogSurface renders inline without a modal overlay.',
+        title: 'Inline Panel',
+        children: 'This Panel renders inline without a modal overlay.',
         footer: footerActions,
     },
     render: (args) => (
         <html.div style={storyStyles.canvas}>
-            <DialogSurface {...args} />
+            <Panel {...args} />
         </html.div>
     ),
 };
@@ -58,11 +58,11 @@ export const Playground: Story = {
 export const WithoutFooter: Story = {
     args: {
         title: 'Information',
-        children: 'This is a simple inline dialog without footer actions.',
+        children: 'This is a simple inline panel without footer actions.',
     },
     render: (args) => (
         <html.div style={storyStyles.canvas}>
-            <DialogSurface {...args} />
+            <Panel {...args} />
         </html.div>
     ),
 };
@@ -70,13 +70,13 @@ export const WithoutFooter: Story = {
 export const WithoutCloseButton: Story = {
     args: {
         title: 'Notice',
-        children: 'This dialog surface has no close button.',
+        children: 'This panel has no close button.',
         footer: footerActions,
         hideCloseButton: true,
     },
     render: (args) => (
         <html.div style={storyStyles.canvas}>
-            <DialogSurface {...args} />
+            <Panel {...args} />
         </html.div>
     ),
 };

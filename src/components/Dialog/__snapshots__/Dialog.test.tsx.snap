@@ -24,7 +24,7 @@ exports[`Dialog renders with body and footer 1`] = `
       aria-labelledby=":r0:"
       aria-modal={true}
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="Dialog/DialogSurface.tsx:46"
+      data-element-src="Panel/Panel.tsx:46"
       data-style-src="react-strict-dom:web/runtime.js"
       ref={[Function]}
       role="dialog"
@@ -33,13 +33,13 @@ exports[`Dialog renders with body and footer 1`] = `
     >
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="Dialog/DialogSurface.tsx:54"
+        data-element-src="Panel/Panel.tsx:54"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       >
         <span
           className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-          data-element-src="Text/Text.tsx:43"
+          data-element-src="Text/Text.tsx:36"
           data-style-src="react-strict-dom:web/runtime.js"
           id=":r0:"
           ref={null}
@@ -53,7 +53,7 @@ exports[`Dialog renders with body and footer 1`] = `
       </div>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="Dialog/DialogSurface.tsx:72"
+        data-element-src="Panel/Panel.tsx:72"
         data-style-src="react-strict-dom:web/runtime.js"
         id=":r1:"
         style={{}}
@@ -62,7 +62,7 @@ exports[`Dialog renders with body and footer 1`] = `
       </div>
       <div
         className="margin-x1ghz6dp padding-x1717udv"
-        data-element-src="Dialog/DialogSurface.tsx:76"
+        data-element-src="Panel/Panel.tsx:76"
         data-style-src="react-strict-dom:web/runtime.js"
         style={{}}
       >

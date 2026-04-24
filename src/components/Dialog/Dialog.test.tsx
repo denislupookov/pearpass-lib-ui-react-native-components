@@ -7,6 +7,11 @@ jest.mock('./Dialog.styles', () => ({
         modalLayer: {},
         backdrop: {},
         dialogPositioner: {},
+    },
+}));
+
+jest.mock('../Panel/Panel.styles', () => ({
+    styles: {
         root: {},
         header: {},
         title: {},

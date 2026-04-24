@@ -1,7 +1,7 @@
 import React from 'react';
 import { html } from 'react-strict-dom';
 import { styles } from './Dialog.styles';
-import { DialogSurface } from './DialogSurface';
+import { Panel } from '../Panel';
 import { useScrollLock } from '../../hooks/useScrollLock';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 
@@ -81,7 +81,7 @@ export const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(function Dia
                 onClick={closeOnOutsideClick ? onClose : undefined}
             />
             <html.div style={styles.dialogPositioner}>
-                <DialogSurface
+                <Panel
                     {...rest}
                     ref={combinedRef}
                     role="dialog"
@@ -97,7 +97,7 @@ export const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(function Dia
                     closeButtonTestID={closeButtonTestID}
                 >
                     {children}
-                </DialogSurface>
+                </Panel>
             </html.div>
         </html.div>
     );
