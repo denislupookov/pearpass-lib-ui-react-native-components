@@ -12,7 +12,7 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link
     const linkTarget = isExternal ? '_blank' : target;
     const linkRel = isExternal ? (rel ? `${rel} noopener noreferrer` : 'noopener noreferrer') : rel;
 
-    const linkPress = useLinkPress();
+    const linkPress = useLinkPress(href);
 
     const handlePress = (e: React.MouseEvent<HTMLAnchorElement> | Event | unknown) => {
         if (linkPress) {

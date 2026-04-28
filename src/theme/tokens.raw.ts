@@ -15,6 +15,7 @@ export const rawTokens = {
     spacing32: 32,
     spacing40: 40,
     spacing48: 48,
+    spacing60: 60,
     radius8: 8,
     radius16: 16,
     radius20: 20,

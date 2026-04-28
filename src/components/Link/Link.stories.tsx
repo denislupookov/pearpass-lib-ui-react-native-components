@@ -46,7 +46,7 @@ const storyStyles = css.create({
 
 export const Playground: Story = {
     args: {
-        href: '#',
+        href: 'https://google.com',
         children: 'Link',
     },
 };
