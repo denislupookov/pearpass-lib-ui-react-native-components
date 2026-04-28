@@ -85,7 +85,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
     const runtimeIconColorMap: Record<ButtonVariant, string> = {
         primary: theme.colors.colorOnPrimary,
         secondary: theme.colors.colorTextPrimary,
-        tertiary: theme.colors.colorPrimary,
+        tertiary: theme.colors.colorTextPrimary,
         destructive: theme.colors.colorTextPrimary,
     };
     const iconColor = disabled ? theme.colors.colorTextDisabled : runtimeIconColorMap[variant];
@@ -93,7 +93,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
     const runtimeTextColorMap: Record<ButtonVariant, string> = {
         primary: theme.colors.colorOnPrimary,
         secondary: theme.colors.colorTextPrimary,
-        tertiary: theme.colors.colorPrimary,
+        tertiary: theme.colors.colorTextPrimary,
         destructive: theme.colors.colorTextPrimary,
     };
     const textColor = disabled ? theme.colors.colorTextDisabled : runtimeTextColorMap[variant];

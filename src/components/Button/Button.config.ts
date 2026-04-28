@@ -5,7 +5,7 @@ import { ButtonSize, ButtonVariant } from './types';
 export const variantTextColorMap: Record<ButtonVariant, string> = {
     primary: tokens.colorOnPrimary,
     secondary: tokens.colorTextPrimary,
-    tertiary: tokens.colorPrimary,
+    tertiary: tokens.colorTextPrimary,
     destructive: tokens.colorTextPrimary,
 };
 

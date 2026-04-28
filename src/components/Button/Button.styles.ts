@@ -158,7 +158,7 @@ export const styles = css.create({
     variantTertiary: {
         backgroundColor: 'transparent',
         borderColor: 'transparent',
-        color: tokens.colorPrimary,
+        color: tokens.colorTextPrimary,
         ':hover': {
             backgroundColor: tokens.colorSurfaceHover,
         },
@@ -203,7 +203,7 @@ export const styles = css.create({
         color: tokens.colorTextPrimary,
     },
     textTertiary: {
-        color: tokens.colorPrimary,
+        color: tokens.colorTextPrimary,
     },
     textDestructive: {
         color: tokens.colorTextPrimary,
