@@ -174,6 +174,28 @@ export const styles = css.create({
         borderColor: 'transparent',
         color: tokens.colorTextDisabled,
     },
+    variantTertiaryAccent: {
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        color: tokens.colorPrimary,
+        ':hover': {
+            backgroundColor: tokens.colorSurfaceHover,
+        },
+        ':active': {
+            backgroundColor: tokens.colorSurfaceElevatedOnInteraction,
+        },
+    },
+    variantTertiaryAccentPressed: {
+        backgroundColor: tokens.colorSurfaceElevatedOnInteraction,
+    },
+    variantTertiaryAccentDisabled: {
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        color: tokens.colorTextDisabled,
+    },
+    textTertiaryAccent: {
+        color: tokens.colorPrimary,
+    },
     variantDestructive: {
         backgroundColor: tokens.colorSurfaceDestructive,
         borderColor: tokens.colorSurfaceDestructive,

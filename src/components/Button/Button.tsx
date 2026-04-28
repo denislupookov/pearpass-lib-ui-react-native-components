@@ -86,6 +86,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
         primary: theme.colors.colorOnPrimary,
         secondary: theme.colors.colorTextPrimary,
         tertiary: theme.colors.colorTextPrimary,
+        tertiaryAccent: theme.colors.colorPrimary,
         destructive: theme.colors.colorTextPrimary,
     };
     const iconColor = disabled ? theme.colors.colorTextDisabled : runtimeIconColorMap[variant];
@@ -94,6 +95,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
         primary: theme.colors.colorOnPrimary,
         secondary: theme.colors.colorTextPrimary,
         tertiary: theme.colors.colorTextPrimary,
+        tertiaryAccent: theme.colors.colorPrimary,
         destructive: theme.colors.colorTextPrimary,
     };
     const textColor = disabled ? theme.colors.colorTextDisabled : runtimeTextColorMap[variant];

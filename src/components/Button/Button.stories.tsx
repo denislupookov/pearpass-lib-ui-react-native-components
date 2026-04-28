@@ -33,7 +33,7 @@ const meta = {
         onClick: { action: 'clicked' },
         variant: {
             control: 'select',
-            options: ['primary', 'secondary', 'tertiary', 'destructive'],
+            options: ['primary', 'secondary', 'tertiary', 'tertiaryAccent', 'destructive'],
         },
         size: {
             control: 'select',
@@ -48,7 +48,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const variants: ButtonVariant[] = ['primary', 'secondary', 'tertiary', 'destructive'];
+const variants: ButtonVariant[] = ['primary', 'secondary', 'tertiary', 'tertiaryAccent', 'destructive'];
 const storyStyles = css.create({
     stack: {
         display: 'flex',
