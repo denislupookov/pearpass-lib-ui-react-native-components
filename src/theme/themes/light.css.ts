@@ -45,6 +45,7 @@ export const lightThemeStyle = css.createTheme(tokens, {
     spacing32: '32px',
     spacing40: '40px',
     spacing48: '48px',
+    spacing60: '60px',
     radius8: '8px',
     radius16: '16px',
     radius20: '20px',
