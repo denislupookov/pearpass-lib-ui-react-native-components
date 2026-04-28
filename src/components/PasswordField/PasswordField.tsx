@@ -1,6 +1,6 @@
 import React from 'react';
 import { html } from 'react-strict-dom';
-import { EyeFilled, EyeOutlined, InfoOutlined } from '../../icons';
+import { EyeFilled, EyeOutlined, InfoFilled } from '../../icons';
 import { InputField } from '../InputField/InputField';
 import { PasswordIndicator } from '../PasswordIndicator/PasswordIndicator';
 import { useTheme } from '../../theme';
@@ -115,10 +115,10 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
       <InfoBoxAnimatedContainer visible={isFocused}>
         <html.div style={styles.infoBox} data-testid="password-field-info-box">
           <html.div style={styles.infoBoxIcon}>
-            <InfoOutlined
+            <InfoFilled
               width={16}
               height={16}
-              color={theme.colors.colorTextSecondary}
+              color={theme.colors.colorTextPrimary}
             />
           </html.div>
           <html.span style={styles.infoBoxText}>{infoBox}</html.span>
