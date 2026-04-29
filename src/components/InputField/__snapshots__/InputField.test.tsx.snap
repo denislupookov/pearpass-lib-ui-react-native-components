@@ -3,27 +3,28 @@
 exports[`InputField renders correctly with default props 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="InputField/InputField.tsx:50"
+  data-element-src="InputField/InputField.tsx:123"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="email-input"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="InputField/InputField.tsx:52"
+    data-element-src="InputField/InputField.tsx:73"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:58"
+      data-element-src="InputField/InputField.tsx:85"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:43"
+        data-element-src="Text/Text.tsx:36"
         data-style-src="react-strict-dom:web/runtime.js"
+        onClick={[Function]}
         ref={null}
         style={{}}
       >
@@ -31,13 +32,20 @@ exports[`InputField renders correctly with default props 1`] = `
       </span>
       <input
         className="margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23 borderStyle-x1y0btm7"
-        data-element-src="InputField/InputField.tsx:60"
+        data-element-src="InputField/InputValue.native.tsx:40"
         data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
         dir="auto"
+        disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
         onInput={[Function]}
         placeholder="Enter your email"
+        readOnly={false}
+        ref={
+          {
+            "current": null,
+          }
+        }
         style={{}}
         type="text"
         value=""
@@ -50,27 +58,28 @@ exports[`InputField renders correctly with default props 1`] = `
 exports[`InputField renders correctly with error variant, right slot and error message 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="InputField/InputField.tsx:50"
+  data-element-src="InputField/InputField.tsx:123"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="username-input"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="InputField/InputField.tsx:52"
+    data-element-src="InputField/InputField.tsx:73"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:58"
+      data-element-src="InputField/InputField.tsx:85"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
       <span
         className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
-        data-element-src="Text/Text.tsx:43"
+        data-element-src="Text/Text.tsx:36"
         data-style-src="react-strict-dom:web/runtime.js"
+        onClick={[Function]}
         ref={null}
         style={{}}
       >
@@ -78,13 +87,20 @@ exports[`InputField renders correctly with error variant, right slot and error m
       </span>
       <input
         className="margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23 borderStyle-x1y0btm7"
-        data-element-src="InputField/InputField.tsx:60"
+        data-element-src="InputField/InputValue.native.tsx:40"
         data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
         dir="auto"
+        disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
         onInput={[Function]}
         placeholder="Enter username"
+        readOnly={false}
+        ref={
+          {
+            "current": null,
+          }
+        }
         style={{}}
         type="text"
         value="invalid_user"
@@ -92,7 +108,7 @@ exports[`InputField renders correctly with error variant, right slot and error m
     </div>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:72"
+      data-element-src="InputField/InputField.tsx:105"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git reset *)",
+      "Bash(xargs ls *)",
+      "Bash(grep -E \"\\\\.\\(js|ts|tsx|json\\)$\")",
+      "Bash(npx tsc *)",
+      "Bash(npx jest *)",
+      "Bash(git stash *)",
+      "Read(//tmp/**)"
+    ]
+  }
+}
