@@ -3,6 +3,20 @@ import React from 'react';
 /** @deprecated Use error prop instead */
 export type InputFieldVariant = 'default' | 'error';
 
+export interface InputValueProps {
+  value: string;
+  type?: 'text' | 'password';
+  name?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  readOnly?: boolean;
+  inputRef: React.RefObject<HTMLInputElement | null>;
+  onInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus: () => void;
+  onBlur: () => void;
+  onClick?: () => void;
+}
+
 export interface InputFieldProps {
   label: string;
   name?: string;

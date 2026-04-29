@@ -11,9 +11,6 @@ export const styles = css.create({
   trigger: {
     width: '100%',
   },
-  wrapperTriggerContent: {
-    pointerEvents: 'none',
-  },
   container: {
     display: 'flex',
     flexDirection: 'row',

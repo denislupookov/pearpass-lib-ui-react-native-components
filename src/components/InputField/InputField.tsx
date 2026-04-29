@@ -8,6 +8,7 @@ import { ContentCopy } from '../../icons';
 import { useTheme } from '../../theme';
 import { InputFieldProps } from './types';
 import { AnimatedContainer, NATIVE_ANIMATED } from './AnimatedContainer';
+import { InputValue } from './InputValue';
 import { Pressable } from '../Pressable';
 
 export const InputField = (props: InputFieldProps): React.ReactElement => {
@@ -83,8 +84,8 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
         )}
         <html.div style={styles.innerColumn}>
           <Text variant="label" style={styles.label} onClick={handleLabelClick}>{label}</Text>
-          <html.input
-            ref={resolvedInputRef}
+          <InputValue
+            inputRef={resolvedInputRef}
             type={inputType}
             name={name}
             value={value}
@@ -97,8 +98,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
             }}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            onClick={disabled ? undefined : onClick}
-            style={[styles.input, disabled && styles.containerDisabled]}
+            onClick={onClick}
           />
         </html.div>
         {(rightSlot || copyable) && (
@@ -123,9 +123,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
     <html.div style={styles.wrapper} data-testid={testID}>
       {readOnly && onClick ? (
         <Pressable onClick={disabled ? undefined : onClick} style={styles.trigger}>
-          <html.div style={styles.wrapperTriggerContent}>
-            {content}
-          </html.div>
+          {content}
         </Pressable>
       ) : (
         content
