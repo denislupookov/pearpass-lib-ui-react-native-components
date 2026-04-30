@@ -50,11 +50,6 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
   const handleCopy = () => onCopy?.(value);
 
   const handleLabelClick = () => {
-    if (onClick && readOnly) {
-      onClick();
-      return;
-    }
-
     resolvedInputRef.current?.focus();
   };
   const [isFocused, setIsFocused] = React.useState(false);

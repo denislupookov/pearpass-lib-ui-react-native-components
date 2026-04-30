@@ -29,7 +29,7 @@ export const InputValue = ({ inputRef, ...rest }: InputValueProps): React.ReactE
         style={readOnlyStyles.scroll}
         contentContainerStyle={readOnlyStyles.scrollContent}
       >
-        <Text style={[readOnlyStyles.text, { color: textColor }]}>
+        <Text numberOfLines={1} style={[readOnlyStyles.text, { color: textColor }]}>
           {displayValue}
         </Text>
       </ScrollView>

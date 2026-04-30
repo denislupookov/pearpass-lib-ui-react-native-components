@@ -68,6 +68,18 @@ jest.mock('../../icons', () => ({
   ContentCopy: () => <span data-testid="copy-icon" />,
 }));
 
+jest.mock('../Pressable', () => ({
+  Pressable: ({ children, onClick, ...rest }: {
+    children?: React.ReactNode;
+    onClick?: () => void;
+    [key: string]: unknown;
+  }) => (
+    <div data-testid="pressable-trigger" onClick={onClick} {...(rest as React.HTMLAttributes<HTMLDivElement>)}>
+      {children}
+    </div>
+  ),
+}));
+
 
 describe('InputField', () => {
   it('renders correctly with default props', () => {
@@ -133,5 +145,37 @@ describe('InputField', () => {
 
     expect(onChangeTextMock).toHaveBeenCalledWith('New text');
     expect(onChangeTextMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('fires onClick exactly once when a readOnly trigger is clicked', () => {
+    const onClickMock = jest.fn();
+    let component: renderer.ReactTestRenderer;
+
+    act(() => {
+      component = renderer.create(
+        <InputField
+          label="Pick a date"
+          value=""
+          placeholderText="Select"
+          readOnly
+          onClick={onClickMock}
+          testID="readonly-input"
+        />
+      );
+    });
+
+    const labelSpan = component!.root.findAll(
+      (node) => node.type === 'span' && node.props.children === 'Pick a date'
+    )[0];
+    const pressable = component!.root.findByProps({ 'data-testid': 'pressable-trigger' });
+
+    // Simulate a real click on the label: the inner handler runs first, then the
+    // event bubbles up to the outer Pressable. The user's onClick must fire once.
+    act(() => {
+      labelSpan.props.onClick?.();
+      pressable.props.onClick?.();
+    });
+
+    expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 });
