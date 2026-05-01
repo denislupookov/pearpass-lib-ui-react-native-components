@@ -5,7 +5,7 @@ export const styles = css.create({
     root: {
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         gap: tokens.spacing4,
         marginTop: tokens.spacing4,
         width: '100%',
