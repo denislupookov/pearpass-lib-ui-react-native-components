@@ -3,20 +3,20 @@
 exports[`InputField renders correctly with default props 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="InputField/InputField.tsx:118"
+  data-element-src="InputField/InputField.tsx:120"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="email-input"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="InputField/InputField.tsx:68"
+    data-element-src="InputField/InputField.tsx:69"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:80"
+      data-element-src="InputField/InputField.tsx:81"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
@@ -32,7 +32,7 @@ exports[`InputField renders correctly with default props 1`] = `
       </span>
       <input
         className="margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23 borderStyle-x1y0btm7"
-        data-element-src="InputField/InputValue.native.tsx:40"
+        data-element-src="InputField/InputValue.native.tsx:44"
         data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
         dir="auto"
         disabled={false}
@@ -58,20 +58,20 @@ exports[`InputField renders correctly with default props 1`] = `
 exports[`InputField renders correctly with error variant, right slot and error message 1`] = `
 <div
   className="margin-x1ghz6dp padding-x1717udv"
-  data-element-src="InputField/InputField.tsx:118"
+  data-element-src="InputField/InputField.tsx:120"
   data-style-src="react-strict-dom:web/runtime.js"
   data-testid="username-input"
   style={{}}
 >
   <div
     className="margin-x1ghz6dp padding-x1717udv"
-    data-element-src="InputField/InputField.tsx:68"
+    data-element-src="InputField/InputField.tsx:69"
     data-style-src="react-strict-dom:web/runtime.js"
     style={{}}
   >
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:80"
+      data-element-src="InputField/InputField.tsx:81"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >
@@ -87,7 +87,7 @@ exports[`InputField renders correctly with error variant, right slot and error m
       </span>
       <input
         className="margin-x1ghz6dp padding-x1717udv borderWidth-xmkeg23 borderStyle-x1y0btm7"
-        data-element-src="InputField/InputValue.native.tsx:40"
+        data-element-src="InputField/InputValue.native.tsx:44"
         data-style-src="react-strict-dom:web/runtime.js,web/runtime.js"
         dir="auto"
         disabled={false}
@@ -108,7 +108,7 @@ exports[`InputField renders correctly with error variant, right slot and error m
     </div>
     <div
       className="margin-x1ghz6dp padding-x1717udv"
-      data-element-src="InputField/InputField.tsx:100"
+      data-element-src="InputField/InputField.tsx:102"
       data-style-src="react-strict-dom:web/runtime.js"
       style={{}}
     >

@@ -36,6 +36,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
     onFocus,
     onBlur,
     onClick,
+    as,
   } = props;
 
   const resolvedError = error ?? errorMessage;
@@ -94,6 +95,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
             onFocus={handleFocus}
             onBlur={handleBlur}
             onClick={onClick}
+            as={as}
           />
         </html.div>
         {(rightSlot || copyable) && (

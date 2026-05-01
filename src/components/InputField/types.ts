@@ -1,7 +1,10 @@
 import React from 'react';
+import type { TextInputProps } from 'react-native';
 
 /** @deprecated Use error prop instead */
 export type InputFieldVariant = 'default' | 'error';
+
+export type TextInputComponent = React.ComponentType<TextInputProps>;
 
 export interface InputValueProps {
   value: string;
@@ -15,6 +18,12 @@ export interface InputValueProps {
   onFocus: () => void;
   onBlur: () => void;
   onClick?: () => void;
+  /**
+   * Override the underlying TextInput component on native. Pass
+   * `BottomSheetTextInput` from `@gorhom/bottom-sheet` when rendering inside a
+   * bottom sheet so the sheet animates above the keyboard. Ignored on web.
+   */
+  as?: TextInputComponent;
 }
 
 export interface InputFieldProps {
@@ -38,6 +47,12 @@ export interface InputFieldProps {
   onFocus?: () => void;
   onBlur?: () => void;
   onClick?: () => void;
+  /**
+   * Override the underlying TextInput component on native. Pass
+   * `BottomSheetTextInput` from `@gorhom/bottom-sheet` when rendering inside a
+   * bottom sheet so the sheet animates above the keyboard. Ignored on web.
+   */
+  as?: TextInputComponent;
   /** @deprecated Use placeholder instead */
   placeholderText?: string;
   /** @deprecated Use onChange instead */

@@ -122,6 +122,9 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
       <BottomSheetModal
         ref={bottomSheetRef}
         enableDynamicSizing
+        keyboardBehavior="interactive"
+        keyboardBlurBehavior="restore"
+        android_keyboardInputMode="adjustResize"
         backdropComponent={renderBackdrop}
         onDismiss={handleDismiss}
         backgroundStyle={backgroundStyle}

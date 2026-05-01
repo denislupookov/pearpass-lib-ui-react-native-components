@@ -1,12 +1,12 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, Text, type TextInputProps } from 'react-native';
 import { html } from 'react-strict-dom';
 import { useTheme } from '../../theme';
 import { rawTokens } from '../../theme/tokens.raw';
 import { styles } from './InputField.styles';
 import { InputValueProps } from './types';
 
-export const InputValue = ({ inputRef, ...rest }: InputValueProps): React.ReactElement => {
+export const InputValue = ({ inputRef, as: AsComponent, ...rest }: InputValueProps): React.ReactElement => {
   const { theme } = useTheme();
   const { value, type, placeholder, disabled, readOnly, onClick } = rest;
 
@@ -36,13 +36,19 @@ export const InputValue = ({ inputRef, ...rest }: InputValueProps): React.ReactE
     );
   }
 
+  const renderAs = AsComponent
+    ? ((nativeProps: TextInputProps) => <AsComponent {...nativeProps} />) as unknown as React.ReactNode
+    : undefined;
+
   return (
     <html.input
       {...rest}
       ref={inputRef}
       onClick={disabled ? undefined : onClick}
       style={[styles.input, disabled && styles.containerDisabled]}
-    />
+    >
+      {renderAs}
+    </html.input>
   );
 };
 

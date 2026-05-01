@@ -38,6 +38,7 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
     infoBox,
     onFocus,
     onBlur,
+    as,
   } = props;
 
   const { theme } = useTheme();
@@ -108,6 +109,7 @@ export const PasswordField = (props: PasswordFieldProps): React.ReactElement => 
       onCopy={onCopy}
       onFocus={() => { setIsFocused(true); onFocus?.(); }}
       onBlur={() => { setIsFocused(false); onBlur?.(); }}
+      as={as}
     />
   );
 
