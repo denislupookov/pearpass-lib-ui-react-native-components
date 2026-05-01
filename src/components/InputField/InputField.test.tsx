@@ -147,6 +147,62 @@ describe('InputField', () => {
     expect(onChangeTextMock).toHaveBeenCalledTimes(1);
   });
 
+  it('renders the AsComponent override on native via the html.input render-prop child', () => {
+    const MockInput = jest.fn(
+      (props: Record<string, unknown>) => <span data-testid="mock-as-input" data-props={JSON.stringify(props ?? {})} />
+    );
+    let component: renderer.ReactTestRenderer;
+
+    act(() => {
+      component = renderer.create(
+        <InputField
+          label="Email Address"
+          value="hello"
+          placeholderText="Enter your email"
+          onChangeText={() => { }}
+          as={MockInput as unknown as React.ComponentType<unknown>}
+          testID="email-input"
+        />
+      );
+    });
+
+    const inputEl = component!.root.findByType('input');
+    expect(typeof inputEl.props.children).toBe('function');
+
+    const renderAs = inputEl.props.children as (p: Record<string, unknown>) => React.ReactNode;
+    const nativeProps = { value: 'hello', placeholder: 'Enter your email' };
+
+    let asHost: renderer.ReactTestRenderer;
+    act(() => {
+      asHost = renderer.create(<>{renderAs(nativeProps)}</>);
+    });
+
+    expect(MockInput).toHaveBeenCalledTimes(1);
+    expect(MockInput.mock.calls[0][0]).toEqual(expect.objectContaining(nativeProps));
+    expect(() =>
+      asHost!.root.findByProps({ 'data-testid': 'mock-as-input' })
+    ).not.toThrow();
+  });
+
+  it('does not pass a function child when `as` is omitted', () => {
+    let component: renderer.ReactTestRenderer;
+
+    act(() => {
+      component = renderer.create(
+        <InputField
+          label="Email Address"
+          value=""
+          placeholderText="Enter your email"
+          onChangeText={() => { }}
+          testID="email-input"
+        />
+      );
+    });
+
+    const inputEl = component!.root.findByType('input');
+    expect(typeof inputEl.props.children).not.toBe('function');
+  });
+
   it('fires onClick exactly once when a readOnly trigger is clicked', () => {
     const onClickMock = jest.fn();
     let component: renderer.ReactTestRenderer;

@@ -1,7 +1,7 @@
 import React, { useCallback, createContext, useEffect, useMemo, useRef, useContext } from 'react'
 import { View, Pressable } from 'react-native'
 import { BottomSheetBackdrop, BottomSheetModal, BottomSheetView } from '@gorhom/bottom-sheet'
-import type { BottomSheetBackdropProps } from '@gorhom/bottom-sheet'
+import type { BottomSheetBackdropProps, BottomSheetModalProps } from '@gorhom/bottom-sheet'
 import { useTheme } from '../../theme/ThemeContext'
 import { rawTokens } from '../../theme/tokens.raw'
 
@@ -16,6 +16,9 @@ export type NativeBottomSheetProps = {
   onOpenChange?: (open: boolean) => void
   testID?: string
   openOnLongPress?: boolean
+  keyboardBehavior?: BottomSheetModalProps['keyboardBehavior']
+  keyboardBlurBehavior?: BottomSheetModalProps['keyboardBlurBehavior']
+  android_keyboardInputMode?: BottomSheetModalProps['android_keyboardInputMode']
 }
 
 export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
@@ -24,7 +27,10 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
   open,
   onOpenChange,
   openOnLongPress = false,
-  testID
+  testID,
+  keyboardBehavior,
+  keyboardBlurBehavior,
+  android_keyboardInputMode
 }) => {
   const { theme } = useTheme()
   // gorhom doesn't publicly export BottomSheetModalMethods, so any is the only viable ref type
@@ -122,9 +128,9 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
       <BottomSheetModal
         ref={bottomSheetRef}
         enableDynamicSizing
-        keyboardBehavior="interactive"
-        keyboardBlurBehavior="restore"
-        android_keyboardInputMode="adjustResize"
+        keyboardBehavior={keyboardBehavior}
+        keyboardBlurBehavior={keyboardBlurBehavior}
+        android_keyboardInputMode={android_keyboardInputMode}
         backdropComponent={renderBackdrop}
         onDismiss={handleDismiss}
         backgroundStyle={backgroundStyle}

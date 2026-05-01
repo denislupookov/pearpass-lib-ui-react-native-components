@@ -322,6 +322,43 @@ describe('PasswordField', () => {
     expect(animatedContainer().props['data-visible']).toBe(false);
   });
 
+  it('forwards the `as` override down to the underlying input as a render-prop child', () => {
+    const MockInput = jest.fn(
+      (props: Record<string, unknown>) => <span data-testid="mock-as-input" data-props={JSON.stringify(props ?? {})} />
+    );
+    let component: renderer.ReactTestRenderer;
+
+    act(() => {
+      component = renderer.create(
+        <PasswordField
+          label="Password"
+          value="hunter2"
+          placeholderText="Enter your password"
+          onChangeText={() => { }}
+          as={MockInput as unknown as React.ComponentType<unknown>}
+          testID="password-field"
+        />
+      );
+    });
+
+    const inputEl = component!.root.findByType('input');
+    expect(typeof inputEl.props.children).toBe('function');
+
+    const renderAs = inputEl.props.children as (p: Record<string, unknown>) => React.ReactNode;
+    const nativeProps = { value: 'hunter2', secureTextEntry: true };
+
+    let asHost: renderer.ReactTestRenderer;
+    act(() => {
+      asHost = renderer.create(<>{renderAs(nativeProps)}</>);
+    });
+
+    expect(MockInput).toHaveBeenCalledTimes(1);
+    expect(MockInput.mock.calls[0][0]).toEqual(expect.objectContaining(nativeProps));
+    expect(() =>
+      asHost!.root.findByProps({ 'data-testid': 'mock-as-input' })
+    ).not.toThrow();
+  });
+
   it('renders the info box text content', () => {
     let component: renderer.ReactTestRenderer;
 
