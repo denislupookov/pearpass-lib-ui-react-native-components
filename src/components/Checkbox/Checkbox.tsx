@@ -14,6 +14,7 @@ export type CheckboxProps = Omit<HtmlDivProps, 'children'> & {
   label?: string
   description?: string
   disabled?: boolean
+  isCheckboxSelectable?: boolean
   'aria-label'?: string
 }
 
@@ -26,12 +27,13 @@ export const Checkbox = React.forwardRef<HTMLDivElement, CheckboxProps>(
       description,
       disabled = false,
       'aria-label': ariaLabel,
+      isCheckboxSelectable = true,
       ...rest
     },
     ref
   ) {
     const handleToggle = () => {
-      if (!disabled && onChange) {
+      if (!disabled && onChange && isCheckboxSelectable) {
         onChange(!checked)
       }
     }

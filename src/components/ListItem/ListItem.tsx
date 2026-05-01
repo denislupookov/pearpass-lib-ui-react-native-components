@@ -35,6 +35,7 @@ export type ListItemProps = {
   withRoundedTopBorders?: boolean
   withRoundedBorders?: boolean
   selectable?: boolean
+  isCheckboxSelectable?: boolean
 }
 
 export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
@@ -65,7 +66,8 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
       withRoundedBottomBorders = true,
       withRoundedTopBorders = true,
       withRoundedBorders = true,
-      selectable = true
+      selectable = true,
+      isCheckboxSelectable = true,
     },
     ref
   ) {
@@ -132,7 +134,7 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
         }
       >
         {selectionMode === 'multi' && (
-          <Checkbox checked={isSelected} onChange={onSelect} />
+          <Checkbox checked={isSelected} onChange={onSelect} isCheckboxSelectable={isCheckboxSelectable}/>
         )}
 
         {icon && (
