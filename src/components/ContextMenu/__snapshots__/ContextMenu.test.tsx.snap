@@ -29,6 +29,7 @@ exports[`ContextMenu opens menu on trigger click 1`] = `
     className="margin-x1ghz6dp padding-x1717udv"
     data-element-src="ContextMenu/ContextMenu.tsx:67"
     data-style-src="react-strict-dom:web/runtime.js"
+    onClick={[Function]}
     role="menu"
     style={{}}
   >

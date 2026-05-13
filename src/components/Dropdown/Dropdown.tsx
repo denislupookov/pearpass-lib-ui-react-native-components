@@ -12,13 +12,12 @@ export type DropdownProps = Omit<HtmlDivProps, 'children'> & {
   onOpenChange?: (open: boolean) => void
   minWidth?: number
   maxHeight?: number
-  fullWidth?: boolean
   testID?: string
 }
 
 export const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
   function Dropdown(
-    { trigger, children, open, onOpenChange, minWidth = MENU_MIN_WIDTH, maxHeight = MENU_MAX_HEIGHT, fullWidth = false, testID, ...rest },
+    { trigger, children, open, onOpenChange, minWidth = MENU_MIN_WIDTH, maxHeight = MENU_MAX_HEIGHT, testID, ...rest },
     ref
   ) {
     const isControlled = open !== undefined
@@ -59,11 +58,9 @@ export const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
       }
     }, [isOpen, close])
 
-    const wrapperStyle = fullWidth ? styles.triggerWrapperFullWidth : styles.triggerWrapper
-
     return (
-      <html.div {...rest} ref={ref} data-testid={testID} style={wrapperStyle}>
-        <html.div onClick={toggle} style={fullWidth ? styles.triggerInner : undefined}>{trigger}</html.div>
+      <html.div {...rest} ref={ref} data-testid={testID} style={styles.triggerWrapper}>
+        <html.div onClick={toggle}>{trigger}</html.div>
 
         {isOpen && (
           <>

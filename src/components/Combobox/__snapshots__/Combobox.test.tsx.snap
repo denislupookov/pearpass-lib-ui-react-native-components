@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Combobox renders trigger correctly 1`] = `
+<div>
+  <div
+    data-testid="context-menu-trigger"
+    onClick={[Function]}
+  >
+    <div
+      data-testid="select-field"
+    >
+      <span>
+        Fruit
+      </span>
+      <span />
+      <div
+        className="margin-x1ghz6dp padding-x1717udv"
+        data-element-src="Combobox/Combobox.tsx:60"
+        data-style-src="react-strict-dom:web/runtime.js"
+        style={{}}
+      >
+        <span
+          className="margin-x1ghz6dp padding-x1717udv textDecoration-x1hl2dhg textAlign-x16tdsg8 wordWrap-x1vvkbs"
+          data-element-src="Combobox/Combobox.tsx:80"
+          data-style-src="react-strict-dom:web/runtime.js"
+          style={{}}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

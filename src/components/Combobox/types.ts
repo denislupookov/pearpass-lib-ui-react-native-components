@@ -25,5 +25,7 @@ export type ComboboxProps = {
   emptyText?: string
   open?: boolean
   onOpenChange?: (open: boolean) => void
+  clearAriaLabel?: string
+  closeAriaLabel?: string
   testID?: string
 }

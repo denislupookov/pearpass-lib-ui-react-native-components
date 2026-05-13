@@ -22,7 +22,7 @@ export interface InputValueProps {
 }
 
 export interface InputFieldProps {
-  label: string;
+  label?: string;
   name?: string;
   value: string;
   placeholder?: string;

@@ -7,15 +7,6 @@ export const styles = css.create({
     display: 'inline-flex',
     width: 'fit-content'
   },
-  triggerWrapperFullWidth: {
-    position: 'relative',
-    display: 'block',
-    width: '100%'
-  },
-  triggerInner: {
-    display: 'block',
-    width: '100%'
-  },
   overlay: {
     position: 'fixed',
     top: 0,

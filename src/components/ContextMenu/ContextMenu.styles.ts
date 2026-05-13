@@ -29,7 +29,7 @@ export const styles = css.create({
     position: 'fixed',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'stretch',
+    alignItems: 'flex-start',
     gap: tokens.spacing4,
     backgroundColor: tokens.colorSurfacePrimary,
     borderWidth: 1,
@@ -41,6 +41,9 @@ export const styles = css.create({
     zIndex: 1000,
     boxSizing: 'border-box',
     boxShadow: tokens.shadowMenu
+  },
+  menuContainerFullWidth: {
+    alignItems: 'stretch'
   },
   menuPosition: (top: number, left: number, width: number) => ({
     top,

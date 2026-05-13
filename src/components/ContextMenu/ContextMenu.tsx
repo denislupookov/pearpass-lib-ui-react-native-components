@@ -13,12 +13,13 @@ export type ContextMenuProps = Omit<HtmlDivProps, 'children'> & {
   onOpenChange?: (open: boolean) => void
   menuWidth?: number
   fullWidth?: boolean
+  closeOnContentClick?: boolean
   testID?: string
 }
 
 export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
   function ContextMenu(
-    { trigger, children, open, onOpenChange, menuWidth = MENU_WIDTH, fullWidth = false, testID, ...rest },
+    { trigger, children, open, onOpenChange, menuWidth = MENU_WIDTH, fullWidth = false, closeOnContentClick = true, testID, ...rest },
     ref
   ) {
     const isControlled = open !== undefined
@@ -111,7 +112,8 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
             <html.div style={styles.overlay} onClick={close} />
             <html.div
               role="menu"
-              style={[styles.menuContainer, styles.menuPosition(menuTop, menuLeft, resolvedMenuWidth)]}
+              onClick={closeOnContentClick ? close : undefined}
+              style={[styles.menuContainer, fullWidth && styles.menuContainerFullWidth, styles.menuPosition(menuTop, menuLeft, resolvedMenuWidth)]}
             >
               {children}
             </html.div>
