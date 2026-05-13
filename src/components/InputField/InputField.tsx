@@ -79,7 +79,7 @@ export const InputField = (props: InputFieldProps): React.ReactElement => {
           </html.div>
         )}
         <html.div style={styles.innerColumn}>
-          <Text variant="label" style={styles.label} onClick={handleLabelClick}>{label}</Text>
+          {label ? <Text variant="label" style={styles.label} onClick={handleLabelClick}>{label}</Text> : null}
           <InputValue
             inputRef={resolvedInputRef}
             type={inputType}

@@ -9,7 +9,7 @@ export const styles = css.create({
     alignItems: 'center',
     gap: tokens.spacing8,
     boxSizing: 'border-box',
-    borderWidth: '1px',
+    borderWidth: 1,
     borderStyle: 'solid',
     borderColor: tokens.colorBorderSearchField,
     borderRadius: tokens.radius8,

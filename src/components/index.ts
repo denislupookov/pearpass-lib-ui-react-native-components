@@ -1,5 +1,6 @@
 export * from './AlertMessage'
 export * from './AttachmentField'
+export * from './Combobox'
 export * from './Breadcrumb'
 export * from './Button'
 export * from './Checkbox'

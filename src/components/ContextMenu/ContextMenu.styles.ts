@@ -29,7 +29,7 @@ export const styles = css.create({
     position: 'fixed',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
+    alignItems: 'stretch',
     gap: tokens.spacing4,
     backgroundColor: tokens.colorSurfacePrimary,
     borderWidth: 1,

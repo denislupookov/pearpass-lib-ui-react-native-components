@@ -88,8 +88,13 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
 
     const wrapperStyle = fullWidth ? styles.triggerWrapperFullWidth : styles.triggerWrapper
 
+    const resolvedMenuWidth = fullWidth && triggerRect ? triggerRect.width : menuWidth
     const menuTop = triggerRect ? triggerRect.bottom + 5 : 0
-    const menuLeft = triggerRect ? Math.max(triggerRect.right - menuWidth, 0) : 0
+    const menuLeft = triggerRect
+      ? fullWidth
+        ? triggerRect.left
+        : Math.max(triggerRect.right - menuWidth, 0)
+      : 0
 
     return (
       <html.div {...rest} ref={ref} data-testid={testID} style={wrapperStyle}>
@@ -106,8 +111,7 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
             <html.div style={styles.overlay} onClick={close} />
             <html.div
               role="menu"
-              style={[styles.menuContainer, styles.menuPosition(menuTop, menuLeft, menuWidth)]}
-              onClick={close}
+              style={[styles.menuContainer, styles.menuPosition(menuTop, menuLeft, resolvedMenuWidth)]}
             >
               {children}
             </html.div>
