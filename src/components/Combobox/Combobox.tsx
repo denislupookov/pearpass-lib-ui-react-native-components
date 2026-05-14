@@ -109,10 +109,13 @@ export const Combobox = function Combobox({
     >
       {title && typeof document === 'undefined' ? (
         <html.div style={styles.header}>
-          <Text variant='bodyEmphasized'>{title}</Text>
+          <html.div style={styles.headerSpacer} />
+          <html.div style={styles.headerTitle}>
+            <Text variant='bodyEmphasized'>{title}</Text>
+          </html.div>
           <Button
             variant='tertiary'
-            size='small'
+            size='medium'
             type='button'
             aria-label={closeAriaLabel}
             iconBefore={

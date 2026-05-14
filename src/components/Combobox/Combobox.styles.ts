@@ -6,9 +6,16 @@ export const styles = css.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingBlock: tokens.spacing8,
-    paddingInline: tokens.spacing4,
+    paddingInline: tokens.spacing8,
+  },
+  headerSpacer: {
+    width: 40,
+    height: 40,
+  },
+  headerTitle: {
+    flex: 1,
+    textAlign: 'center',
   },
   rightSlot: {
     display: 'flex',
@@ -29,13 +36,18 @@ export const styles = css.create({
     boxSizing: 'border-box',
   },
   searchPaddingNative: {
-    paddingInline: tokens.spacing12,
+    display: 'flex',
+    flexDirection: 'column',
+    paddingInline: tokens.spacing16,
   },
   itemsList: {
+    display: 'flex',
+    flexDirection: 'column',
     maxHeight: 240,
     overflowY: 'auto',
     width: '100%',
     marginTop: tokens.spacing4,
+    paddingBottom: tokens.spacing24,
   },
   emptyState: {
     paddingBlock: tokens.spacing12,
