@@ -66,17 +66,16 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
     backgroundColor: theme.colors.colorSurfaceElevatedOnInteraction
   }), [theme])
 
-  const handleOpen = useCallback(() => {
-    if (isControlled) {
-      onOpenChange?.(true)
-      return
-    }
+  const isPresentedRef = useRef(false)
 
+  const handleOpen = useCallback(() => {
+    isPresentedRef.current = true
     bottomSheetRef.current?.present()
     onOpenChange?.(true)
-  }, [isControlled, onOpenChange])
+  }, [onOpenChange])
 
   const handleDismiss = useCallback(() => {
+    isPresentedRef.current = false
     onOpenChange?.(false)
   }, [onOpenChange])
 
@@ -97,12 +96,17 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
     }
 
     if (open) {
-      bottomSheetRef.current?.present()
+      if (!isPresentedRef.current) {
+        isPresentedRef.current = true
+        bottomSheetRef.current?.present()
+      }
       return
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ; (bottomSheetRef.current as any | null)?.dismiss()
+    if (isPresentedRef.current) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ; (bottomSheetRef.current as any | null)?.dismiss()
+    }
   }, [isControlled, open])
 
   const triggerElement = openOnLongPress
