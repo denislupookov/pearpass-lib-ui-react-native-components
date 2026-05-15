@@ -30,6 +30,7 @@ export const Combobox = function Combobox({
   emptyText = 'No results',
   open,
   onOpenChange,
+  stretch = false,
   clearAriaLabel = 'Clear',
   closeAriaLabel = 'Close',
   testID,
@@ -95,6 +96,7 @@ export const Combobox = function Combobox({
       onOpenChange={handleOpenChange}
       testID={testID}
       fullWidth
+      stretch={stretch}
       closeOnContentClick={false}
       trigger={
         <SelectField
@@ -136,7 +138,7 @@ export const Combobox = function Combobox({
           onChangeText={onSearchChange}
         />
       </html.div>
-      <html.div style={styles.itemsList}>
+      <html.div style={typeof document !== 'undefined' ? styles.itemsListWeb : styles.itemsListNative}>
         {items.length > 0 ? (
           items.map((item) => (
             <ListItem

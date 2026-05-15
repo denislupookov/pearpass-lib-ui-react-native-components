@@ -25,6 +25,10 @@ export type ComboboxProps = {
   emptyText?: string
   open?: boolean
   onOpenChange?: (open: boolean) => void
+  /** When true (web only), the dropdown menu's height is capped to the
+   * available space between the trigger and the viewport bottom edge so it
+   * never overflows the window. Content scrolls inside. Default: false. */
+  stretch?: boolean
   clearAriaLabel?: string
   closeAriaLabel?: string
   testID?: string

@@ -40,11 +40,17 @@ export const styles = css.create({
     flexDirection: 'column',
     paddingInline: tokens.spacing16,
   },
-  itemsList: {
+  itemsListWeb: {
     display: 'flex',
     flexDirection: 'column',
     maxHeight: 240,
     overflowY: 'auto',
+    width: '100%',
+    marginTop: tokens.spacing4,
+  },
+  itemsListNative: {
+    display: 'flex',
+    flexDirection: 'column',
     width: '100%',
     marginTop: tokens.spacing4,
     paddingBottom: tokens.spacing24,

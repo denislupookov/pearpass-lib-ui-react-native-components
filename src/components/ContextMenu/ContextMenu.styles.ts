@@ -49,5 +49,8 @@ export const styles = css.create({
     top,
     left,
     width
+  }),
+  menuMaxHeight: (maxHeight: number) => ({
+    maxHeight
   })
 })

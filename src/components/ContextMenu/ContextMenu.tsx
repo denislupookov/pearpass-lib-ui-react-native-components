@@ -14,12 +14,13 @@ export type ContextMenuProps = Omit<HtmlDivProps, 'children'> & {
   menuWidth?: number
   fullWidth?: boolean
   closeOnContentClick?: boolean
+  stretch?: boolean
   testID?: string
 }
 
 export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
   function ContextMenu(
-    { trigger, children, open, onOpenChange, menuWidth = MENU_WIDTH, fullWidth = false, closeOnContentClick = true, testID, ...rest },
+    { trigger, children, open, onOpenChange, menuWidth = MENU_WIDTH, fullWidth = false, closeOnContentClick = true, stretch = false, testID, ...rest },
     ref
   ) {
     const isControlled = open !== undefined
@@ -97,6 +98,13 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
         : Math.max(triggerRect.right - menuWidth, 0)
       : 0
 
+    const VIEWPORT_PADDING = 8
+    const viewportHeight = typeof window !== 'undefined' ? window.innerHeight : 0
+    const stretchMaxHeight =
+      stretch && triggerRect
+        ? Math.max(viewportHeight - triggerRect.bottom - VIEWPORT_PADDING, 120)
+        : undefined
+
     return (
       <html.div {...rest} ref={ref} data-testid={testID} style={wrapperStyle}>
         <html.div
@@ -113,7 +121,12 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
             <html.div
               role="menu"
               onClick={closeOnContentClick ? close : undefined}
-              style={[styles.menuContainer, fullWidth && styles.menuContainerFullWidth, styles.menuPosition(menuTop, menuLeft, resolvedMenuWidth)]}
+              style={[
+                styles.menuContainer,
+                fullWidth && styles.menuContainerFullWidth,
+                styles.menuPosition(menuTop, menuLeft, resolvedMenuWidth),
+                stretchMaxHeight !== undefined && styles.menuMaxHeight(stretchMaxHeight)
+              ]}
             >
               {children}
             </html.div>

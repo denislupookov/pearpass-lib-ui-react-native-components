@@ -1,6 +1,6 @@
 import React, { useCallback, createContext, useEffect, useMemo, useRef, useContext } from 'react'
 import { View, Pressable } from 'react-native'
-import { BottomSheetBackdrop, BottomSheetModal, BottomSheetView } from '@gorhom/bottom-sheet'
+import { BottomSheetBackdrop, BottomSheetModal, BottomSheetScrollView } from '@gorhom/bottom-sheet'
 import type { BottomSheetBackdropProps, BottomSheetModalProps } from '@gorhom/bottom-sheet'
 import { useTheme } from '../../theme/ThemeContext'
 import { rawTokens } from '../../theme/tokens.raw'
@@ -140,7 +140,7 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
         backgroundStyle={backgroundStyle}
         handleComponent={null}
       >
-        <BottomSheetView>
+        <BottomSheetScrollView>
           <View style={sheetContainerStyle}>
             <View style={{ alignItems: 'center', paddingTop: rawTokens.spacing12, paddingBottom: rawTokens.spacing8 }}>
               <View style={handlePillStyle} />
@@ -149,7 +149,7 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
               {children}
             </BottomSheetCloseContext.Provider>
           </View>
-        </BottomSheetView>
+        </BottomSheetScrollView>
       </BottomSheetModal>
     </View>
   )

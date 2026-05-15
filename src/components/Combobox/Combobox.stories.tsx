@@ -18,6 +18,28 @@ const SAMPLE_ITEMS = [
   { id: '5', title: 'Amazon', subtitle: 'acme.oc14@outlook.com', icon: <AccountCircleFilled /> },
 ]
 
+const ICON_ROTATION = [
+  <AccountCircleFilled />,
+  <AccountCircleOutlined />,
+  <AccountCircleSharp />,
+  <AccountCircleTone />,
+]
+
+const LONG_LIST_NAMES = [
+  'Microsoft 365', 'Slack', 'GitHub', 'Adobe', 'Amazon', 'Apple ID', 'Atlassian', 'Bitbucket',
+  'CloudFlare', 'Discord', 'Dropbox', 'Facebook', 'Figma', 'Google Workspace', 'Heroku',
+  'HubSpot', 'Instagram', 'LinkedIn', 'Linear', 'Notion', 'Okta', 'PagerDuty', 'PayPal',
+  'Reddit', 'Salesforce', 'Sentry', 'Spotify', 'Stripe', 'Twitch', 'Twitter / X',
+  'Vercel', 'Zendesk', 'Zoom',
+]
+
+const LONG_LIST_ITEMS = LONG_LIST_NAMES.map((name, index) => ({
+  id: `long-${index + 1}`,
+  title: name,
+  subtitle: `user.${index + 1}@example.com`,
+  icon: ICON_ROTATION[index % ICON_ROTATION.length],
+}))
+
 const meta = {
   title: 'Components/Combobox',
   component: Combobox,
@@ -214,6 +236,40 @@ export const EmptySearchResults: Story = {
       />
     </html.div>
   ),
+}
+
+export const LongList: Story = {
+  parameters: { controls: { disable: true } },
+  render: () => (
+    <html.div style={storyStyles.previewContainer}>
+      <ComboboxControlled
+        label="Account"
+        placeholder="Select an account..."
+        items={LONG_LIST_ITEMS}
+      />
+    </html.div>
+  ),
+}
+
+export const VeryLongList: Story = {
+  parameters: { controls: { disable: true } },
+  render: () => {
+    const items = Array.from({ length: 100 }, (_, i) => ({
+      id: `item-${i + 1}`,
+      title: `Account ${String(i + 1).padStart(3, '0')}`,
+      subtitle: `user.${i + 1}@example.com`,
+      icon: ICON_ROTATION[i % ICON_ROTATION.length],
+    }))
+    return (
+      <html.div style={storyStyles.previewContainer}>
+        <ComboboxControlled
+          label="Account"
+          placeholder="Select from 100 items..."
+          items={items}
+        />
+      </html.div>
+    )
+  },
 }
 
 export const WithoutIcons: Story = {
