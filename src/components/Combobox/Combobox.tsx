@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { html } from 'react-strict-dom'
 import { styles } from './Combobox.styles'
-import { InputField } from '../InputField'
+import { ComboboxSearchInput } from './ComboboxSearchInput'
 import { ListItem } from '../ListItem'
 import { SelectField } from '../SelectField'
 import { Button } from '../Button'
@@ -132,7 +132,7 @@ export const Combobox = function Combobox({
         </html.div>
       ) : null}
       <html.div style={typeof document !== 'undefined' ? styles.searchPaddingWeb : styles.searchPaddingNative}>
-        <InputField
+        <ComboboxSearchInput
           placeholder={searchPlaceholder}
           value={searchValue}
           onChangeText={onSearchChange}

@@ -3,7 +3,17 @@ import { NativeBottomSheet, NativeBottomSheetProps } from '../NativeBottomSheet'
 
 export type ContextMenuProps = NativeBottomSheetProps
 
-export const ContextMenu: React.FC<ContextMenuProps> = ({ trigger, children, testID, onOpenChange, open, openOnLongPress }) => {
+export const ContextMenu: React.FC<ContextMenuProps> = ({
+  trigger,
+  children,
+  testID,
+  onOpenChange,
+  open,
+  openOnLongPress,
+  keyboardBehavior,
+  keyboardBlurBehavior,
+  android_keyboardInputMode
+}) => {
   // TS workaround: some build/JSX resolutions treat `NativeBottomSheet` as having no props.
   // Casting keeps runtime behavior identical while unblocking the TS compile.
   const BottomSheetComponent = NativeBottomSheet as unknown as React.ComponentType<ContextMenuProps>
@@ -15,6 +25,9 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ trigger, children, tes
       onOpenChange={onOpenChange}
       testID={testID}
       openOnLongPress={openOnLongPress}
+      keyboardBehavior={keyboardBehavior}
+      keyboardBlurBehavior={keyboardBlurBehavior}
+      android_keyboardInputMode={android_keyboardInputMode}
     >
       {children}
     </BottomSheetComponent>

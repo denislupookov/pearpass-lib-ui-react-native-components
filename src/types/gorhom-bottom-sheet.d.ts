@@ -18,5 +18,6 @@ declare module '@gorhom/bottom-sheet' {
 
   export const BottomSheetView: React.ComponentType<Record<string, unknown>>
   export const BottomSheetScrollView: React.ComponentType<Record<string, unknown>>
+  export const BottomSheetTextInput: React.ComponentType<Record<string, unknown>>
 }
 

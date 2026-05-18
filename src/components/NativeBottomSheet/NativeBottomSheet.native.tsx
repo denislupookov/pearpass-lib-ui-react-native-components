@@ -28,9 +28,9 @@ export const NativeBottomSheet: React.FC<NativeBottomSheetProps> = ({
   onOpenChange,
   openOnLongPress = false,
   testID,
-  keyboardBehavior,
-  keyboardBlurBehavior,
-  android_keyboardInputMode
+  keyboardBehavior = 'interactive',
+  keyboardBlurBehavior = 'restore',
+  android_keyboardInputMode = 'adjustResize'
 }) => {
   const { theme } = useTheme()
   // gorhom doesn't publicly export BottomSheetModalMethods, so any is the only viable ref type

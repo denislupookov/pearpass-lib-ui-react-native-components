@@ -7,6 +7,9 @@ export type NativeBottomSheetProps = {
   onOpenChange?: (open: boolean) => void
   testID?: string
   openOnLongPress?: boolean
+  keyboardBehavior?: 'extend' | 'fillParent' | 'interactive'
+  keyboardBlurBehavior?: 'none' | 'restore'
+  android_keyboardInputMode?: 'adjustPan' | 'adjustResize'
 }
 
 export const useBottomSheetClose = () => () => {}
